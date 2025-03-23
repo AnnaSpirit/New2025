@@ -1,0 +1,179 @@
+// USER JSON
+{
+    "commentsHighlight.configurations": [
+        {
+            "prefixicon": "🐛 ",
+            "text": "BUG:",
+            "color": "#ecf0f1",
+            "border": "1px solid rgba(231, 76, 60, 0.5)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(231, 76, 60, 0.5)"
+        },
+        {
+            "prefixicon": "🧑‍🏫 ",
+            "text": "COURSE:",
+            "color": "##0b0f7e",
+            "border": "1px solid rgba(151, 164, 230, 0.98)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(151, 164, 230, 0.98)"
+        },
+        {
+            "prefixicon": "🖋️ ",
+            "text": "EXERCICE:",
+            "color": "#ecf0f1",
+            "border": "2px solid rgba(155, 225, 228, 0.5)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(155, 225, 228, 0.5)"
+        },
+        {
+            "prefixicon": "🛠️⚠️ ",
+            "text": "FIXIT:",
+            "color": "#ecf0f1",
+            "border": "1px solid rgba(255, 192, 0, 0.7)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(255, 192, 0, 0.7)"
+        },
+        {
+            "prefixicon": "💻 ",
+            "text": "HACK:",
+            "color": "#31064c",
+            "border": "1px solid rgba(244, 2, 248, 0.7)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(249, 140, 250, 0.98)"
+        },
+        {
+            "prefixicon": "💡 ",
+            "text": "IDEA:",
+            "color": "#ecf0f1",
+            "border": "1px solid rgba(255, 255, 102, 0.3)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(255, 255, 102, 0.3)"
+        },
+        {
+            "prefixicon": "📰 ",
+            "text": "INFO:",
+            "color": "#ecf0f1",
+            "border": "2px solid rgb(58, 251, 9)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(51, 255, 0, 0.3)"
+        },
+        {
+            "prefixicon": "🔗 ",
+            "text": "LINK:",
+            "color": "#ecf0f1",
+            "border": "1px solid rgba(200, 200, 200, 0.7)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(191, 191, 191, 0.7)"
+        },
+        {
+            "prefixicon": "🔒 ",
+            "text": "NOCHANGE:",
+            "color": "#ecf0f1",
+            "border": "2px solid rgba(255, 255, 255, 0.3)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(0, 0, 0, 0.3)"
+        },
+        {
+            "prefixicon": "📒 ",
+            "text": "NOTE:",
+            "color": "#ecf0f1",
+            "border": "1px solid rgba(204, 102, 255, 0.3)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(204, 102, 255, 0.3)"
+        },
+        {
+            "prefixicon": "⁉️ ",
+            "text": "QUESTION:",
+            "color": "#ecf0f1",
+            "border": "2px solid rgba(230, 38, 0, 0.6)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(239, 133, 19, 0.9)"
+        },
+        {
+            "prefixicon": "📈 ",
+            "text": "RESULT:",
+            "color": "#ecf0f1",
+            "border": "2px solid rgba(77, 166, 255, 0.3)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(232, 167, 56, 0.8)"
+        },
+        {
+            "prefixicon": "🟢▶️ ",
+            "text": "To Be Done:",
+            "color": "#ecf0f1",
+            "border": "1px solid rgba(46, 204, 113, 0.3)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(46, 204, 113, 0.3)"
+        },
+        {
+            "prefixicon": "🔍 ",
+            "text": "REVIEW:",
+            "color": "#ecf0f1",
+            "border": "2px solid rgba(255, 51, 0, 0.5)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(77, 13, 0, 0.5)"
+        },
+        {
+            "prefixicon": "➕🔄️ ",
+            "text": "OTHER:",
+            "color": "#ecf0f1",
+            "border": "1px solid rgba(77, 255, 77, 0.3)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(77, 255, 77, 0.3)"
+        },
+        {
+            "prefixicon": "🤖 ",
+            "text": "GPT:",
+            "color": "#ecf0f1",
+            "border": "1px solid rgba(255, 255, 255, 0.3)",
+            "borderRadius": "6px",
+            "backgroundColor": "rgba(0, 0, 0, 0.3)"
+        },
+        {
+            "prefixicon": "🟪📝 ",
+            "text": "PROF: ",
+            "color": "#a67c00",
+            "border": "1px solid #fffbe6",
+            "borderRadius": "6px",
+            "backgroundColor": "#fffbe6",
+        }
+    ],
+    "cSpell.language": "en,fr,he",
+    "cSpell.useLocallyInstalledCSpellDictionaries": true,
+    "files.autoSave": "onFocusChange",
+    "editor.fontSize": 16,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorWidth": 4,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "diffEditor.hideUnchangedRegions.contextLineCount": 2,
+    "diffEditor.wordWrap": "on",
+    "editor.quickSuggestionsDelay": 20,
+    "files.autoSaveDelay": 500,
+    "workbench.commandPalette.history": 30,
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "workbench.preferredDarkColorTheme": "Tomorrow Night Blue",
+    "workbench.preferredHighContrastColorTheme": "Tomorrow Night Blue",
+    "workbench.preferredHighContrastLightColorTheme": "Quiet Light",
+    "workbench.preferredLightColorTheme": "Quiet Light",
+    "workbench.tree.indent": 6,
+    "workbench.editor.limit.value": 8,
+    "auto-close-tag.SublimeText3Mode": true,
+    "auto-rename-tag.activationOnLanguage": [
+        "*"
+    ],
+    "cSpell.maxDuplicateProblems": 5,
+    "cSpell.minWordLength": 3,
+    "cSpell.numSuggestions": 10,
+    "cSpell.revealIssuesAfterDelayMS": 1000,
+    "cSpell.suggestionNumChanges": 5,
+    "cSpell.useGitignore": false,
+    "commentsHighlight.fullLine": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.settings.applyToAllProfiles": [
+        "commentsHighlight.fullLine"
+    ]
+}

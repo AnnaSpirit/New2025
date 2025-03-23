@@ -14,8 +14,8 @@
 		# 	cypher_text += chr(ord(letter) + 3)
 
 
-uncryptedtext = "this is text to encrypt"
-
+# uncryptedtext = "this is text to encrypt abcdefghijklmnopqrstuvwxyz"
+uncryptedtext = input("Please write the sentence to code? \n")
 # make the alphabet into a list
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 alphabet = [*alphabet] # this is a list comprehension
@@ -27,14 +27,13 @@ for letter in uncryptedtext:
     else:
         # takes the letter, find its index in the alphabet list, and then adds 3 to it then add it to the crytedtext string variable
         letterindex = alphabet.index(letter.lower())
-        cryptedtext += alphabet[letterindex - 3]
+        cryptedtext += alphabet[(letterindex + 3)%26]
+# print(uncryptedtext)
 print(cryptedtext)
 
-#RESULT: qefp fp qbuq ql bkzovmq
+#RESULT: wklv lv whbw wr hqfucsw
 
 # QUESTION: With the Link the shift is -3, (a to x) 🤔
-# should be: wklv lv whaw wr hqfubsw
-
 
 # cryptedtext2 = input("Please write the sentence to decode? \n")
 
@@ -43,9 +42,23 @@ print(cryptedtext)
 #     if letter2.isalpha() == False:
 #         cryptedtext2 += letter2
 #     else:
-#         # takes the letter, find its index in the alpphabet list, and then remove 3 to it then add it to the crytedtex string variable
+#         # takes the letter, find its index in the alphabet list, and then remove 3 to it then add it to the crytedtex string variable
 #         letter2index = alphabet.index(letter2.lower())
-#         uncryptedtext2 += alphabet[letter2index + 3]
+#         uncryptedtext2 += alphabet[letterindex - 3]
 # print(uncryptedtext2)
 
 # #QUESTION: Why the invert of the code does not work. Please help me. 🤔
+
+# PROF: 
+# cryptedtext2 = "defghijklmnopqrstuvwxyzabc"
+cryptedtext2 = input("Please write the sentence to decode? \n")
+uncryptedtext2 = ""
+for letter2 in cryptedtext2:
+    if letter2.isalpha() == False:
+        uncryptedtext2 += letter2
+    else:
+        # takes the letter, find its index in the alphabet list, and then remove 3 to it then add it to the crytedtex string variable
+        letter2index = alphabet.index(letter2.lower())
+        uncryptedtext2 += alphabet[letter2index - 3]
+print(uncryptedtext2)
+
