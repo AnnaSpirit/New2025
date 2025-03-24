@@ -277,7 +277,24 @@ print(list(filtered_object))
 def power_numbers(first, second):
     return first**second
 
-my_list = [1, 3, 5, 7]
+my_list = [3, 5, 7, 9]
 reduced_list = reduce(power_numbers, my_list)
+
 print(reduced_list)
+OTHER:
+# reduced_list = reduce(lambda first, second: first**second, my_list)
+
+#RESULT: 7625597484987 (3**5=243**7=2187**9=7625597484987)
+# QUESTION: Could we format the hudge number with separate thousand?
+
+#EXERCICE: Using map and filter, try to say hello to everyone who's name is less than or equal to 4 letters.
+
+people = ["Rick", "Morty", "Beth", "Jerry", "Snowball"]
+
+short_names = filter(lambda names: len(name) <= 4, people)
+display_names = map(lambda name: f"Hello " {names}!!!, short_names)
+
+print(list(display_names))
+
+#RESULT: ['Hello Rick!!!', 'Hello Beth!!!']
 
