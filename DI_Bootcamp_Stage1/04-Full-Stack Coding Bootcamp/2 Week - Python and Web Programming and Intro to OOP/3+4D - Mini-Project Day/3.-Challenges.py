@@ -99,7 +99,7 @@ print(factorial(5))
 # EXERCICE: 17: Write a function that prints elements of a list if the index and the value are even:
 
 
-# EXERCICE: 18: Write a function that accepts an undefined number of keyworded arguments and return the count of different types:
+# EXERCICE: 18: Write a function that accepts an undefined number of keyword-ed arguments and return the count of different types:
 
 
 # EXERCICE: 19: Write a function that mimics the builtin .split() method for strings. By default the function uses whitespace but it should be able to take an argument for any character and split with that argument.
