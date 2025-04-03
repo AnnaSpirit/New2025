@@ -1,4 +1,4 @@
-#  Exercise 1: Cats -- Instructions --
+#  EXERCICE: 1: Cats -- Instructions --
 # Using this class
 # class Cat:
 #     def __init__(self, cat_name, cat_age):
@@ -37,7 +37,7 @@
 
 #COURSE: Paramètres : La méthode reçoit trois paramètres : self : qui fait référence à l'instance courante de la classe.cat_name : qui représente le nom du chat. cat_age : qui représente l'âge du chat.
 
-# 🌟 Exercise 2 : Dogs
+# 🌟 EXERCICE: 2 : Dogs
 # Instructions
 
 #     Create a class called Dog.
@@ -92,7 +92,7 @@
 
 # #RESULT: Rex is the bigger dog.
 
-# Exercise 3 : Who’s the song producer?
+# EXERCICE: 3 : Who’s the song producer?
 # Instructions
 
 # 1. Define a class called Song, it will show the lyrics of a song.
