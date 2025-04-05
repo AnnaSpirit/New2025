@@ -69,7 +69,7 @@ import os
 sampleJson = """{ 
    "company":{ 
       "employee":{ 
-         "name":"emma",
+         "name":"Emma",
          "payable":{ 
             "salary":7000,
             "bonus":800
@@ -103,6 +103,6 @@ with open(json_file_path, "w") as file:
 print("Le fichier JSON a été enregistré dans :", json_file_path)
 
 
-#QUESTION: Pourquoi je dois préciser mon chemin d'accès. Je le fais car sinon il s'enregistre à la base de mon arborescence (DI_Bootcamp_Stage1)
+#QUESTION: Pourquoi je dois préciser mon chemin d'accès. Je le fais car sinon il s'enregistre à la base de mon arborescence (DI_Bootcamp_Stage1)  Why should I specify my access path? I do it because otherwise it is registered at the base of my tree structure (Di_Bootcamp_Stage1)
 
-# QUESTION: Comment faire pour que le fichier s'enregistre dans le même dossier que mon fichier python ?
+# QUESTION: Comment faire pour que le fichier s'enregistre dans le même dossier que mon fichier python ?  How to make the file register in the same folder as my Python file?

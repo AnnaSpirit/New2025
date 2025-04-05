@@ -1,7 +1,7 @@
 {
     "company": {
         "employee": {
-            "name": "emma",
+            "name": "Emma",
             "payable": {
                 "salary": 7000,
                 "bonus": 800
