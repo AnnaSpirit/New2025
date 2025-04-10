@@ -1,3 +1,0 @@
-PostgreSQL: 
-Superuser password: AnnaSpirit25
-Port: 5432

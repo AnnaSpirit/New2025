@@ -11,7 +11,7 @@
 
 -- SELECT stud_l_name, stud_f_name, stud_birthday FROM students WHERE stud_birthday = (SELECT MAX(stud_birthday) FROM students);
 
-----3.     Fetch three students skipping the first two students.
+----3. Fetch three students skipping the first two students.
 
 -- SELECT stud_l_name, stud_f_name, stud_birthday FROM students LIMIT 3 OFFSET 2;
 
