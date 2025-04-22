@@ -1,0 +1,1 @@
+Allez, c’est parti pour un vrai tuto ludique : tu vas découvrir les bases des échecs tout en codant en Python + SQLite
