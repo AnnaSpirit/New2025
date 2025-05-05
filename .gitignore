@@ -1,4 +1,7 @@
-z_Config/.history/
-.vscode
-.git
-.Mimo
+# ——— Dossiers à ignorer individuellement ———
+
+# Éditeur / config locale
+.vscode/
+
+# Dossier temporaire de config
+z_Config/

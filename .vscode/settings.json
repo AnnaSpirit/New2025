@@ -1,6 +1,5 @@
 {
   "commentsHighlight.configurations": [
-
     {
       "prefixicon": "🐛 ",
       "text": "BUG:",
@@ -121,29 +120,39 @@
       "borderRadius": "6px",
       "backgroundColor": "rgba(77, 255, 77, 0.3)"
     },
-    {"prefixicon": "➕🔄️ ",
-      "text": "OTHER:",
-      "color": "#CE1D93",
-      // "border": "1px solid #FC34BD",
+{
+      "prefixicon": "➕🔄️ ",
+      "text": "+OU= :",
+      "color": "#ecf0f1",
+      "border": "1px solid rgba(255, 128, 191, 0.3)",
       "borderRadius": "6px",
-      "backgroundColor": "#000000"
+      "backgroundColor": "rgba(255, 228, 191, 0.3)"
     },
     {
       "prefixicon": "🤖 ",
       "text": "GPT:",
-      "color": "#a67c00",
-      "border": "1px solid #1E6072",
+      "color": "#ecf0f1",
+      "border": "1px solid rgba(255, 255, 255, 0.3)",
       "borderRadius": "6px",
-      "backgroundColor": "#000000",
+      "backgroundColor": "rgba(0, 0, 0, 0.3)"
     },
     {
       "prefixicon": "🟪📝 ",
       "text": "PROF:",
-      "color": "##ff1919",
-      "border": "1px solid #ff1919",
+      "color": "#ecf0f1",
+      "border": "1px solid rgba(255, 255, 255, 0.3)",
       "borderRadius": "6px",
-      "backgroundColor": "#044141",
-    },
+      "backgroundColor": "rgba(0, 0, 0, 0.3)"
+    }
+    {
+      "prefixicon": "📝 ",
+      "text": "WRITE:",
+      "color": "#ecf0f1",
+      "border": "1px solid rgba(255, 255, 255, 0.3)",
+      "borderRadius": "6px",
+      "backgroundColor": "rgba(0, 0, 0, 0.3)"
+    }
+
   ],
   "rainbowBrackets.isolatedRightBracketsColor": "#f00000",
   "rainbowBrackets.roundBracketsColor": [
