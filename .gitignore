@@ -1,4 +1,14 @@
-z_Config/.history/
-.vscode
-.git
-.Mimo
+# ——— Dossiers à ignorer individuellement ———
+
+# Éditeur / config locale
+.git/
+.vscode/
+
+# Ignorer certains sous-dossiers de travail dans /Bases
+/Bases/Cours/
+/Bases/Memo/
+/Bases/non ok/
+
+#Ignorer le fichier de mot de passe:
+
+/OK/Info Passwords Tools.txt

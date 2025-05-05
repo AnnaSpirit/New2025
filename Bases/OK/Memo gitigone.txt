@@ -1,0 +1,36 @@
+Petit mémo : écrire un chemin dans .gitignore
+
+1. Ignorer un dossier
+Syntaxe : /chemin/du/dossier/
+Exemple :
+/logs/
+Astuce :
+- Slash de début (/) : force la racine du dépôt.
+- Slash de fin (/) : indique qu’il s’agit d’un dossier (et de tout son contenu).
+
+2. Ignorer un fichier
+Syntaxe : /chemin/vers/fichier.ext
+Exemple :
+/.env
+Variante sans slash racine :
+*.log  → ignore tous les fichiers .log n’importe où.
+
+3. Ignorer un sous-dossier précis
+Exemples :
+/Bases/Cours/
+/Bases/Memo/
+/Bases/non ok/
+
+4. Ignorer tout le contenu d’un dossier mais pas le dossier lui-même
+Syntaxe : /dossier/**/*
+Exemple :
+/temp/**/*
+
+5. Réintégrer (dé-ignore) un fichier ou dossier
+Syntaxe :
+/logs/                 # on ignore logs
+!/logs/important.log   # on garde important.log
+
+Le point d’exclamation (!) annule l’ignore sur ce pattern.
+
+Garde ce mémo sous le coude pour un .gitignore toujours au top ! 😉

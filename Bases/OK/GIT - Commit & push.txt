@@ -1,0 +1,35 @@
+╔════════════════════════════════════════════════════╗
+║      MÉMO : METTRE À JOUR GITHUB AVEC UNE BRANCHE                   ║
+╠════════════════════════════════════════════════════╣
+║ 1. Ouvre ton terminal et place-toi dans ton dossier :               ║
+║    cd /chemin/vers/ton/repository (ici : 2025_)                     ║
+║                                                                     ║
+║ 2. Passe sur ta branche de travail (branch1)                        ║
+║    • Si elle existe déjà :                                          ║
+║         git checkout branch1                                        ║
+║    • Sinon, crée-la et bascule dessus :                             ║
+║         git checkout -b branch1                                     ║
+║                                                                     ║
+║ 3. Vérifie l'état de ton dépôt avec :                               ║
+║         git status                                                  ║
+║                                                                     ║
+║ 4. Ajoute tes modifications :                                       ║
+║         git add .                                                   ║
+║                                                                     ║
+║ 5. Commits tes changements avec un message clair :                  ║
+║         git commit -m "Description de mes modifs"                   ║
+║                                                                     ║
+║ 6. Pousse la branche branch1 sur GitHub :                           ║
+║         git push origin branch1                                     ║
+║                                                                     ║
+║ 7. Pour intégrer tes modifs dans main :                             ║
+║    a) Passe sur main :                                              ║
+║         git checkout main                                           ║
+║    b) Mets à jour ta branche main :                                 ║
+║         git pull origin main                                        ║
+║    c) Fusionne branch1 dans main :                                  ║
+║         git merge branch1                                           ║
+║         (résous d'éventuels conflits, si besoin)                    ║
+║    d) Pousse la branche main sur GitHub :                           ║
+║         git push origin main                                        ║
+╚════════════════════════════════════════════════════╝

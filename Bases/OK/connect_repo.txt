@@ -1,0 +1,27 @@
+Marche à suivre pour relier ton dossier local au repo GitHub
+
+1. Configure Git (à faire une seule fois) :
+   git config --global user.name "Anna Spirit"
+   git config --global user.email "annalevy.training@gmail.com"
+
+2. Place-toi dans ton dossier :
+   cd /chemin/vers/_Older_PeleMele
+
+3. Initialise le dépôt Git :
+   git init
+
+4. Ajoute la remote “origin” :
+   git remote add origin https://github.com/AnnaSpirit/_Older_PeleMele.git
+
+5. Vérifie la configuration des remotes :
+   git remote -v
+
+6. Prépare ton premier commit :
+   git add .
+   git commit -m "Initial commit"
+
+7. (Optionnel) Assure-toi que ta branche principale s’appelle "master" :
+   git branch -M master
+
+8. Envoie tout sur GitHub :
+   git push -u origin master
