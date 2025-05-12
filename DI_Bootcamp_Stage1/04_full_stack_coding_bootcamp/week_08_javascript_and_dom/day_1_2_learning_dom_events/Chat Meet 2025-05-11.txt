@@ -1,0 +1,182 @@
+chat meet 11/05/2025:
+
+DOM
+What is DOM (Document Object Model)
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+Finding HTML element by id
+Finding HTML elements by tag name
+Finding HTML elements by class name
+Finding HTML elements by selectors
+
+
+Finding HTML Elements
+Method	                                Description
+document.getElementById('root')	        Find an element by element id
+document.getElementsByTagName('div')	  Find elements by tag name
+document.getElementsByClassName('a')	  Find elements by class name
+document.querySelector('#root .a')
+document.querySelectorAll('#root .a')
+Changing HTML Elements
+Property	Description
+element.innerHTML/innerText =  new html content	Change the inner HTML of an element
+element.attribute = new value	Change the attribute value of an HTML element
+element.style.property = new style	Change the style of an HTML element
+element.setAttribute(attribute, value)	Change the attribute value of an HTML element
+Adding and Deleting Elements
+Method	Description
+document.createElement(element)	Create an HTML element
+document.removeChild(element)	Remove an HTML element
+document.appendChild(element)	Add an HTML element
+document.replaceChild(new, old)	Replace an HTML element
+
+--------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer async></script>
+</head>
+<body class="main">
+    <div id="root" class="main"></div>
+</body>
+</html>
+JavaScript Instructor
+18:31
+/** Find element / s int HTML page */
+
+const root = document.getElementById('root');
+console.log(root);
+
+const myTags = document.getElementsByTagName('div') 
+console.log(myTags[0]);
+
+const myClass = document.getElementsByClassName('main')
+console.log(myClass[1]);
+
+const divOne = document.querySelector('div.main')
+console.log(divOne);
+
+const allElems = document.querySelectorAll('.main');
+console.log(allElems);
+JavaScript Instructor
+18:45
+/** add text to element */
+root.innerText = 'Hello'
+// root.textContent = '<h2>My div</h2>'
+root.innerHTML = '<h2>Header</h2>'
+
+/** tag / element attribute */
+const divAttr = root.getAttribute("class");
+console.log(divAttr);
+
+const myImg = document.getElementsByTagName('img')[0]
+console.log(myImg.src);
+
+// myImg.src = 'https://developers.institute/wp-content/uploads/2023/11/img_main.png'
+
+myImg.setAttribute('src', 'https://developers.institute/wp-content/uploads/2023/11/img_main.png');
+myImg.set
+myImg.setAttribute('width', '200px');
+
+root.style.color = 'red'
+root.style.backgroundColor = 'yellow'
+root.style.textAlign = 'center'
+--------------------------------------------------------
+DOM
+What is DOM (Document Object Model)
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+Finding HTML element by id
+Finding HTML elements by tag name
+Finding HTML elements by class name
+Finding HTML elements by selectors
+
+
+Finding HTML Elements
+Method	                                Description
+document.getElementById('root')	        Find an element by element id
+document.getElementsByTagName('div')	  Find elements by tag name
+document.getElementsByClassName('a')	  Find elements by class name
+document.querySelector('#root .a')
+document.querySelectorAll('#root .a')
+Changing HTML Elements
+Property	Description
+element.innerHTML/innerText =  new html content	Change the inner HTML of an element
+element.attribute = new value	Change the attribute value of an HTML element
+element.style.property = new style	Change the style of an HTML element
+element.setAttribute(attribute, value)	Change the attribute value of an HTML element
+Adding and Deleting Elements
+Method	Description
+document.createElement(element)	Create an HTML element
+document.removeChild(element)	Remove an HTML element
+document.appendChild(element)	Add an HTML element
+document.replaceChild(new, old)	Replace an HTML element
+<ul id="list">
+        <li id="lione">One</li>
+        <li id="litwo">Two</li>
+        <li id="lithree">Three</li>
+    </ul>
+--------------------------------------------------------
+const solarSystem = [
+  { name: "Mercury", moons: 0, color: "#a9a9a9" },
+  { name: "Venus", moons: 0, color: "#ffcc00" },
+  { name: "Earth", moons: 1, color: "#0077be" },
+  { name: "Mars", moons: 2, color: "#b22222" },
+  { name: "Jupiter", moons: 79, color: "#f5deb3" },
+  { name: "Saturn", moons: 82, color: "#d2b48c" },
+  { name: "Uranus", moons: 27, color: "#66cdaa" },
+  { name: "Neptune", moons: 14, color: "#4169e1" },
+];
+--------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>Dom Events</h2>
+      <button onclick="sayHi(event)">Click!</button>
+      <div>
+        <input type="password" oninput="getValue(event)"/>
+        <button id="sendbutton">Send</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+function sayHi() {
+    console.log('hello');
+}
+
+function getValue(e) {
+    console.log(e.target.type, e.target.value);
+}
+
+const button = document.getElementById('sendbutton');
+
+button.addEventListener('click', function(event) {
+   alert('hello from send button')
+   const header2 = document.getElementsByTagName('h2')[0]
+   header2.style.color = 'red'
+   header2.addEventListener('mouseenter', function(){
+    header2.style.backgroundColor = 'yellow'
+   })
+})

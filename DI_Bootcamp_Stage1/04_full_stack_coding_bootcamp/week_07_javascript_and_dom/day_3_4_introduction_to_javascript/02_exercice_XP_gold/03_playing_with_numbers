@@ -1,0 +1,20 @@
+let age = [20, 5, 12, 43, 98, 55];
+
+//Requirements : Don’t use built-in Javascript methods to answer the following questions. You have to create the logic by yourself. Use simple for loops.
+
+
+//1. Console.log the sum of all the numbers in the age array.
+
+for (let i = 0; i < age.length; i++) {
+    console.log(age[i]); // Affiche chaque élément du tableau age
+}
+
+//2. Console.log the highest age in the array.
+
+let maxAge = age[0]; // Initialiser maxAge avec le premier élément du tableau
+for (let i = 1; i < age.length; i++) {
+    if (age[i] > maxAge) {
+        maxAge = age[i]; // Mettre à jour maxAge si un élément plus grand est trouvé
+    }
+}
+console.log(maxAge); // Affiche l'âge maximum trouvé dans le tableau age

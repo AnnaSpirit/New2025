@@ -1,0 +1,239 @@
+JAVASCRIPT TYPES
+-----------------
+Ouvrir Navigateur internet, Inspecter puis l'onglet Console.
+c'est l'equivalent du terminal en python.
+-----------------
+1. Number 
+    calcul et modulo
+    // 1 + 1 = 2
+    // 1 - 1 = 0
+    // 1 * 1 = 1    
+    // 1 / 1 = 1
+    // 1 % 1 = 0
+    // (1 + 2)*8 = 24
+2. String
+    "Hello" + "world"
+    // "Hello" + "world" = "Helloworld"
+    on a besoin d'un espace.
+    // "Hello" + " " + "world" = "Hello world"
+    "This is not nice"
+    'This is not nice'
+    'This isn't nice'
+    //Uncaught SyntaxError: unexpected token: identifier 
+    si on veut utiliser une apostrophe dans une string, on doit utiliser des guillemets ou un backslash \ pour l'échapper.
+    // 'This isn\'t nice'
+
+    10+ "5" = 105
+    //convertit le 10 en string et concatène 5 à 10
+    10- "3" = 7	
+    //convertit le 10 en number et soustrait 3 à 10
+
+    "Hello" - "bye" = NaN
+    // NaN = Not a Number
+
+3. Boolean
+true ou false
+    // true = 1
+    // false = 0
+    // true + true = 2
+    // true + false = 1
+    // false + false = 0
+    // true - true = 0
+    
+4. Undefined
+5. Null
+<!-- 6. Symbol (new in ECMAScript 6) -->
+7. Object
+
+JAVASCRIPT COMPARISONS
+-----------------
+  //NOTE: les espaces autour des opérateurs (+, -, *, /, %, >, < ...) sont facultatifs mais recommandés pour la lisibilité humaine.
+!==
+===
+>=
+<=
+>
+<
+    3> 2 = true
+    5>10 = false
+    3 == 2 = false
+    5>=5 = true
+    3=3 =  Uncaught SyntaxError: invalid assignment left-hand side
+    1 seul = n'est pas une equivalence mais une affectation.
+    3===3 = true
+    3!==3 = false
+    //!== est l'opposé de ===
+
+JAVASCRIPT VARIABLES
+-----------------
+var
+<!-- let (new in ECMAScript 6)-->  
+<!-- const (new in ECMAScript 6)-->
+
+var my_things = [2 + 5, 'samurai', true];
+
+    my_things est le nom de la variable
+    [2 + 5, 'samurai', true] est la valeur de la variable
+    ATTENTION: Ne pas oublier le ; à la fin de la déclaration de la variable.
+
+            En stockant les arrays dans une variable, on peut les manipuler plus facilement. et c'est plus lisible
+
+
+JAVASCRIPT CONDITIONALS++++++++++++++++++++++++++++++++++++++
+-----------------
+if
+else
+else if
+<!-- ternary operator -->
+<!-- switch -->
+
+
+JAVASCRIPT LOGICAL OPERATORS
+-----------------
+&&
+||
+!
+
+JAVASCRIPT FUNCTIONS
+-----------------
+var a = function name() {}
+function name() {}
+return
+****************liste d'arguments et leur Syntax********************
+    alert(argument)
+
+
+
+****************************************
+<!-- () => (new in ECMAScript 6) -->
+
+JAVASCRIPT DATA STRUCTURES
+-----------------
+Array
+    [item1, item2, item3]
+        peut contenir n'importe quel type de données (string, number, boolean, object, etc.).
+            alert([2 + 5, 'samurai', true])
+
+Index: Pour accéder à un élément spécifique d'un tableau, vous devez d'abord connaître son index (ou sa position) dans le tableau. Vous devez ensuite emballer cet index dans des crochets [].
+    alert(my_things[0])
+        //ici l'argument est une expression qui renvoie le premier élément du tableau my_things, qui est 7.
+    alert(my_things[3])
+        //ici l'argument est une expression qui renvoie undefined car il n'y a pas de quatrième élément dans le tableau my_things.
+ATTENTION: Les index commencent à 0, donc le premier élément est à l'index 0, le deuxième élément est à l'index 1, l'index -1 renvoie le dernier élément du tableau.
+
+my_things has a property called length:
+
+var my_things = [2 + 5, 'samurai', true];
+alert(my_things.length);
+    //ici l'argument est une expression qui renvoie la longueur du tableau my_things, qui est 3. Il y a 3 éléments dans le tableau my_things.
+
+INFO: Array est modulable, ce qui signifie que vous pouvez ajouter ou supprimer des éléments d'un tableau à tout moment.
+    my_things.push('new item')
+    NOTE: On utilise le mot clef 'var' pour déclarer une variable, mais pas pour l'editer.
+
+    //METHODE: push() : Ajoute un ou plusieurs éléments à la fin d'un tableau et renvoie la nouvelle longueur du tableau.
+
+        var my_things = [2 + 5, 'samurai', true];
+        alert(my_things);
+        my_things.push('The Button');
+        alert(my_things);
+
+    //METHODE includes() : Renvoie true si un tableau contient un élément spécifique, sinon false.
+        var my_things = [2 + 5, 'samurai', true];
+        alert(my_things.includes('ninja'));
+        //ici l'argument est une expression qui renvoie false car le tableau my_things ne contient pas l'élément 'ninja'.
+
+    //METHODE COMPARISONS
+        alert(window.innerWidth > 400) 
+        true (La reponse est un boolean!)
+
+
+
+
+
+    Object
+
+JAVASCRIPT LOOPING
+-----------------
+for
+while
+do 
+forEach (new in ECMAScript 5) 
+
+
+JAVASCRIPT KEYWORDS
+-----------------
+break
+case
+catch
+class
+const
+continue
+debugger
+default
+delete
+do
+else
+export
+extends
+finally
+for
+function
+if
+import
+in
+instanceof
+new
+return
+super
+switch
+this
+throw
+try
+typeof
+var
+void
+while
+with
+yield
+
+____________________________
+    alert('Hello World!')
+        popup de message
+        //alert est une fonction de javascript qui affiche une boîte de dialogue avec un message (l'argument) et un bouton OK.
+
+    alert(9+5 * 3)
+    //ici l'argument est une expression arithmétique qui sera évaluée avant d'être affichée dans la boîte de dialogue.
+
+    alert(window.innerWidth)
+    //ici l'argument est une propriété de l'objet window qui renvoie la largeur intérieure de la fenêtre du navigateur.
+    //window est un objet global qui représente la fenêtre du navigateur.
+        //This means your browser's window is 928 pixels wide
+
+    alert(window.scrollY)
+    //ici l'argument est une propriété de l'<b>objet</b> window qui renvoie la position verticale du défilement de la fenêtre du navigateur.
+        //This means your browser's window is scrolled down 3586.25 pixels from the top of the page.
+            window is a JavaScript object.
+            innerWidth is a property of the window object. To access this property, you used a dot . to specify you wanted the innerWidth that exists within the window object.
+    
+    window.origin which is a string
+    window.scrollY which is a number
+    window.location which is an object
+
+    //INFO: Nesting : A property of an object can be an object itself (inception!).
+    alert(window.location.href)
+    //ici l'argument est une propriété de l'objet window qui renvoie l'URL complète de la page actuelle.
+        //This means your browser's window is displaying the page https://jgthms.com/javascript-in-14-minutes/
+
+            window is an object
+            location is an object
+            href is a string
+
+    //INFO: Methods : Quand une propriété d'un objet est une fonction, on l'appelle méthode.
+        alert fonction qu'on a utiliser et une méthode de l'objet window.
+        window.alert('OMG')
+
+    //INFO: Array : Un type qui contient une liste de valeurs.
+        //Un tableau est une collection d'éléments, qui peuvent être de n'importe quel type de données (string, number, boolean, object, etc.).
+    alert(['What', 'is', 'up'])
+
