@@ -1,0 +1,11 @@
+WorkFiles/Hackathon1 Presentation.mp4"
+
+# ——— Python ———
+__pycache__/               # caches d'interpréteur
+*.py[cod]                  # fichiers compilés (.pyc, .pyo, .pyd)
+*.pyswapped                # swap files
+env/                       # environnement virtuel
+venv/
+ENV/
+
+env_pawn_to_king
