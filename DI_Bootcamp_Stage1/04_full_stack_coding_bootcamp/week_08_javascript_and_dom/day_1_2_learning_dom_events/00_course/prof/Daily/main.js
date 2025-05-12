@@ -1,4 +1,4 @@
-const { SlowBuffer } = require("buffer");
+// const { SlowBuffer } = require("buffer");
 
 const solarSystem = [
   { name: "Mercury", moons: 0, color: "#a9a9a9" },
