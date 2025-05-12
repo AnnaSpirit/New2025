@@ -1,0 +1,29 @@
+// Write a JavaScript function to convert a string into an abbreviated form.
+
+// console.log(abbrevName("Robin Singh")); --> "Robin S."
+
+/**
+ * @param {string} fullName — le nom complet
+ * @returns {string} — ex. "Robin S."
+ */
+function abbrevName(fullName) {
+    //On nettoie les espaces et on découpe sur les espaces multiples
+    const parts = fullName.trim().split(/\s+/);
+
+    //Si y'a qu'un seul mot, on le renvoie tel quel
+    if (parts.length < 2) {
+        return fullName;
+    }
+
+    //On récupère le prénom et l'initiale (en majuscule) du dernier mot
+    const firstName = parts[0];
+    const lastInitial = parts[parts.length - 1].charAt(0).toUpperCase();
+
+    //On assemble le tout
+    return `${firstName} ${lastInitial}.`;
+}
+
+// 🧪 Quelques tests motivants
+console.log(abbrevName("Robin Williams"));    // → "Robin S."
+console.log(abbrevName("emma watson"));    // → "emma W."
+console.log(abbrevName("Platon"));         // → "Platon"  (pas d'abréviation possible)
