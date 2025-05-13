@@ -27,12 +27,12 @@ for (let i = 0; i < solarSystem.length; i++) {
   /// add the moons
 
   let left = 0;
-  for (let j = 0; j < solarSystem[i].moons; j = j +2) {
+  for (let j = 0; j < solarSystem[i].moons; j = j + 2) {
     const moonsDiv = document.createElement("div");
     moonsDiv.classList.add("moon");
     moonsDiv.style.left = left + "px";
     moonsDiv.style.backgroundColor = getRandomColor();
-    left += 15;
+    left += 25;
     planetDiv.appendChild(moonsDiv);
   }
 }
@@ -47,6 +47,9 @@ function getRandomColor() {
 }
 
 solarSystem.forEach((item, index) => {
-  
+
   console.log(item);
 });
+
+// ajouter fct pour changer la couleur de la planète au click
+//ne pas avoir 2 couleur identiques ni du noir.

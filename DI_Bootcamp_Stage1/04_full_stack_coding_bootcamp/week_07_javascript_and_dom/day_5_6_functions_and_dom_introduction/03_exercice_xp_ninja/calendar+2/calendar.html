@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="scr_cal.js" defer></script>
+    <title>Calendriers multiples</title>
+    <style>
+      .calendars-container {
+        display: flex;
+        gap: 40px; /* espace entre chaque calendrier */
+        align-items: flex-start;
+      }
+      table {
+        border-collapse: collapse;
+        text-align: center;
+      }
+      th,
+      td {
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #ccc;
+      }
+      caption {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calendars" class="calendars-container"></div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Challenge: Create a solar system</title>
+    <style>
+      body {
+        background-color: black;
+        padding: 20px;
+      }
+
+      .planet {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        padding: 25px;
+        position: relative;
+        border: 2px solid white;
+        box-sizing: border-box;
+        color: white;
+      }
+
+      .moon {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: rgb(237, 237, 237);
+        border: 3px solid rgb(173, 166, 166);
+
+        /* centre verticalement sur l’axe médian, 
+     mais horizontalement on pilotera avec JS */
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .more {
+        position: absolute;
+        font-size: 1rem;
+        color: white;
+        padding-left: 5px;
+        white-space: nowrap;
+
+        /* même centrage vertical que les lunes */
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://spaceplace.nasa.gov/how-many-moons/en/ -->
+    <section class="listPlanets"></section>
+    <script src="01_script_planets.js"></script>
+  </body>
+</html>

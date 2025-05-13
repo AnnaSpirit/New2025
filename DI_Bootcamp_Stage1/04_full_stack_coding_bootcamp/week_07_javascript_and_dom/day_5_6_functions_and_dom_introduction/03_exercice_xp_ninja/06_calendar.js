@@ -9,41 +9,60 @@
 // Hint: There shouldn’t be any code in the HTML file.The table should be created from the JS file using the DOM.
 
 function createCalendar(year, month) {
-    const table = document.createElement('table'); // Create a table element
-    const headerRow = document.createElement('tr'); // Create a row for the header
+    const table = document.createElement('table');// Create a table element
+    const headerRow = document.createElement('tr');// Create a row for the header
 
-    // Array of weekday names
+    // Weekday names, Monday first
     const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-    // Create header cells for each weekday
-    weekdays.forEach(weekday => {
-        const th = document.createElement('th'); // Create a header cell
-        th.textContent = weekday; // Set the text content to the weekday name
-        headerRow.appendChild(th); // Append the header cell to the header row
+    weekdays.forEach(day => {
+        const th = document.createElement('th');
+        th.textContent = day;
+        headerRow.appendChild(th);
     });
+    table.appendChild(headerRow);
 
-    table.appendChild(headerRow); // Append the header row to the table
+    const firstDay = new Date(year, month - 1, 1);
+    const lastDay = new Date(year, month, 0);
+    const totalDays = lastDay.getDate();
 
-    const firstDayOfMonth = new Date(year, month - 1, 1); // Get the first day of the month
-    const lastDayOfMonth = new Date(year, month, 0); // Get the last day of the month
+    // mapping JS getDay() (0 = Sunday … 6 = Saturday) → index 0 = Monday … 6 = Sunday
+    const getWeekdayIndex = date => (date.getDay() + 6) % 7;
 
-    let currentDate = firstDayOfMonth; // Start from the first day of the month
-    let weekRow; // Variable to hold the current week row
+    let row = document.createElement('tr');
+    table.appendChild(row);
 
-    while (currentDate <= lastDayOfMonth) { // Loop until we reach the last day of the month
-        if (currentDate.getDay() === 1) { // If it's Monday, create a new week row
-            weekRow = document.createElement('tr'); // Create a new row for the week
-            table.appendChild(weekRow); // Append it to the table
-        }
-
-        const td = document.createElement('td'); // Create a cell for the current date
-        td.textContent = currentDate.getDate(); // Set the text content to the date number
-        weekRow.appendChild(td); // Append the cell to the current week row
-
-        currentDate.setDate(currentDate.getDate() + 1); // Move to the next date
+    // 1) cases vides avant le 1er
+    const startIndex = getWeekdayIndex(firstDay);
+    for (let i = 0; i < startIndex; i++) {
+        row.appendChild(document.createElement('td'));
     }
 
-    document.body.appendChild(table); // Append the table to the body of the document
+    // 2) remplir les jours
+    for (let dayNum = 1; dayNum <= totalDays; dayNum++) {
+        const current = new Date(year, month - 1, dayNum);
+        const cell = document.createElement('td');
+        cell.textContent = dayNum;
+        row.appendChild(cell);
+
+        // quand on atteint dimanche, on repart sur une nouvelle ligne
+        if (getWeekdayIndex(current) === 6 && dayNum !== totalDays) {
+            row = document.createElement('tr');
+            table.appendChild(row);
+        }
+    }
+
+    // 3) compléter la dernière ligne (si le mois ne finit pas un dimanche)
+    const endIndex = getWeekdayIndex(lastDay);
+    for (let i = endIndex + 1; i < 7; i++) {
+        row.appendChild(document.createElement('td'));
+    }
+
+    // attacher au DOM
+    document.body.appendChild(table);
 }
 
-console.log(createCalendar(2012, 9)); 
+// Exemple d'utilisation
+// createCalendar(2012, 9);
+// createCalendar(2025, 6);
+createCalendar(1947, 10);
+

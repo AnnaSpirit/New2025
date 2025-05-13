@@ -14,7 +14,7 @@ function uniqueElements(arr) {
 // Example usage:
 const numbers = [1, 2, 3, 4, 5, 1, 2, 3];
 const uniqueNumbers = uniqueElements(numbers);
-console.log("The unique elements in the array are: " + uniqueNumbers); // Output: The unique elements in the array are: 1,2,3,4,5
+// console.log("The unique elements in the array are: " + uniqueNumbers); // Output: The unique elements in the array are: 1,2,3,4,5
 // Test with an empty array
 const emptyArray = [];
 const uniqueInEmptyArray = uniqueElements(emptyArray);
