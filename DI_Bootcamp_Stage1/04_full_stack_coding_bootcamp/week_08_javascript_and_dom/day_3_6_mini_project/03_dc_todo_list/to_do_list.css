@@ -1,0 +1,85 @@
+/* Corps de page avec dégradé rouge-corail */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+/* INFO : Côté perf’,
+un <link>dans le <head>se charge un peu plus vite qu’un @import dans le CSS, mais pour un petit projet c’est souvent négligeable. */
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    font-family: Arial, sans-serif;
+}
+
+/* Boîte blanche centrale */
+.todo-container {
+    background: #fff;
+    width: 320px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+/* Titre */
+.todo-container h1 {
+    margin: 0 0 20px;
+    color: #333;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Formulaire et champs */
+#todoForm {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#todoForm input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+}
+
+#todoForm button {
+    padding: 8px 16px;
+    border: none;
+    background: #3498db;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Zone qui contiendra ultérieurement la liste */
+.listTasks {
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Lien « Clear » en bas à droite */
+.clear {
+    display: block;
+    margin-top: 10px;
+    color: #e74c3c;
+    font-size: 16px;
+    text-align: right;
+}
+
+.clear:hover {
+    text-decoration: underline;
+}
+
+/* Change la couleur de la case à cocher */
+.task-item input[type="checkbox"] {
+    accent-color: rgb(223, 34, 185);
+}

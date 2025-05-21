@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="tell_the_story.js" defer></script>
+    <title>Tell the story</title>
+  </head>
+  <body>
+    <h1>Mad Libs</h1>
+
+    <form id="libform">
+      <label for="noun">Noun:</label><input type="text" id="noun" /><br />
+      <label for="adjective">Adjective:</label
+      ><input type="text" id="adjective" /><br />
+      <label for="person">Someone's Name:</label
+      ><input type="text" id="person" /><br />
+      <label for="verb">Verb:</label><input type="text" id="verb" /><br />
+      <label for="place">A place:</label><input type="text" id="place" /><br />
+      <button id="lib-button">Lib it!</button>
+    </form>
+
+    <div id="story"></div>
+
+    <!-- Bouton Shuffle (désactivé tant que le formulaire n’a pas été soumis) -->
+    <button type="button" id="shuffle-button" disabled>Shuffle Story</button>
+    <!-- <footer>
+      Idee à partir de cet exercice: le cadravre exquis:Premier exemple de
+      structure – Complément de lieu (complément de phrase : « cela se passe où
+      ? ») – Exemple : dans le couloir + Complément de temps (complément de
+      phrase : « cela se passe quand ? ») – Exemple : au moment où sonne la
+      cloche + Groupe nominal qui servira de sujet – Exemple : les petits lapins
+      + Phrase relative pour compléter le GNS – Exemple : qui allument des
+      bougies + Verbe transitif direct, on doit pouvoir le compléter en
+      répondant à « qui ? » ou « quoi ? » – Exemple : réclament + Adverbe –
+      Exemple : joliment + Groupe nominal qui servira de complément d’objet
+      direct – Exemple : des cahiers + Adjectif pour compléter le COD – Exemple
+      : bleus + Complément de manière (complément de phrase : « cela se passe
+      comment ? ») – Exemple : en dansant la valse « Dans le couloir, au moment
+      où sonne la cloche, les petits lapins, qui allument des bougies, réclament
+      joliment des cahiers bleus en dansant la valse. »
+
+      Ou meme Blanc manger-Coco
+      .
+      .
+      
+    </footer> -->
+  </body>
+</html>

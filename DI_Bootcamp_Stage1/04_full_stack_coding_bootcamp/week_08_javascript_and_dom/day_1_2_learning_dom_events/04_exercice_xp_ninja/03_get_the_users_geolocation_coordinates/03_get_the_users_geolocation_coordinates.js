@@ -18,7 +18,7 @@ locateBtn.addEventListener('click', function () {
         status.textContent = 'Géolocalisation non supportée par ton navigateur.';
         return;
     }
-    status.textContent = 'Récupération de la position en cours… ⏳';
+    status.textContent = 'Recovery of the current position ...⏳';
     navigator.geolocation.getCurrentPosition(success, error);
 });
 
