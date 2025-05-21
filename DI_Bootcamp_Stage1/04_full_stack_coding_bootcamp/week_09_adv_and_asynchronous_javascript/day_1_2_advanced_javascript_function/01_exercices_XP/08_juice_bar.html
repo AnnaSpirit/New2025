@@ -1,0 +1,81 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Juice Bar</title>
+  </head>
+  <body>
+    <script src="08_juice_bar.js"></script>
+
+    <div>
+      <h3>Explication et but de l'exercice</h3>
+
+      Pas de panique, je te fais un petit dessin (à l’écrit) pour que ce soit
+      plus clair :
+      <br />
+      Le bar à jus, c’est ta fonction makeJuice(size)
+      <br />
+      Imagine que makeJuice soit l’ouverture de ton food-truck : tu choisis la
+      taille du verre (small, medium, large).
+      <br />
+      À l’intérieur, tu veux garder trace privée de tous les ingrédients qu’on
+      va te demander.
+      <br />
+      Le tableau ingredients = ta “caisse” secrète
+      <br />
+      C’est un array vide, personne d’autre que toi (ton food-truck) ne peut y
+      toucher directement depuis l’extérieur.
+      <br />
+      addIngredients(ing1, ing2, ing3) = la récolte des fruits
+      <br />
+      À chaque appel, tu glisses trois fruits (ou légumes, ou épices) dans ta
+      caisse.
+      <br />
+      Tu appelles cette fonction deux fois : hop, 6 ingrédients différents dans
+      le tableau.
+      <br />
+      displayJuice() = la mise en scène finale
+      <br />
+      Une fois tes 6 ingrédients en stock, tu ouvres la caisse, tu fabriques ta
+      phrase magique (“Le client veut un large juice contenant apple, banana…”),
+      et tu l’affiches dans le DOM.
+      <br />
+      C’est le moment où tu rends visible au client ce qu’il va déguster.
+      <br />
+      L’astuce “closure”
+      <br />
+      Les deux fonctions internes — addIngredients et displayJuice — vivent à
+      l’intérieur de makeJuice. Elles partagent donc le même espace mémoire :
+      <br />
+      Elles voient la variable ingredients.
+      <br />
+      Elles conservent l’état (les ingrédients ajoutés) même après plusieurs
+      appels.
+      <br />
+      En résumé But pédagogique : te montrer comment encapsuler des données (ton
+      tableau d’ingrédients) et étendre ton code avec des fonctions imbriquées
+      qui peuvent :
+      <br />
+      accumuler des infos,
+      <br />
+      les utiliser plus tard pour afficher un résultat.
+      <br />
+      Utilité pratique : ce pattern (closure + fonctions imbriquées) sert chaque
+      fois que tu veux :
+      <br />
+      garder un état privé dans une fonction,
+      <br />
+      exposer seulement certaines actions (ajouter, afficher, supprimer…)
+      <br />
+      éviter de polluer l’espace global avec plein de variables.
+      <br />
+      C’est un peu comme un petit frigo secret : tu y mets ce que tu veux, et
+      seuls ceux qui connaissent la combinaison (tes inner functions) peuvent y
+      accéder ! Voilà pourquoi on appelle ça une closure.
+      <br />
+      J’espère que c’est plus limpide ! Si tu veux d’autres exemples ou un
+      schéma, dis-moi. 😉
+    </div>
+  </body>
+</html>

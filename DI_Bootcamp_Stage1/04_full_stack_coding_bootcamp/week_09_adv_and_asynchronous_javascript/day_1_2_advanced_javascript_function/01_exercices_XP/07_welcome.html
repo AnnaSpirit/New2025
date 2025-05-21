@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome Navbar</title>
+    <style>
+      /* Styles basiques pour la navbar */
+      #navbar {
+        display: flex;
+        align-items: center;
+        background-color: #333;
+        padding: 10px;
+        color: #fff;
+        font-family: sans-serif;
+      }
+      #logo {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      #user-info {
+        margin-left: auto; /* pousse l’info user tout à droite */
+        display: flex;
+        align-items: center;
+      }
+      .profile-pic {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 8px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="navbar">
+        <div id="logo">MonSite</div>
+        <!-- <- Le div #user-info sera injecté ici par le JS -->
+      </div>
+    </nav>
+
+    <script src="07_welcome.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+function winBattle() {
+    return true;
+}
+
+// Déclare winBattle comme une arrow function qui renvoie true
+const winBattle = () => true;
+
+// Utilise un ternaire pour attribuer 10 points si victoire, sinon 1 point
+const experiencePoints = winBattle() ? 10 : 1;
+
+// Affiche le résultat dans la console
+console.log(experiencePoints);
+
+
+// Explications
+
+// Arrow function : const winBattle = () => true; remplace la syntaxe classique function winBattle() { return true; }.
+
+// Ternary operator: winBattle() ? 10 : 1 vérifie le retour de la fonction; si c’est true, on obtient 10, sinon 1.
+
+// Console.log permet de voir directement que experiencePoints vaut bien 10(puisque winBattle() renvoie true).

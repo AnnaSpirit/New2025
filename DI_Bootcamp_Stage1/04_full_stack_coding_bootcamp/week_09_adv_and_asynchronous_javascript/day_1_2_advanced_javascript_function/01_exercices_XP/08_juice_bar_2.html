@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="08_juice_bar_2.js"></script>
+    <title>Juice Bar Interactive</title>
+    <style>
+      /* Grille de 4 colonnes pour les checkboxes */
+      .ingredients-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        max-width: 600px;
+        margin: 1rem 0;
+      }
+      .ingredient-item {
+        display: flex;
+        align-items: center;
+      }
+      #message {
+        font-family: sans-serif;
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🍹 Build Your Juice</h1>
+    <form id="juice-form">
+      <!-- Sélection de la taille -->
+      <label for="size">Choose size:</label>
+      <select id="size" name="size">
+        <option value="small">Small</option>
+        <option value="medium" selected>Medium</option>
+        <option value="large">Large</option>
+      </select>
+
+      <!-- Grille de 20 ingrédients (min 2, max 6) -->
+      <div class="ingredients-grid">
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing1"
+            name="ingredients"
+            value="Apple"
+          /><label for="ing1">Apple</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing2"
+            name="ingredients"
+            value="Banana"
+          /><label for="ing2">Banana</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing3"
+            name="ingredients"
+            value="Cherry"
+          /><label for="ing3">Cherry</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing4"
+            name="ingredients"
+            value="Orange"
+          /><label for="ing4">Orange</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing5"
+            name="ingredients"
+            value="Mango"
+          /><label for="ing5">Mango</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing6"
+            name="ingredients"
+            value="Kiwi"
+          /><label for="ing6">Kiwi</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing7"
+            name="ingredients"
+            value="Strawberry"
+          /><label for="ing7">Strawberry</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing8"
+            name="ingredients"
+            value="Pineapple"
+          /><label for="ing8">Pineapple</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing9"
+            name="ingredients"
+            value="Peach"
+          /><label for="ing9">Peach</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing10"
+            name="ingredients"
+            value="Grapes"
+          /><label for="ing10">Grapes</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing11"
+            name="ingredients"
+            value="Watermelon"
+          /><label for="ing11">Watermelon</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing12"
+            name="ingredients"
+            value="Lemon"
+          /><label for="ing12">Lemon</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing13"
+            name="ingredients"
+            value="Lime"
+          /><label for="ing13">Lime</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing14"
+            name="ingredients"
+            value="Blueberry"
+          /><label for="ing14">Blueberry</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing15"
+            name="ingredients"
+            value="Raspberry"
+          /><label for="ing15">Raspberry</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing16"
+            name="ingredients"
+            value="Coconut"
+          /><label for="ing16">Coconut</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing17"
+            name="ingredients"
+            value="Papaya"
+          /><label for="ing17">Papaya</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing18"
+            name="ingredients"
+            value="Pear"
+          /><label for="ing18">Pear</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing19"
+            name="ingredients"
+            value="Melon"
+          /><label for="ing19">Melon</label>
+        </div>
+        <div class="ingredient-item">
+          <input
+            type="checkbox"
+            id="ing20"
+            name="ingredients"
+            value="Passionfruit"
+          /><label for="ing20">Passionfruit</label>
+        </div>
+      </div>
+
+      <button type="submit">Make Juice</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
