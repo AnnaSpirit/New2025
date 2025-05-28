@@ -131,4 +131,3 @@ document
             })
             .forEach(createRobotCard);
     });
-
