@@ -1,0 +1,10 @@
+Name      : rr
+Age       : 12
+Attributes:
+  - Strength    : 17
+  - Dexterity   : 12
+  - Constitution: 8
+  - Intelligence: 13
+  - Wisdom      : 16
+  - Charisma    : 9
+--------------------------

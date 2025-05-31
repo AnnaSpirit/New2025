@@ -1,0 +1,14 @@
+[
+  {
+    "name": "rr",
+    "age": 12,
+    "stats": {
+      "Strength": 17,
+      "Dexterity": 12,
+      "Constitution": 8,
+      "Intelligence": 13,
+      "Wisdom": 16,
+      "Charisma": 9
+    }
+  }
+]
