@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page divisée en 4 mini‐maquettes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Conteneur principal en 2×2 -->
+    <div class="grid-container">
+      <!-- ================= Cellule 1 : Mock 1 ================= -->
+      <div class="cell">
+        <div class="mock1">
+          <!-- Ligne 1 : rose (80×60) + bleu (280×60) -->
+          <div class="row">
+            <div class="box left">
+              <img
+                src="https://via.placeholder.com/80x60/ea9999/000000?text=ROSE"
+                alt="pavé rose"
+              />
+            </div>
+            <div class="box right">
+              <img
+                src="https://via.placeholder.com/280x60/9fc5e8/000000?text=BLAU"
+                alt="pavé bleu"
+              />
+            </div>
+          </div>
+          <!-- Ligne 2 : même configuration -->
+          <div class="row">
+            <div class="box left">
+              <img
+                src="https://via.placeholder.com/80x60/ea9999/000000?text=ROSE"
+                alt="pavé rose"
+              />
+            </div>
+            <div class="box right">
+              <img
+                src="https://via.placeholder.com/280x60/9fc5e8/000000?text=BLAU"
+                alt="pavé bleu"
+              />
+            </div>
+          </div>
+          <!-- Ligne 3 : idem -->
+          <div class="row">
+            <div class="box left">
+              <img
+                src="https://via.placeholder.com/80x60/ea9999/000000?text=ROSE"
+                alt="pavé rose"
+              />
+            </div>
+            <div class="box right">
+              <img
+                src="https://via.placeholder.com/280x60/9fc5e8/000000?text=BLAU"
+                alt="pavé bleu"
+              />
+            </div>
+          </div>
+          <!-- Bandeau jaune full‐width (360×60) -->
+          <div class="row fullwidth">
+            <div class="box full">
+              <img
+                src="https://via.placeholder.com/360x60/f9cb9c/000000?text=BANDEAU+JAUNE"
+                alt="bandeau jaune"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.cell (Mock 1) -->
+
+      <!-- ================= Cellule 2 : Mock 2 ================= -->
+      <div class="cell">
+        <div class="mock2">
+          <!-- En-tête violet full-width (420×80) -->
+          <div class="row fullwidth">
+            <div class="box full">
+              <img
+                src="https://via.placeholder.com/420x80/8e7cc3/ffffff?text=ENTÊTE+VIOLET"
+                alt="bandeau violet"
+              />
+            </div>
+          </div>
+          <!-- Trois colonnes rouges/vertes/oranges (130×200 chacune) -->
+          <div class="row three-col">
+            <div class="box red">
+              <img
+                src="https://via.placeholder.com/130x200/e06666/ffffff?text=COL1"
+                alt="colonne rouge"
+              />
+            </div>
+            <div class="box blue">
+              <img
+                src="https://via.placeholder.com/130x200/93c47d/ffffff?text=COL2"
+                alt="colonne blue"
+              />
+            </div>
+            <div class="box orange">
+              <img
+                src="https://via.placeholder.com/130x200/f6b26b/ffffff?text=COL3"
+                alt="colonne orange"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.cell (Mock 2) -->
+
+      <!-- ================= Cellule 3 : Mock 3 ================= -->
+      <div class="cell">
+        <div class="mock3">
+          <!-- En-tête vert full-width (420×80) -->
+          <div class="row fullwidth">
+            <div class="box full">
+              <img
+                src="https://via.placeholder.com/420x80/6aa84f/ffffff?text=ENTÊTE+VERT"
+                alt="bandeau vert"
+              />
+            </div>
+          </div>
+          <!-- Trois images d'arbre (130×100 chacune) -->
+          <div class="row three-col">
+            <div class="box">
+              <img src="arbre.png" alt="arbre 1" />
+            </div>
+            <div class="box">
+              <img src="arbre.png" alt="arbre 2" />
+            </div>
+            <div class="box">
+              <img src="arbre.png" alt="arbre 3" />
+            </div>
+          </div>
+          <!-- Trois pavés couleur (orange/rouge/bleu) (130×100 chacun) -->
+          <div class="row three-col">
+            <div class="box orange">
+              <!-- <img
+                src="https://via.placeholder.com/130x100/f6b26b/ffffff?text=ORANGE"
+                alt="pavé orange"
+              /> -->
+            </div>
+            <div class="box red">
+              <!-- <img
+                src="https://via.placeholder.com/130x100/e06666/ffffff?text=ROUGE"
+                alt="pavé rouge"
+              /> -->
+            </div>
+            <div class="box blue">
+              <!-- <img
+                src="https://via.placeholder.com/130x100/6d9eeb/ffffff?text=BLEU"
+                alt="pavé bleu"
+              /> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.cell (Mock 3) -->
+
+      <!-- ================= Cellule 4 : Mock 3 Variante (background‐image) ================= -->
+      <div class="cell">
+        <div class="mock3-alt">
+          <!-- En-tête vert full-width (même que Mock 3) -->
+          <div class="row fullwidth">
+            <div class="box full">
+              <img
+                src="https://via.placeholder.com/420x80/6aa84f/ffffff?text=ENTÊTE+VERT"
+                alt="bandeau vert"
+              />
+            </div>
+          </div>
+          <!-- Trois boîtes avec background-image pour l'arbre -->
+          <div class="row three-col">
+            <div class="box tree-bg"></div>
+            <div class="box tree-bg"></div>
+            <div class="box tree-bg"></div>
+          </div>
+          <!-- Trois pavés couleur (orange/rouge/bleu) identiques à Mock 3 -->
+          <div class="row three-col">
+            <div class="box orange">
+              <!-- <img
+                src="https://via.placeholder.com/130x100/f6b26b/ffffff?text=ORANGE"
+                alt="pavé orange"               />-->
+            </div>
+            <div class="box red">
+              <!-- <img
+                src="https://via.placeholder.com/130x100/e06666/ffffff?text=ROUGE"
+                alt="pavé rouge" 
+              />-->
+            </div>
+            <div class="box blue">
+              <!-- <img
+                src="https://via.placeholder.com/130x100/6d9eeb/ffffff?text=BLEU"
+                alt="pavé bleu" 
+              />-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.cell (Mock 3-alt) -->
+    </div>
+    <!-- /.grid-container -->
+  </body>
+</html>

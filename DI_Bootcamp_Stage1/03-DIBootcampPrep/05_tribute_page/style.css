@@ -41,6 +41,7 @@ h2 {
     color: #1E3E39;
     text-transform: capitalize;
     text-decoration: underline #FC0724;
+    margin-top: 115px;
 }
 
 h3 {
@@ -61,18 +62,19 @@ h4 {
 }
 
 footer {
-    
+
     font-size: medium;
-    
-    
+
+
 }
 
-footer>p{
+footer>p {
     color: darkolivegreen;
     font-size: 26px;
     text-align: center;
     font-weight: bold;
 }
+
 .container {
     position: relative;
     width: 1100px;
@@ -167,6 +169,8 @@ footer>p{
 .intro1 {
     margin-right: 48px;
     background-color: #fddd8b;
+    border-radius: 10px;
+    margin-left: 15px;
 }
 
 

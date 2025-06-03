@@ -1,0 +1,408 @@
+.major-mono-display-regular {
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+p {
+    text-align: center;
+    /* Centre le texte du titre */
+    color: #401a90;
+    /* Couleur du texte */
+    font-family: Major Mono Display, monospace;
+    /* Police de caractères */
+
+}
+
+h1 {
+    margin-top: 20px;
+    /* Espace au-dessus du titre */
+    font-size: 52px;
+    background-color: #f1c27d;
+    font-style: italic;
+}
+
+p {
+    text-decoration: underline double rgb(18, 32, 217);
+    background-color: blue;
+    color: white;
+}
+
+/* ----------------------------------------
+   Sélecteur : .robot
+   - Le point (.) indique une classe.
+   - Ici, on cible l’élément de classe "robot".
+   - Cet élément sera centré horizontalement sous un futur <h1>, avec un margin-top pour l’espacer.
+---------------------------------------- */
+.robot {
+    width: 250px;
+    /* Largeur fixe pour le robot */
+    margin: 20px auto 0;
+    /* 20px de marge en haut, auto pour centrer sur l’axe horizontal */
+    position: relative;
+    /* Nécessaire pour positionner les enfants (bras, jambes…) en absolu */
+    height: 400px;
+    margin: 50px auto;
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .head
+     - Un espace entre ".robot" et ".head" signifie : l’élément de classe "head" AU SEIN de l’élément de classe "robot".
+     - On stylise la tête du robot avec une taille, une couleur verte, et un z-index pour la mettre au-dessus (surtout par rapport aux bras/jambes).
+  ---------------------------------------- */
+.robot .head {
+    width: 200px;
+    height: 100px;
+    background: rgb(2, 212, 2);
+    /* Vert clair du robot */
+    border-radius: 255px 255px 10px 10px;
+    /* Bords arrondis pour une tête plus “douce” */
+    margin: 0 auto;
+    /* Centre horizontalement la tête dans .robot */
+    position: relative;
+    /* Permet de positionner les yeux et antennes en absolu à l’intérieur */
+    z-index: 2;
+    /* Assure que la tête reste toujours au-dessus du reste */
+    transition: transform 0.3s;
+    /* Transition pour l’effet hover de rotation */
+}
+
+/* ----------------------------------------
+     Hover spécifique à la tête :
+     - Sélecteur : .robot .head:hover
+     - Lorsqu’on survole la tête (et seulement la tête), elle tourne d’environ 20 degrés.
+  ---------------------------------------- */
+.robot .head:hover {
+    transform: rotate(20deg);
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .head .eyes
+     - Chaîne de classes : on cible l’élément de classe "eyes" À L’INTÉRIEUR de "head", lui-même À L’INTÉRIEUR de "robot".
+     - Cette règle dessine les yeux rouges, placés au centre de la tête.
+  ---------------------------------------- */
+.robot .head .eye {
+    width: 40px;
+    height: 20px;
+    background: rgb(166, 32, 57);
+    /* Rouge des yeux */
+    border-radius: 10px;
+    /* Légèrement arrondi pour ressembler à deux œufs côte à côte */
+    position: absolute;
+    /* On positionne par rapport à .head */
+    top: 35px;
+    /* 35px depuis le haut de .head */
+    left: calc(50% - 20px);
+    /* Centre horizontalement (50% - la moitié de la largeur des yeux) */
+}
+
+.robot .head .eye-left {
+    left: 50px;
+    /* Décalage depuis le bord gauche de .head */
+}
+
+.robot .head .eye-left:hover {
+    transform: scale(0.8);
+    /* Exemple : on agrandit légèrement l’œil au hover */
+}
+
+.robot .head .eye-right {
+    left: calc(100% - 90px);
+    /* 100% de la tête - largeur œil (40px) - 60px de marge interne */
+}
+
+.robot .head .eye-right:hover {
+    transform: scale(1.4);
+    /* Même effet d’agrandissement au hover */
+}
+
+
+
+
+/* ----------------------------------------
+     Sélecteur : .robot .head .antenna
+     - On cible les deux antennes grâce à la classe commune "antenna" située DANS la tête.
+     - Les antennes sont positionnées absolument par rapport à .head.
+  ---------------------------------------- */
+.robot .head .antenna {
+    width: 6px;
+    height: 70px;
+    background: #a4c639;
+    /* Couleur des antennes */
+    position: absolute;
+    /* Positionnement relatif à .head */
+    top: -60px;
+    /* Au-dessus de la tête */
+    transition: transform 0.3s;
+    /* Pour l’effet hover si on veut animer l’antenne individuellement */
+    border-radius: 5px;
+}
+
+/* ----------------------------------------
+     Hover spécifique à l’antenne gauche :
+     - Sélecteur : .robot .head .antenna-left:hover
+     - Lorsqu’on survole l’antenne gauche, on peut la faire “trembler” ou la faire bouger de 20 degrés.
+     - Ici, on garde l’inclinaison initiale mais on pourrait ajouter un petit effet si besoin.
+  ---------------------------------------- */
+.robot .head .antenna-left:hover {
+    transform: rotate(-30deg);
+    /* Exemple : on réduit l’angle pour un effet */
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .head .antenna-left
+     - On cible spécifiquement l’antenne gauche (classe "antenna-left").
+     - Pas d’espace avant .antenna-left : on combine deux classes sur le même élément (antenna ET antenna-left).
+     - transform: rotate(-60deg) pour l’incliner à 60° vers la gauche.
+  ---------------------------------------- */
+.robot .head .antenna-left {
+    left: 60px;
+    /* Décalage de 20px depuis le bord gauche de .head */
+    transform: rotate(-60deg);
+    /* Inclinée à 60° vers la gauche */
+    transform-origin: bottom center;
+    /* Le point de rotation se situe au bas de l’antenne */
+}
+
+/* ----------------------------------------
+     Hover spécifique à l’antenne droite :
+     - Sélecteur : .robot .head .antenna-right:hover
+     - Au survol, on peut donner un petit mouvement.
+  ---------------------------------------- */
+.robot .head .antenna-right:hover {
+    transform: rotate(45deg);
+    /* Exemple : on fléchit un peu */
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .head .antenna-right
+     - On cible l’antenne droite (classe "antenna-right").
+     - Même principe que pour la gauche, mais inclinée à droite.
+  ---------------------------------------- */
+.robot .head .antenna-right {
+    right: 60px;
+    /* Décalage de 20px depuis le bord droit de .head */
+    transform: rotate(60deg);
+    /* Inclinée à 60° vers la droite */
+    transform-origin: bottom center;
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .body
+     - On cible l’élément de classe "body" À L’INTÉRIEUR de "robot".
+     - Cet élément contiendra le torse et les membres.
+  ---------------------------------------- */
+.robot .body {
+    position: relative;
+    /* Permet de positionner les enfants (torso, limbs) en absolu */
+    margin-top: -10px;
+    /* Remonte légèrement pour que le torse chevauche un peu le bas de la tête */
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .body .torso
+     - On cible l’élément de classe "torso" À L’INTÉRIEUR de "body".
+     - z-index élevé (3) pour être au-dessus des bras/jambes (arrière-plan).
+  ---------------------------------------- */
+.robot .body .torso {
+    width: 200px;
+    height: 180px;
+    background: rgb(2, 212, 2);
+    /* Même vert que la tête */
+    margin: 25px auto;
+    /* Centre horizontalement dans .body */
+    border-radius: 25%;
+    position: relative;
+    /* Pour que le z-index fonctionne */
+    z-index: 3;
+    /* Toujours au premier plan */
+    transition: all 0.3s;
+    /* Pour l’effet hover (bord vert + couleur peau) */
+}
+
+/* ----------------------------------------
+     Hover spécifique au torse :
+     - Sélecteur : .robot .torso:hover
+     - Survol du torse → on modifie sa bordure et sa couleur de fond.
+  ---------------------------------------- */
+.robot .torso:hover {
+    border: 6px solid rgb(2, 212, 2);
+    /* Bordure verte */
+    background: #f1c27d;
+    /* Couleur de peau */
+    border-radius: 100%;
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .body .limbs
+     - Conteneur général des membres (bras et jambes).
+  ---------------------------------------- */
+.robot .body .limbs {
+    position: relative;
+    /* Les membres seront positionnés relativement à ce conteneur */
+    /* margin-top: -150px; */
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .body .limbs .arm-left
+     - On cible le bras gauche (classe "arm-left") À L’INTÉRIEUR de "limbs".
+     - z-index bas (1) pour que le torse (z-index 3) passe devant.
+     - transform-origin pour pivoter depuis l’épaule.
+  ---------------------------------------- */
+.robot .body .limbs .arm-left {
+    width: 100px;
+    height: 25px;
+    background: rgb(2, 212, 2);
+    /* Vert initial */
+    position: absolute;
+    /* Positionné dans .limbs */
+    top: -150px;
+    /* 20px en dessous du haut de .limbs (approximatif) */
+    left: -80px;
+    /* Déplacé à gauche du torse */
+    transform-origin: right center;
+    /* L’épaule est le point de rotation */
+    z-index: 1;
+    /* Derrière le torse */
+    transition: transform 0.3s;
+    /* Pour la rotation au hover */
+    border-radius: 0px 15px 15px 15px;
+}
+
+/* ----------------------------------------
+     Hover spécifique au bras gauche :
+     - Sélecteur : .robot .arm-left:hover
+     - Survol du bras gauche → il pivote à l’horizontale (90deg) et déclenche l’animation arc-en-ciel de 3s.
+  ---------------------------------------- */
+.robot .arm-left:hover {
+    transform: rotate(60deg);
+    /* Bras gauche à l’horizontale */
+    animation: rainbow 0.5s infinite;
+    /* Animation de couleur arc-en-ciel */
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .body .limbs .arm-right
+     - Même principe que l’autre bras, mais à droite.
+  ---------------------------------------- */
+.robot .body .limbs .arm-right {
+    width: 100px;
+    height: 25px;
+    background: rgb(2, 212, 2);
+    position: absolute;
+    top: -150px;
+    right: -80px;
+    /* Déplacé à droite du torse */
+    transform-origin: left center;
+    /* Pivot depuis l’épaule droite */
+    z-index: 1;
+    transition: transform 1s;
+    border-radius: 15px 15px 0px 15px;
+}
+
+/* ----------------------------------------
+     Hover spécifique au bras droit :
+     - Sélecteur : .robot .arm-right:hover
+     - Survol du bras droit → il se lève à environ 120 degrés et active l’animation arc-en-ciel.
+  ---------------------------------------- */
+.robot .arm-right:hover {
+    transform: rotate(55deg);
+    /* Bras droit levé */
+    animation: rainbow 3s infinite;
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .body .limbs .leg-left
+     - On cible la jambe gauche (classe "leg-left") À L’INTÉRIEUR de "limbs".
+     - z-index faible pour rester en arrière-plan.
+  ---------------------------------------- */
+.robot .body .limbs .leg-left {
+    width: 30px;
+    height: 100px;
+    background: rgb(2, 212, 2);
+    position: absolute;
+    bottom: -80px;
+    /* 50px sous le bas de .limbs */
+    left: 55px;
+    /* 20px depuis le bord gauche du torse */
+    z-index: 1;
+    transition: all 0.3s;
+    /* Pour translation et changement de couleur au hover */
+    border-radius: 0px 0px 15px 15px;
+}
+
+/* ----------------------------------------
+     Hover spécifique à la jambe gauche :
+     - Sélecteur : .robot .leg-left:hover
+     - Survol de la jambe gauche → elle change de couleur en vert foncé et monte de 16px.
+  ---------------------------------------- */
+.robot .body .limbs .leg-left:hover {
+    background: rgb(1, 150, 1);
+    /* Vert plus foncé */
+    transform: translateY(-50px);
+    /* Monte de 50px */
+}
+
+/* ----------------------------------------
+     Sélecteur : .robot .body .limbs .leg-right
+     - Même principe pour la jambe droite.
+  ---------------------------------------- */
+.robot .body .limbs .leg-right {
+    width: 30px;
+    height: 100px;
+    background: rgb(2, 212, 2);
+    position: absolute;
+    bottom: -80px;
+    right: 55px;
+    /* 20px depuis le bord droit du torse */
+    z-index: 1;
+    transition: all 0.3s;
+    border-radius: 0px 0px 15px 15px;
+}
+
+/* ----------------------------------------
+     Hover spécifique à la jambe droite :
+     - Sélecteur : .robot .leg-right:hover
+     - Survol de la jambe droite → même changement qu’à gauche (couleur + déplacement).
+  ---------------------------------------- */
+.robot .body .limbs .leg-right:hover {
+    background: rgb(2, 109, 16);
+    transform: translateY(-40px);
+}
+
+/* ----------------------------------------
+     Animation “rainbow” pour l’effet arc-en-ciel sur les bras
+     - Nom de l’animation : rainbow
+     - Durée : 3 secondes
+     - infinite : en boucle continue
+  ---------------------------------------- */
+@keyframes rainbow {
+    0% {
+        background: red;
+    }
+
+    16% {
+        background: orange;
+    }
+
+    33% {
+        background: yellow;
+    }
+
+    50% {
+        background: green;
+    }
+
+    66% {
+        background: blue;
+    }
+
+    83% {
+        background: indigo;
+    }
+
+    100% {
+        background: violet;
+    }
+}
