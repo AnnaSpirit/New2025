@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* ----------------------------------------
+   Styles généraux
+---------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka One', cursive;
+    /* Fond en dégradé du haut vers le bas */
+    background-image: linear-gradient(180deg, #89f7fe 0%, #66a6ff 100%);
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 92px;
+    color: #ffdf00;
+    -webkit-text-stroke: 2px #000000;
+    text-shadow: 2px 2px gray;
+    margin-bottom: 20px;
+}
+
+/* Sous-titre/auteur */
+h5 {
+    color: #000000;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+h3 a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Flex utilities */
+.flex {
+    display: flex;
+}
+
+/* Conteneur global du jeu */
+.game-display {
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+/* Conteneurs de lignes */
+.game-container {
+    flex-direction: column;
+}
+
+.container {
+    flex-direction: row;
+}
+
+/* ----------------------------------------
+   Styles pour les cases
+---------------------------------------- */
+.box {
+    position: relative;
+    /* Nécessaire pour centrer le <p> en absolute */
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 2px silver;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effet de hover : légère ombre et éclaircissement */
+.box:hover {
+    background-color: #f0f0f0;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------------------------------
+   Symbole X ou O (inséré via JS)
+---------------------------------------- */
+.symbol {
+    /* 1) On supprime toute marge auto du <p> */
+    margin: 0;
+
+    /* 2) Position absolue, centrée */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* 3) Taille adaptée à 100×100 px */
+    font-size: 80px;
+    line-height: 1;
+    /* Par défaut, on met la couleur en rouge/orange, 
+       mais on ajoutera ultérieurement .symbol.x ou .symbol.o */
+    color: #FF4500;
+}
+
+/* Si on précise le joueur X, on reste en orange/rouge */
+.symbol.x {
+    color: #FF4500;
+}
+
+/* Si on précise le joueur O, on met en bleu vif */
+.symbol.o {
+    color: #1E90FF;
+}
+
+/* ----------------------------------------
+   Overlay de résultat (victoire ou match nul)
+---------------------------------------- */
+#result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    /* s’affiche via JS */
+    opacity: 0.9;
+    flex-direction: column;
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease;
+}
+
+#message {
+    font-size: 50px;
+    color: #ffdf00;
+    text-shadow: 2px 2px black;
+}
+
+#button {
+    padding: 15px 25px;
+    margin-top: 30px;
+    background-color: #ffdf00;
+    color: #000000;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px #333333;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#button:hover {
+    background-color: #fff166;
+    transform: scale(1.05);
+}
+
+/* ----------------------------------------
+   Responsive pour petits écrans
+---------------------------------------- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 52px;
+        -webkit-text-stroke: 2px white;
+    }
+
+    #message {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+}
