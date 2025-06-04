@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anagram Checker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Anagram Checker</h1>
+
+    <!-- SECTION 1: Local (manual) check -->
+    <div class="section" id="manual-section">
+      <h2>1) Local Check</h2>
+      <label for="manual-word1">First word/phrase:</label>
+      <input type="text" id="manual-word1" placeholder="e.g. Astronomer" />
+
+      <label for="manual-word2">Second word/phrase:</label>
+      <input type="text" id="manual-word2" placeholder="e.g. Moon starer" />
+
+      <button id="manual-check-btn">Check Anagram</button>
+
+      <div class="result" id="manual-result"></div>
+    </div>
+
+    <!-- SECTION 2: API check (Datamuse + Anagramica) -->
+    <div class="section" id="api-section">
+      <h2>2) API Check (Datamuse &amp; Anagramica)</h2>
+      <label for="api-word1">First word:</label>
+      <input type="text" id="api-word1" placeholder="e.g. listen" />
+
+      <label for="api-word2">Second word:</label>
+      <input type="text" id="api-word2" placeholder="e.g. silent" />
+
+      <button id="api-check-btn">Check with Datamuse &amp; Anagramica</button>
+
+      <div class="result" id="api-result"></div>
+    </div>
+
+    <!-- Include the two JavaScript files -->
+    <script src="dc_anagram_checker.js"></script>
+    <script src="isAnagramWithAPI.js"></script>
+  </body>
+</html>
