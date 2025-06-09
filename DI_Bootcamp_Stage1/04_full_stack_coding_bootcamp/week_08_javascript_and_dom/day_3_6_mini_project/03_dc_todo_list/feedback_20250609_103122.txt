@@ -1,0 +1,44 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_3_6_mini_project/03_dc_todo_list/to_do_list.css
+suggestions for improvement:
+- The code is missing the JavaScript functionality to add tasks to the array and the DOM.  It only provides the HTML and CSS structure.
+- Implement `addTask()`, `doneTask()` (Bonus I), and `deleteTask()` (Bonus II) functions as specified in the instructions.  These functions should handle adding tasks to the array, updating the DOM, and managing task completion and deletion.
+- Add error handling for the case where the input is empty when the user clicks the submit button.  Currently, there's no check for empty input.
+- The CSS is well-structured and readable but it's missing the styling for the task items (checkbox and 'X' button) within the `.listTasks` div.  Add appropriate CSS for these elements.
+- Use more descriptive names for CSS classes and IDs (e.g., instead of just `todoForm`, use something like `addTaskForm`).
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_3_6_mini_project/03_dc_todo_list/to_do_list.html
+suggestions for improvement:
+- Implement Bonus I: Add task objects with id, text, and done properties.  Update the DOM manipulation to reflect these changes, including the data-task-id attribute and checkbox functionality.
+- Implement Bonus II: Add the `deleteTask` function to remove tasks from the array and the DOM when the 'X' button is clicked.
+- Add error handling for cases where the input might be invalid (e.g., excessively long).
+- Improve styling with CSS to match the provided image more closely.  Consider using a CSS framework like Bootstrap or Tailwind CSS for easier styling.
+- Use more descriptive variable names (e.g., instead of `tasks`, perhaps `todoList`).
+Correctness: 85%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_3_6_mini_project/03_dc_todo_list/to_do_list.js
+suggestions for improvement:
+- Implement Bonus I:  Add task objects with id, text, and done properties.  Use data attributes for task IDs in the DOM.
+- Implement Bonus II: Add a `deleteTask` function to remove tasks from the array and DOM when the 'X' button is clicked.
+- Improve styling: Add basic CSS to improve the visual appearance of the to-do list.  The current styling is minimal.
+- Add error handling: Consider adding more robust error handling (e.g., try...catch blocks) for operations that might fail.
+Correctness: 85%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_3_6_mini_project/03_dc_todo_list/to_do_list_bonus.html
+suggestions for improvement:
+- Add error handling for when the user tries to add an empty task. Currently, it simply adds an empty list item.
+- Improve styling to more closely match the provided image, particularly the spacing and visual presentation of list items.
+- The 'Clear' button functionality is missing. Implement the functionality to clear all tasks from the list and the tasks array.
+- Consider using a more descriptive ID for the task counter div (e.g., 'taskCounter').
+- The `doneTask` function should update the task object in the array after updating the DOM. Currently, the array is not updated, resulting in a mismatch between the array and the DOM.
+Correctness: 90%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_3_6_mini_project/03_dc_todo_list/to_do_list_bonus.js
+suggestions for improvement:
+- Add Font Awesome to the project.  The code assumes it's included, but it needs to be explicitly linked.
+- Improve error handling. For instance, what if `document.getElementById('todoForm')`,  `document.getElementById('taskInput')`, `document.querySelector('.listTasks')`, or `document.getElementById('taskCount')` return null?  Consider adding checks and perhaps more informative error messages.
+- Enhance styling with CSS for better visual appeal. Currently, the styling is minimal and relies on inline styles within the JavaScript, which is not best practice.
+- Consider using a more robust method for task ID generation, especially if the to-do list is likely to grow very large.  `nextTaskId++` is sufficient for a small list, but a more sophisticated method would be advisable for scalability.
+- Add accessibility features. For example, appropriate ARIA attributes could enhance accessibility for screen readers.
+Correctness: 95%
+-----
