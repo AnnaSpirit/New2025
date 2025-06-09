@@ -1,0 +1,38 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/02_exercice_XP_animations/01_timer.html
+suggestions for improvement:
+- **Exercise 1: Part I and II:** The code is missing the implementation for Part I and II of Exercise 1.  These parts require the use of `setTimeout` to display an alert and add a paragraph respectively. These should be added to `01_timer.js`.
+- **Exercise 1: Part III:** The code lacks the `setInterval` functionality to add paragraphs every 2 seconds and the clearing of the interval based on button click or paragraph count.  The `clearInterval` function needs to be implemented within `01_timer.js` to handle both conditions.
+- **Exercise 2:** The HTML and Javascript for Exercise 2 are completely missing.  This exercise requires separate HTML and Javascript files to handle animation of the box.
+- **Error Handling:** Add error handling (e.g., `try...catch` blocks) to gracefully handle potential issues, such as the `container` div not being found.
+- **Comments:** Add comments to explain the purpose of different code sections, especially the functions and important logic.
+- **Separation of Concerns:** The JavaScript code should be separated into distinct functions for better organization and readability.
+Correctness: 70%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/02_exercice_XP_animations/01_timer.js
+suggestions for improvement:
+- In Part III, the code could be slightly improved by checking the paragraph count before adding a new paragraph to avoid unnecessary DOM manipulation if the limit is already reached.
+- Add comments to explain the purpose of each section of code, especially the event listener for the button.
+- Consider using more descriptive variable names (e.g., instead of `p`, use `newParagraph`).
+- The animation in Exercise 2 is missing.  The provided code only addresses Exercise 1.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/02_exercice_XP_animations/02_move_the_box.html
+suggestions for improvement:
+- Exercise 1 is missing.  The provided code only addresses Exercise 2.
+- In Exercise 2, the code lacks the `clearInterval` call to stop the animation when the box reaches the right edge. This makes it inefficient and could potentially freeze the browser.
+- Error handling (e.g., checking if elements exist before manipulating them) is missing.
+- The `myMove` function should be more descriptive, e.g., `moveBoxRight`.
+- Add comments to explain the logic, especially for the animation part.
+- The second button (`#downBtn`) is unused and should be removed or given functionality.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/02_exercice_XP_animations/02_move_the_box.js
+suggestions for improvement:
+- The code for Exercise 1 is missing.  Add Javascript code to complete all parts of Exercise 1.
+- The animation in Exercise 2 is unnecessarily split into two phases (horizontal, then vertical).  Combine both movements into one smooth animation if that is possible.
+- Improve the readability by using more descriptive variable names (e.g., instead of `pos`, use `horizontalPosition`).
+- The animation is jerky because it moves 1px every millisecond which is way too fast. Consider increasing the interval (e.g., to 10 milliseconds) and adjusting the speed accordingly.
+- Add error handling. What happens if the elements with IDs 'animate' and 'container' are not found?
+- Add comments to explain the logic and purpose of each section of code.
+Correctness: 80%
+-----
