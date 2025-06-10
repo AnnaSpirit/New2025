@@ -1,93 +1,73 @@
-/** JSON */
+//**JSON    */
 let user = {
-  id: 1,
-  name: "Lena Graham",
-  username: "lena",
-  getFullName: function () {
-    return name;
-  },
-  age: undefined,
-  password: 123456,
-};
+    id: 1,
+    name: "John",
+    username: "john_doe",
+    password: "123456"
+}
 
-// console.log(user);
+console.log(user);
 
-/**
- * JSON.stringify()
- * object,
- * optioanl - filter function
- * optional - indent / prety
- */
+//** JSON stringify method 
+// object
+// option 1 - filter function
+// optional - indent / pretty print
+
+// let userJSON = JSON.stringify(user);
+// console.log(userJSON);
+
+let userJSON = JSON.stringify(user, null, 2); // pretty print with 2 spaces
+// option 2 - array of keys
+console.log(userJSON);
 
 const filterMyJson = (key, value) => {
-  if (key === "password") return undefined//"********";
-  if(key === 'id') return value + '@#4567'
-  return value;
+    if (key === "password") {
+        return "*********"; // replace password with asterisks
+        return undefined; // or you can return undefined to remove the key
+    }
+    return value;
 };
 
-let jsonUser = JSON.stringify(user, filterMyJson, 2);
+let userFronJson = {
+    "id": 1,
+    "name": "Lena Grahams",
+    "username": "L_Grahams",
+    "password": "123456"
+}
+console.log(userFronJson);
+//** JSON parse method
+let userFromJson = JSON.parse(userJSON, filterMyJson);
 
-// console.log(jsonUser);
+//**EXCEPTION */
 
+//Try & Catch*/
 
-let userFromJson = `{
-  "id": "1",
-  "name": "Lena Graham",
-  "username": "lena"
-}`
+// console.log("Start");
+// a
 
-// console.log(userFromJson);
+// console.log("after");
 
-/** JSON.parse */
-// console.log(JSON.parse(userFromJson));
-
-/** Exeption */
-
-/**
- * try & catch block
- * try {
- * 
- * }
- * catch(error) {
- * 
- * }
- */
-
-// console.log('before');
-// try{
-//   a;
+// console.log("Before");
+// try {
+//     a;
 // }
-// catch(error){
-//   // console.log(error);
+// catch (error) {
+//     console.log("Error:", error);
 // }
-// console.log('after');
 
+// console.log("after");
 
-
-function x(num) {
-  // let a = 8
-  if(num === undefined) {
-    throw new Error('num is undefined')
-  }
-
-  try {
-    return a * num
-  }
-  catch(e) {
-    // console.log(e);
-    throw new Error('opps... somthing went wrong in x function')
-  }
+function x(Num) {
+    try {
+        return a * num
+    }
+    catch (e)) {
+        console.log(e.message);
+    }
 }
 
 function y() {
-  try{
-    console.log(x())
-  }
-  catch(e){
-    console.log(e);
-  }
+    console.log(x(/10))
 }
-
 y()
-
-console.log('after');
+console.log("after");
