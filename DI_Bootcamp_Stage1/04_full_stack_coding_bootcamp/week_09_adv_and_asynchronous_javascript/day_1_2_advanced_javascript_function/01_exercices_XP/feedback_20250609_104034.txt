@@ -1,0 +1,95 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/01_scope.js
+suggestions for improvement:
+- Add comments explaining the expected output for each code section, aligning with the instructions to 'predict what will be the value of `a`'.
+- For Exercise 1, explicitly state the expected behavior when using `const` instead of `let` in each part.  The current comments only mention that an error *will* occur, but not the *type* of error.
+- In Exercise 2, add error handling.  What if `winBattle()` returns a non-boolean value?
+- In Exercise 3, the description could be more precise.  Specify that the function should handle various data types beyond strings and arrays (e.g., numbers, objects, null, undefined).
+- Exercise 7 lacks implementation details.  The instructions are vague about where the profile picture should come from (user input, database, etc.).  How should the div be styled?
+- Exercise 8:  Part II's instructions are a bit ambiguous.  Clarify the exact expected output string format (e.g., comma-separated, specific wording).
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/03_Is_it_a_string.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/04_Sum.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/05_Kg_and_grams.js
+suggestions for improvement:
+- The comment explaining the difference between function declaration and function expression could be more concise.  A single sentence highlighting hoisting would suffice.
+- Consider adding more descriptive variable names (e.g., instead of `kg`, use `kilograms`).
+- While the one-line comment is acceptable, a multiline comment might improve readability for the differences between function types.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/06_fortune_teller.js
+suggestions for improvement:
+- The comments are helpful but could be more concise and focus on the specific implementation details rather than general explanations.
+- Consider adding error handling for invalid input types (e.g., non-numeric children, non-string values for other parameters).
+- While the code works correctly, using `document.body.appendChild` might not be the most robust approach for dynamically adding content to a webpage.  It's better to append to a specific element (e.g., a div with an id) to avoid unexpected behavior if the page structure changes.
+Correctness: 95%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/07_welcome.html
+suggestions for improvement:
+- The solution for Exercise 7 (Welcome) successfully adds a div to the navbar, displaying the user's name. However, it lacks the user's profile picture as specified in the instructions.  The implementation could be improved by adding an image element with a suitable URL or placeholder.
+- Add error handling in case the user's name is not provided or is invalid.
+- Improve the styling of the added div for better visual integration with the navbar.  Consider adding CSS classes to the added element for better styling control.
+- The code for other exercises (1-6 and 8) are not provided, so their correctness, readability, etc., cannot be evaluated.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/07_welcome.js
+suggestions for improvement:
+- Add error handling for the case where the 'navbar' element is not found.  The script will throw an error if the navbar element with the specified ID doesn't exist.
+- Consider adding CSS styling to improve the visual presentation of the user information (e.g., image size, positioning, etc.).
+- The profile picture path ('./profile.jpeg') should be made more robust. A relative path might break if the script's location changes. Consider using a more absolute or relative path based on your application's structure.
+- The code assumes the existence of a `profile.jpeg` file.  It would be better to either include the image directly within the HTML or dynamically generate the image element based on user-specific data if the image isn't always 'profile.jpeg'.
+Correctness: 90%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar.html
+suggestions for improvement:
+- The code doesn't fully implement Part II of Exercise 8.  It only adds ingredients once, not twice as requested. The `displayJuice` function is missing, and the output is not displayed in the DOM as specified.
+- Add comments to explain the logic of the nested functions, particularly the closure aspect.
+- Consider using more descriptive variable names (e.g., instead of `ing1`, `ing2`, use `ingredient1`, `ingredient2`).
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar.js
+suggestions for improvement:
+- In Part I, the code directly appends a paragraph to the document body.  It would be better to provide a more specific location, perhaps a div with a specific ID, to avoid potential conflicts and improve organization.  This applies to Part II as well.
+- Consider adding input validation to the `makeJuice` function in Part II to handle cases where the number of ingredients is not a multiple of 3.  Currently it will work as expected, but a more robust error handling will make the function more reliable
+- Add comments explaining the purpose of each function and variable, especially the `ingredients` array and the use of `join()` in `displayJuice`.
+- The comments within the code are helpful but could be improved further by linking to specific requirements from the chapter content.
+Correctness: 90%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar_2.html
+suggestions for improvement:
+- The code doesn't fully address Part II of Exercise 8.  It doesn't dynamically add ingredients based on checkboxes; instead, it provides a pre-defined list.
+- The `displayJuice` function should be improved to handle an array of ingredients, rather than only three.
+- The code lacks error handling. What happens if the user selects no ingredients?  The message will likely break.
+- Consider using more descriptive variable names (e.g., `selectedSize` instead of `size`).
+- The HTML is quite verbose. Consider improving the structure (perhaps using a loop to generate ingredient checkboxes dynamically).
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar_2.js
+suggestions for improvement:
+- The provided code does not address any of the exercises in the Chapter Content/Questions. It implements a juice bar ordering system with ingredient selection and shuffling, which is unrelated to the exercises on scope, ternary operators, arrow functions, or self-invoking functions.
+- The code uses appropriate event listeners and array manipulation for its intended functionality.  The Fisher-Yates shuffle algorithm is efficient.
+- The code is relatively readable, with clear variable names and comments.  However, it's not directly relevant to the chapter's objectives.
+Correctness: 0%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/exercices_XP.html
+suggestions for improvement:
+- **Exercise 1:** Add comments explaining the predictions for each section (1.2, 2.2, 4.2, 5.2).  The current comments only state what the instructions asked for but don't contain the answer.
+- **Exercise 1:**  The code doesn't actually *alert* the answers, it just runs them. Consider adding `console.log` statements for better verification.
+- **Exercise 1:** In sections where `const` is used instead of `let`, explicitly show the error that occurs (e.g., `Uncaught TypeError: Assignment to constant variable`).
+- **Exercise 2:** The code is missing a `console.log` for `experiencePoints`.
+- **Exercise 3:** The arrow function for `isString` is good.  However, a more concise way would be `const isString = (arg) => typeof arg === 'string';`.
+- **Exercise 4:** The one-line arrow function is correctly implemented. Could add more descriptive variable names for better readability.
+- **Exercise 5:** While the three approaches (function declaration, expression, and arrow function) are correct, the comment about the difference is missing.
+- **Exercise 6:** The self-invoking function is missing.  It should create and display the sentence in the DOM (using `document.write` or innerHTML).
+- **Exercise 7:** The self-invoking function for the welcome message needs to actually add the div with profile picture and name to the navbar in the DOM.
+- **Exercise 8:**  Part I is correctly implemented. Part II needs to correctly push the ingredients to the array and use `join()` correctly in the `displayJuice` function to output them properly.
+Correctness: 80%
+-----
