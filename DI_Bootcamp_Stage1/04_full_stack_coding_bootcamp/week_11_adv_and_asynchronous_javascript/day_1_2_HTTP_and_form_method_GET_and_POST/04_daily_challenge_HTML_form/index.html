@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <title>JSON Form Demo</title>
+  </head>
+  <body>
+    <h1>Enter your name</h1>
+    <form id="nameForm">
+      <input type="text" id="firstName" placeholder="First name" required />
+      <input type="text" id="lastName" placeholder="Last name" required />
+      <button type="submit" id="sendBtn">Send</button>
+    </form>
+
+    <!-- Ici on affichera la chaîne JSON -->
+    <pre id="outputJson"></pre>
+    <pre id="outputXml"></pre>
+  </body>
+</html>

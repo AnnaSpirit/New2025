@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <!-- Chargement du script avec defer et async -->
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Section d'affichage de la citation -->
+    <section id="quote-section">
+      <!-- Citation générée ici -->
+    </section>
+
+    <!-- Boutons d'actions sur la citation -->
+    <div id="action-buttons">
+      <button id="count-spaces-btn">Character count (with spaces)</button>
+      <button id="count-no-spaces-btn">Character count (no spaces)</button>
+      <button id="count-words-btn">Word count</button>
+      <button id="like-btn">Like ❤️ (<span id="likes-count">0</span>)</button>
+    </div>
+
+    <!-- Formulaire pour ajouter une nouvelle citation -->
+    <form id="new-quote-form">
+      <input type="text" id="new-quote-input" placeholder="Quote" required />
+      <input type="text" id="new-author-input" placeholder="Author" required />
+      <button type="submit" id="add-quote-btn">Add Quote</button>
+    </form>
+
+    <!-- Formulaire de filtre par auteur -->
+    <form id="filter-form">
+      <input
+        type="text"
+        id="filter-author-input"
+        placeholder="Filter by author"
+        required
+      />
+      <button type="submit" id="filter-author-btn">Filter</button>
+    </form>
+    <div id="navigation-buttons" style="display: none">
+      <button id="prev-btn">Previous</button>
+      <button id="next-btn">Next</button>
+    </div>
+
+    <button id="generate-btn">Generate Quote</button>
+  </body>
+</html>
