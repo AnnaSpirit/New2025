@@ -7,45 +7,43 @@
 /**
  * makeAllCaps: prend un array of words,
  * si tous sont des strings, renvoie un array uppercased,
- * sinon rejette avec un message d'erreur.
+ * sinon rejette avec un message d'erreur précis.
  */
 function makeAllCaps(words) {
     return new Promise((resolve, reject) => {
-        // 👉 astuce : vérifier le type de chaque élément
         const allAreStrings = words.every(item => typeof item === 'string');
-        if (allAreStrings) {
-            // transformer chaque mot en MAJ
-            const uppercased = words.map(w => w.toUpperCase());
-            resolve(uppercased);
-        } else {
-            reject('Error: Not all items are strings 👀');
+        if (!allAreStrings) {
+            reject('Error: Not all items in the array are strings 🛑');
+            return;
         }
+        const uppercased = words.map(w => w.toUpperCase());
+        resolve(uppercased);
     });
 }
 
 /**
  * sortWords: prend un array of UPPERCASED words,
  * si length > 4, renvoie le tableau trié alphabétiquement,
- * sinon rejette avec raison.
+ * sinon rejette avec un message clair.
  */
 function sortWords(words) {
     return new Promise((resolve, reject) => {
-        // 👉 astuce : vérifier la longueur avant de trier
-        if (words.length > 4) {
-            const sorted = [...words].sort(); // copie avant tri
-            resolve(sorted);
-        } else {
-            reject('Error: Array length must be > 4 to sort 🎯');
+        if (words.length <= 4) {
+            reject('Error: Array length must be greater than 4 for sorting 📑');
+            return;
         }
+        const sorted = [...words].sort();
+        resolve(sorted);
     });
 }
 
-// Fonction pour exécuter le challenge 1 et afficher
+/**
+ * runChallenge1: exécute les 3 tests et affiche dans #output-ch1
+ */
 function runChallenge1() {
     const output = document.getElementById('output-ch1');
-    output.textContent = ''; // reset
+    output.textContent = '';
 
-    // trois tests
     const tests = [
         [1, 'pear', 'banana'],
         ['apple', 'pear', 'banana'],
@@ -64,46 +62,47 @@ function runChallenge1() {
     });
 }
 
-// bind du bouton
 document.getElementById('run-ch1').addEventListener('click', runChallenge1);
-
 
 // ------------------------------
 // Challenge 2: Morse converter
 // ------------------------------
 
 /**
- * toJs: convertit la chaîne JSON en objet JS.
- * rejette si l'objet est vide.
+ * toJs: convertit la chaîne JSON en objet JS,
+ * rejette si vide ou JSON invalide.
  */
 function toJs(morseJsonStr) {
     return new Promise((resolve, reject) => {
         try {
             const obj = JSON.parse(morseJsonStr);
-            // 👉 astuce : Object.keys pour vérifier viduité
             if (Object.keys(obj).length === 0) {
                 reject('Error: Morse object is empty ⚠️');
-            } else {
-                resolve(obj);
+                return;
             }
-        } catch (e) {
+            resolve(obj);
+        } catch {
             reject('Error: Invalid JSON string ❌');
         }
     });
 }
 
 /**
- * toMorse: demande à l'utilisateur une phrase via prompt,
- * traduit chaque caractère en morse ou rejette si un caractère inconnu.
+ * toMorse: récupère la saisie utilisateur depuis #morse-input,
+ * valide qu’elle n’est pas vide, traduit caractère par caractère,
+ * et rejette si un caractère est introuvable.
  */
 function toMorse(morseObj) {
     return new Promise((resolve, reject) => {
-        const input = prompt('Enter a word or sentence:').toLowerCase();
-        const translation = [];
+        const raw = document.getElementById('morse-input').value.trim();
+        if (!raw) {
+            reject('Error: No input provided 🚫');
+            return;
+        }
 
-        for (const ch of input) {
+        const translation = [];
+        for (const ch of raw.toLowerCase()) {
             if (ch === ' ') {
-                // on peut gérer les espaces à part
                 translation.push('\n');
             } else if (morseObj[ch]) {
                 translation.push(morseObj[ch]);
@@ -117,12 +116,19 @@ function toMorse(morseObj) {
 }
 
 /**
- * joinWords: prend un array de codes morse,
- * affiche chaque code sur une nouvelle ligne dans le DOM.
+ * joinWords: affiche chaque code morse sur une ligne dans #morse-output.
+ * Garde en mémoire la robustesse contre inputs invalides.
  */
 function joinWords(morseArr) {
     const outputDiv = document.getElementById('morse-output');
-    outputDiv.innerHTML = ''; // reset
+    outputDiv.innerHTML = '';
+
+    if (!Array.isArray(morseArr)) {
+        console.warn('joinWords: expected an array, got', morseArr);
+        outputDiv.textContent = 'Error: Invalid Morse translation result.';
+        return;
+    }
+
     morseArr.forEach(code => {
         const line = document.createElement('div');
         line.textContent = code;
@@ -130,7 +136,6 @@ function joinWords(morseArr) {
     });
 }
 
-// JSON string fournie
 const morseJson = `{
     "0": "-----", "1": ".----", "2": "..---",
     "3": "...--", "4": "....-", "5": ".....",
@@ -150,15 +155,14 @@ const morseJson = `{
   }`;
 
 /**
- * runChallenge2: chaîne les 3 fonctions avec gestion d'erreur.
+ * runChallenge2: chaîne toJs → toMorse → joinWords
+ * capture toutes les erreurs et les affiche via alert().
  */
 function runChallenge2() {
     toJs(morseJson)
         .then(obj => toMorse(obj))
         .then(arr => joinWords(arr))
-        .catch(err => alert(err + ' 🤖'));  // humor + emoji
+        .catch(err => alert(err + ' 🤖'));
 }
 
-// bind du bouton
 document.getElementById('run-ch2').addEventListener('click', runChallenge2);
-
