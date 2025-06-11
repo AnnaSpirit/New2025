@@ -1,0 +1,15 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_3_4_asynchronous_javascript/01_exercice_XP/index.html
+suggestions for improvement:
+- The HTML file only provides the structure for the exercises.  The actual JavaScript code implementing the promise functionalities is missing in `promises.js`.
+- Implement the `compareToTen` function as described in Exercise 1.
+- Implement the 4-second resolving promise in Exercise 2.
+- Implement `Promise.resolve(3)` and `Promise.reject("Boo!")` in Exercise 3.
+Correctness: 0%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_3_4_asynchronous_javascript/01_exercice_XP/promises.js
+suggestions for improvement:
+- In `compareToTen`, consider using a more descriptive message for rejection, perhaps indicating the threshold exceeded.
+- Add comments to `delayedSuccess` explaining the purpose of the 4-second delay.
+- The code could benefit from more robust error handling in a real-world application, though the exercises don't explicitly require this.
+Correctness: 100%
+-----
