@@ -1,0 +1,7 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/04_daily_challenge_groceries/groceries.js
+suggestions for improvement:
+- The `cloneGroceries` function doesn't actually create a deep clone of the `groceries` object.  It only creates a shallow copy. Changes to nested objects like `other` will still be reflected in both `groceries` and `shopping`. A deep clone is needed to fully illustrate pass-by-reference vs. pass-by-value for nested objects.  Consider using a library like Lodash's `cloneDeep` or a recursive cloning function.
+- Add comments within `cloneGroceries` to explicitly explain each step and the expected outcome (pass-by-value or pass-by-reference). This will enhance the educational value of the function.
+- The explanation at the end is good, but could benefit from being integrated directly into the code as comments to enhance understanding.
+Correctness: 90%
+-----

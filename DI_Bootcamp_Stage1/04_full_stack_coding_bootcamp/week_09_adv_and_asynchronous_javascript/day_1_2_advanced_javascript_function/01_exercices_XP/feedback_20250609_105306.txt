@@ -1,0 +1,71 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/01_scope.js
+suggestions for improvement:
+- Add comments explaining the expected output for each section (e.g., '#1.2 Expected: TypeError').
+- In Exercise 2, explicitly state the type of the experiencePoints variable (e.g., `let experiencePoints`).
+- For Exercise 3, add test cases to demonstrate the function's behavior with different input types (including null, undefined, etc).
+- Add more comprehensive comments in Exercise 8, explaining the logic behind the nested functions and the purpose of each function call.
+- In Exercise 7, specify the location to insert the div element in the navbar (e.g., append it as a child to a specific element within the navbar).
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/03_Is_it_a_string.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/04_Sum.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/05_Kg_and_grams.js
+suggestions for improvement:
+- The comments explaining the differences between function declaration, expression, and arrow functions are excellent and concise.  Consider adding a comment to the arrow function example explaining the implicit return.
+- While the code is functional, the inline comment explaining hoisting could be improved by mentioning that function declarations are hoisted to the top of their scope while function expressions are not. This clarifies the key difference more precisely.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/06_fortune_teller.js
+suggestions for improvement:
+- The comments within the IIFE are helpful but could be more concise.  For example, the explanation of the template literal is redundant.
+- Consider adding error handling. What happens if any of the arguments are missing or of the wrong type?  A simple check would improve robustness.
+- The code directly appends to the `document.body`.  For better structure, it's preferable to append to a specific container element (e.g., a `div` with an ID) within the HTML.
+- The use of `textContent` is good for security (preventing XSS), but it could be enhanced by allowing HTML elements to be added for more dynamic display (while carefully sanitizing inputs).
+Correctness: 95%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/07_welcome.html
+suggestions for improvement:
+- The solution correctly implements a self-invoking function that adds a div to the navbar, displaying the user's name. However, it lacks the user's profile picture as requested in the instructions.
+- Consider adding error handling for cases where the user's name might be missing or invalid.
+- The styling of the added div could be improved for better integration with the existing navbar.
+- It would be beneficial to separate the DOM manipulation logic from the self-invoking function for better code organization and testability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/07_welcome.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar_2.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar_2.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/exercices_XP.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

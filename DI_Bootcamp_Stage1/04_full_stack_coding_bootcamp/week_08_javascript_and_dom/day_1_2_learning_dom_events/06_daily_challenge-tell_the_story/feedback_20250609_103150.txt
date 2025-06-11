@@ -1,0 +1,16 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/06_daily_challenge-tell_the_story/tell_the_story.html
+suggestions for improvement:
+- Implement the story generation logic in `tell_the_story.js`.  The provided HTML only sets up the form and display area.  The core Mad Libs functionality is missing.
+- Add error handling for empty input fields. Currently, it doesn't explicitly check for empty inputs before generating the story.
+- Implement the shuffle button functionality.  The button is present in the HTML but is disabled and lacks functionality.  This requires generating multiple story variations and randomly selecting one.
+- Improve the story generation to be more dynamic and entertaining.  The current instruction to 'Write a story that uses each of the values' lacks specifics.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/06_daily_challenge-tell_the_story/tell_the_story.js
+suggestions for improvement:
+- Add input validation to prevent XSS vulnerabilities.  Sanitize user inputs before displaying them in the story.  A simple solution would be to escape HTML special characters.
+- Improve readability by using more descriptive variable names (e.g., instead of `vals`, use `inputValues`).
+- The code is missing the `shuffle-button` in the HTML.  Add it to the form.
+- Consider adding error handling for cases where `storyTemplates` is empty or contains invalid templates.
+Correctness: 95%
+-----
