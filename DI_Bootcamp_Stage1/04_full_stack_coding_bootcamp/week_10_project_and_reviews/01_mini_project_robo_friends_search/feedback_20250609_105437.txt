@@ -1,0 +1,28 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_10_project_and_reviews/01_mini_project_robo_friends_search/index.html
+suggestions for improvement:
+- The provided HTML is a good starting point, but it's missing the JavaScript (`script.js`) and CSS (`style.css`) files that are crucial for the functionality and styling of the Robo-Friends application.  These files need to be implemented to achieve a fully functional application.
+- The comments in the HTML are helpful, but could be more specific.  Instead of general statements like "📚 Mentionner pourquoi ces balises sont indispensables en SEO et accessibilité," provide concrete explanations of how the meta tags improve SEO and accessibility.  For example, explain how `charset` impacts character encoding and how `viewport` impacts responsiveness.
+- The `defer` and `async` attributes on the `<script>` tag are appropriate for ensuring the HTML is parsed before the JavaScript executes and preventing blocking of rendering. But a more detailed explanation within a comment would be beneficial.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_10_project_and_reviews/01_mini_project_robo_friends_search/script.js
+suggestions for improvement:
+- The image paths in the `robots` array are incorrect.  They should use the provided `robohash.org` URLs or point to locally stored images.  Currently, they likely will not work.
+- Add error handling for cases where the `cardContainer` element might not be found. A simple `if (container)` check before using it would improve robustness.
+- The comments are a mix of French and English. It's better to stick to one language for consistency.
+- The styling (CSS) is missing, which is a significant part of the project instructions. The project will look very basic without it.
+- Consider using a more efficient search method for large datasets. The current `Object.values` and `some` approach works well for small datasets but can become slow as the number of robots increases.  A more optimized approach may involve indexing or using a library like Fuse.js
+- Improve the code's readability with more descriptive variable names (e.g., instead of `term`, use `searchTerm`).
+- Add input sanitization to prevent XSS vulnerabilities, although this is low risk given the context.
+Correctness: 90%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_10_project_and_reviews/01_mini_project_robo_friends_search/style.css
+suggestions for improvement:
+- The code is missing the core logic for filtering the robots based on the search input.  There's no JavaScript to handle the search box interaction and update the displayed robots.
+- The CSS is well-structured and readable, but it lacks the dynamic aspect of adding/removing cards based on the search filter.
+- Implement JavaScript functionality to filter the `robots` array based on the search input and update the DOM accordingly.  Use `document.getElementById` to get the search box and event listeners for the input change.
+- Add the JavaScript code within `<script>` tags in your HTML file or in a separate `.js` file linked to your HTML.
+- Consider adding error handling (e.g., if the robots array is empty).
+- The provided CSS is good for styling, but the instruction mentions the use of specific fonts ('SEGA LOGO FONT' etc.) which are not included.  Ensure you link the correct font files.
+Correctness: 70%
+-----

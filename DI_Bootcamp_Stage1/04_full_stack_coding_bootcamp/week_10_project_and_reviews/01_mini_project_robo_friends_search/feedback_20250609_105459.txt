@@ -1,0 +1,27 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_10_project_and_reviews/01_mini_project_robo_friends_search/index.html
+suggestions for improvement:
+- The provided HTML only sets up the structure; the core functionality (filtering and displaying robots) is missing.  The `script.js` file, which would contain this logic, is not included.
+- Add error handling for the case where the robots array might be empty or undefined.
+- Improve the CSS for better responsiveness and visual appeal. The instructions mention using specific fonts and background images; these are not implemented in the provided HTML.
+- Consider using more semantic HTML5 elements where appropriate.  For instance, `<article>` could be used for each robot card instead of a generic `<div>`.
+- Add ARIA attributes to ensure better accessibility for screen readers, particularly for the search box and robot cards.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_10_project_and_reviews/01_mini_project_robo_friends_search/script.js
+suggestions for improvement:
+- The image paths in the `robots` array are incorrect.  They should use the correct URLs provided in the assignment or point to locally available image files.  The current paths ('images/rob01_pict.png', etc.) assume the images are in an 'images' folder within the project's directory which is not guaranteed.
+- The code directly manipulates the innerHTML of the container, which is generally less efficient and can be more vulnerable to XSS attacks than using createElement for each element.  Consider building the card structure using DOM methods instead of innerHTML.
+- The filtering logic filters across all fields (name, username, email, id). The instructions explicitly mention filtering only by the robot's name.
+- Add error handling for cases where the `cardContainer` element might not be found.  A more robust solution would check if `document.getElementById('cardContainer')` returns a valid element before proceeding.
+- Consider adding more descriptive CSS classes to the HTML elements to improve maintainability and styling.
+- The comments use both French and English which can confuse readers, pick one language for better clarity.
+Correctness: 85%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_10_project_and_reviews/01_mini_project_robo_friends_search/style.css
+suggestions for improvement:
+- The code only provides CSS styling.  It's missing the JavaScript functionality to filter the robots based on the search input.  The core functionality of the project (filtering the robots) is absent.
+- The comments are in both French and English which might be unnecessary if the project's primary language is one of them.
+- Add JavaScript code to fetch data from the `robots` array, dynamically create the cards, and update the displayed cards based on the search input.
+- Implement a debounce function on the search input to prevent excessive filtering calls as the user types.
+Correctness: 70%
+-----
