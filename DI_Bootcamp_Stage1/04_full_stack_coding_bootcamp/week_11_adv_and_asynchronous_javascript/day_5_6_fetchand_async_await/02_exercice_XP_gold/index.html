@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exercises XP Gold</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Signature AnnaSpirit -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Exercises XP Gold</h1>
+    </header>
+
+    <main>
+      <!-- Exercise 1 -->
+      <section id="exercise-1">
+        <h2>Exercise 1: Giphy API #2</h2>
+        <p>
+          Use the Giphy API Documentation for this exercise. Use the API KEY
+          provided in the Exercises XP. Create a program to fetch a gif. Make
+          sure to check the status of the Response and to catch any occurring
+          errors. Once the server sends back data, append one random GIF to the
+          page. Hint: to find the URL of the gif, look for the sub-object named
+          “images” inside the data you receive from the API.
+        </p>
+        <p>My API Key: <code>lmduClpWyQzGEPXKUyTuJ014oxg50C1b</code></p>
+        <div id="gif-container">
+          <!-- GIF will be appended here -->
+        </div>
+        <button id="fetch-gif-btn">Fetch a Random GIF</button>
+      </section>
+
+      <!-- Exercise 2 -->
+      <section id="exercise-2">
+        <h2>Exercise 2: Analyze #2</h2>
+        <pre><code>
+let resolveAfter2Seconds = function () {
+  console.log("starting slow promise");
+  return new Promise(resolve => {
+    setTimeout(function () {
+      resolve("slow");
+      console.log("slow promise is done");
+    }, 2000);
+  });
+};
+
+let resolveAfter1Second = function () {
+  console.log("starting fast promise");
+  return new Promise(resolve => {
+    setTimeout(function () {
+      resolve("fast");
+      console.log("fast promise is done");
+    }, 1000);
+  });
+};
+
+let sequentialStart = async function () {
+  console.log('==SEQUENTIAL START==');
+  const slow = await resolveAfter2Seconds();
+  console.log(slow);
+  const fast = await resolveAfter1Second();
+  console.log(fast);
+}
+
+sequentialStart()
+      </code></pre>
+        <p>
+          When you launch Sequentialstart (), the console displays first ==
+          Sequential Start == then immediately Starting Slow Promised, it waits
+          ~ 2 s, poster Slow Promised is therefore and slow, then it starts the
+          rapid promise by displaying Starting Fast Promised, waits ~ 1 s, then
+          displays Fast Promised is done and fast: you observe these six
+          messages as a result (2 ×. Title + 2 × Start + 2 × Done/Value) on
+          approximately 3 s.
+        </p>
+      </section>
+
+      <!-- Exercise 3 -->
+      <section id="exercise-3">
+        <h2>Exercise 3: Analyze #3</h2>
+        <pre><code>
+let resolveAfter2Seconds = function () {
+  console.log("starting slow promise");
+  return new Promise(resolve => {
+    setTimeout(function () {
+      resolve("slow");
+      console.log("slow promise is done");
+    }, 2000);
+  });
+};
+
+let resolveAfter1Second = function () {
+  console.log("starting fast promise");
+  return new Promise(resolve => {
+    setTimeout(function () {
+      resolve("fast");
+      console.log("fast promise is done");
+    }, 1000);
+  });
+};
+
+let concurrentStart = async function () {
+  console.log('==CONCURRENT START with await==');
+  const slow = resolveAfter2Seconds();
+  const fast = resolveAfter1Second();
+  console.log(await slow);
+  console.log(await fast);
+}
+
+setTimeout(concurrentStart, 4000)
+      </code></pre>
+        <p>
+          When Concurgurntstart starts (after the 4 s of delay), you see first
+          == Competient Start With Await ==, then immediately Starting Slow
+          Promised and Promised Starting Fast. The quick promise ends after 1
+          and posted fast promised is therefore (even if we did not get it right
+          away), then the slow promise ends after 2 s with Slow promised is
+          therefore. Then Await Slow unlocks and poster Slow, then Await Fast
+          displays Fast. In the end, you get these six messages in ~ 2 s
+          (excluding initial deadline) in this order: Start Titles → Starts →
+          Fast Done → Slow done → Slow → Fast. 😎🚀
+        </p>
+      </section>
+
+      <!-- Exercise 4 -->
+      <section id="exercise-4">
+        <h2>Exercise 4: Modify fetch with Async/Await</h2>
+        <pre><code>
+const urls = [
+  "https://jsonplaceholder.typicode.com/users",
+  "https://jsonplaceholder.typicode.com/posts",
+  "https://jsonplaceholder.typicode.com/albums"
+];
+
+const getData = async function() {
+  const [ users, posts, albums ] = await Promise.all(urls.map(url =>
+    fetch(url).then(resp => resp.json())
+  ));
+  console.log('users', users);
+  console.log('posts', posts);
+  console.log('albums', albums);
+}
+
+getData()
+      </code></pre>
+        <p>
+          <!-- À modifier : remplacer .then/resp.json par await et ajouter try/catch -->
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>✨ Exercises XP Gold — AnnaSpirit</p>
+    </footer>
+  </body>
+</html>
