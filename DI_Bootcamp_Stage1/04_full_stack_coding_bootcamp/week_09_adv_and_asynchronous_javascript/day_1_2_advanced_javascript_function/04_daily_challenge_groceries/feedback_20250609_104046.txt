@@ -1,0 +1,6 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/04_daily_challenge_groceries/groceries.js
+suggestions for improvement:
+- The `cloneGroceries` function doesn't actually create a deep clone of the `groceries` object.  It only creates a shallow copy. Changes to nested objects within `shopping` will also affect `groceries`.  To create a deep clone, consider using the `structuredClone()` method (for modern browsers) or a library like Lodash's `cloneDeep()`.
+- The comments in `cloneGroceries` are good, but could be improved by being more concise and directly relating to the code changes, e.g., instead of a large block of text explaining the behavior, use comments like `// Primitives are passed by value` and `// Objects are passed by reference` directly above the relevant code sections.
+Correctness: 90%
+-----

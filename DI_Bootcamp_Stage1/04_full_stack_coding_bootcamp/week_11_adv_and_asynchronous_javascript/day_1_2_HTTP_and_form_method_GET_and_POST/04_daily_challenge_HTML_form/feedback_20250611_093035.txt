@@ -1,0 +1,15 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_1_2_HTTP_and_form_method_GET_and_POST/04_daily_challenge_HTML_form/index.html
+suggestions for improvement:
+- The code is missing the JavaScript (`script.js`) file that handles the form submission and JSON output.  The HTML structure is correct, but without the JavaScript, it doesn't fulfill the core functionality.
+- The `outputXml` `<pre>` element is unnecessary as the instructions only require JSON output.
+- Add input validation to prevent unexpected data (e.g., special characters, numbers only in specific fields, length restrictions).
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_1_2_HTTP_and_form_method_GET_and_POST/04_daily_challenge_HTML_form/script.js
+suggestions for improvement:
+- The code generates XML output in addition to the required JSON output.  Remove the XML generation part to strictly adhere to the instructions.
+- The code should include basic input validation to handle cases where the user doesn't enter a name or last name.  Display a user-friendly message if the inputs are empty.
+- Use more descriptive IDs for elements (e.g., 'firstNameInput', 'lastNameInput').
+- Consider using a more robust method for displaying the JSON, perhaps by creating a `<pre>` element to preserve formatting.
+Correctness: 80%
+-----

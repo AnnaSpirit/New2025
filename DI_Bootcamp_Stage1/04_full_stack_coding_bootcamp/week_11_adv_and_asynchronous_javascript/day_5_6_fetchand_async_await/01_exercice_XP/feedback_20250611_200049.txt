@@ -1,0 +1,86 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_01/index.html
+suggestions for improvement:
+- Exercise 1: Add error handling to the fetch call.  The instructions explicitly state to 'Make sure to check the status of the Response and to catch any occuring errors.'  The current code lacks this crucial error handling.
+- Exercise 1: The output isn't displayed in a user-friendly way.  While the console.log shows the data, a better solution would be to display the GIFs on the webpage itself.
+- Exercise 2:  Similar to Exercise 1, add error handling and consider displaying the GIFs on the page instead of just logging to the console.
+- Exercise 2: The code for Exercise 2 is missing.  The JSON response needs to be parsed and the data extracted to get the 10 gifs. Then, the URLs of the GIFs should be used to display them.
+- Exercise 3: The async function should include error handling in a try...catch block to manage potential network errors or issues with the API response.
+- Exercise 4: No code is provided for Exercise 4.  An analysis should be added showing the expected output ('calling', then after 2 seconds 'resolved').
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_01/script.js
+suggestions for improvement:
+- Exercise 2: The code for Exercise 2 is missing.  Add a function similar to `fetchHilariousGifs` but incorporating the `limit`, `offset`, and  `q` parameters as specified in the instructions.
+- Exercise 3: The code for Exercise 3 is missing.  Implement an async function that fetches data from the provided Star Wars API URL using `await` and handles errors appropriately without using `.then()` methods. 
+- Exercise 4: The code for Exercise 4 is missing. The instructions ask for an analysis of the provided code snippet, not for implementation. Provide an analysis explaining the output.
+- Error Handling: While the error handling in `fetchHilariousGifs` is good, consider adding more specific error messages (e.g., differentiating between network errors and API errors).
+- Comments: Add comments to explain the purpose of different parts of the code. Even though this is a relatively short function, adding comments will help make it more readable.
+- Variable Naming: The variable name `apiUrl` is descriptive and good practice.  Maintain this style for any variables introduced in subsequent exercises.
+Correctness: 95%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_01/style.css
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_02/index.html
+suggestions for improvement:
+- The HTML file is missing the JavaScript code to fetch and display the GIFs.  The `script.js` file needs to be implemented.
+- The instructions specify using the Fetch API to retrieve 10 GIFs about the "sun", starting at position 2.  This is not implemented in the provided HTML.
+- Error handling (checking the response status) is missing. The code should handle potential network errors or API errors.
+- The code should display the GIFs on the page. Currently, there are no elements to display the results.
+Correctness: 0%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_02/script.js
+suggestions for improvement:
+- The code for Exercise 1 is missing.  The solution only addresses Exercise 2.
+- Add comments to explain the purpose of each part of the URL construction in `fetchSunGifs`.
+- Consider using a more descriptive variable name than `json` for the parsed JSON response (e.g., `sunGifData`).
+- The error handling is good, but could be improved by providing more specific error messages to the user, instead of just logging to the console.
+- Exercises 3 and 4 are not addressed. The provided code only solves exercise 2.
+Correctness: 95%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_02/style.css
+suggestions for improvement:
+- Exercise 1: Add error handling for non-200 status codes.  The instructions explicitly state to 'Make sure to check the status of the Response and to catch any occurring errors.'  The provided code lacks this crucial step.
+- Exercise 2: Similar to Exercise 1, add robust error handling. Also, explicitly specify the `limit` parameter in the fetch URL to retrieve 10 GIFs.  The instructions mention retrieving '10 gifs about the "sun"', but the code is missing.
+- Exercise 3: The solution is good.  However, consider adding more descriptive variable names (e.g., instead of `objectStarWars`, use something like `starShipData`).
+- Exercise 4: No code provided for Exercise 4.  The analysis should be included as a separate response.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_03/index.html
+suggestions for improvement:
+- Add error handling within the async function to catch network errors or errors from the API response.  The current implementation only handles errors at the top level of the fetch call, which is not sufficient.  Specifically, check `response.ok` before accessing `response.json()` and handle potential JSON parsing errors.
+- While the code fulfills the core requirement of using async/await, it would benefit from more descriptive variable names (e.g., instead of `objectStarWars`, use something like `starshipData`).
+- Add comments to explain the purpose of the async function and its key steps.  While the code is concise, comments would enhance readability and understanding.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_03/script.js
+suggestions for improvement:
+- The code is well-structured and easy to follow.  Consider adding comments explaining the purpose of the `try...catch` block for enhanced readability.
+- While the error handling is excellent,  a more user-friendly error message could be displayed to the user instead of just logging to the console.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_03/style.css
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_04/index.html
+suggestions for improvement:
+- The code is well-structured and easy to understand.  Minor improvements could include adding comments to explain the purpose of the `resolveAfter2Seconds` function more explicitly.
+- While the performance is optimal for this example,  consider adding error handling within the `resolveAfter2Seconds` function for robustness, though it's not strictly necessary given the context.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_04/script.js
+suggestions for improvement:
+- The code is well-structured and easy to follow.  Consider adding comments to explain the purpose of `resolveAfter2Seconds` more explicitly.  For example, a comment like `// Simulates an asynchronous operation that takes 2 seconds to complete` would enhance clarity.
+- While the performance is good, for very large-scale applications, the use of `setTimeout` might need to be replaced with more sophisticated techniques depending on context, but for this example it is perfectly acceptable.
+- The security score is 100 because there are no security vulnerabilities present in this small code snippet.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/01_exercice_XP/ex_04/style.css
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
