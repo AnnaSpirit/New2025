@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>exercise-1-giphy-3</title>
+  </head>
+  <body>
+    <section id="exercise-1-giphy-3">
+      <h2>Exercise 1 : Giphy API #3</h2>
+      <form id="search-form">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for GIFs (e.g. cats)"
+          required
+        />
+        <button type="submit" id="search-btn">Search GIFs</button>
+        <button type="button" id="delete-btn">Delete All GIFs</button>
+      </form>
+      <div id="gifs-container">
+        <!-- Les GIFs apparaîtront ici -->
+      </div>
+    </section>
+
+    <div>
+      <h3>Exercise 2: Analyze #4</h3>
+      <p>
+        This version uses <code>Promise.all()</code> to launch two promises in
+        parallel: one that resolves after 2 seconds and another after 1 second.
+        Both promises start at the same time, but nothing is displayed until
+        <strong>both have resolved</strong>. Once they are done, their results
+        are printed in the order they appear in the array — not based on which
+        finished first. This ensures synchronized execution, but delays output
+        until everything is complete.
+      </p>
+
+      <h3>Exercise 3: Analyze #5</h3>
+      <p>
+        In this version, <code>Promise.all()</code> is combined with
+        <code>async/await</code> and immediately-invoked async functions. Both
+        promises are launched at the same time, but their results are displayed
+        <strong>as soon as each one finishes</strong>, not after both are done.
+        It’s still parallel, but with more responsive output. This approach
+        improves perceived performance and keeps the code easy to read using
+        <code>await</code> syntax.
+      </p>
+
+      <h3>Exercise 4: Analyze #6</h3>
+      <p>
+        Here, the two promises are launched independently, each with its own
+        <code>.then()</code>. This means they both run in parallel, and their
+        results are printed as soon as they are resolved — like in Exercise 5.
+        However, unlike the previous exercises, there is
+        <strong>no error handling</strong> or synchronization. If one fails, it
+        won't be caught, and there’s no waiting for both to finish before
+        showing results.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunrise Checker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>🌅 Sunrise Time Checker 🌅</h1>
+    <form id="sunrise-form">
+      <fieldset>
+        <legend>🌍 City 1 (ex: Paris)</legend>
+        <input
+          type="number"
+          step="any"
+          id="lat1"
+          placeholder="Latitude"
+          required
+        />
+        <input
+          type="number"
+          step="any"
+          id="lng1"
+          placeholder="Longitude"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <legend>🗽 City 2 (ex: New York)</legend>
+        <input
+          type="number"
+          step="any"
+          id="lat2"
+          placeholder="Latitude"
+          required
+        />
+        <input
+          type="number"
+          step="any"
+          id="lng2"
+          placeholder="Longitude"
+          required
+        />
+      </fieldset>
+      <button type="submit">☀️ Get Sunrise Times!</button>
+    </form>
+
+    <section id="results">
+      <p class="sunrise-info" id="city1-result"></p>
+      <p class="sunrise-info" id="city2-result"></p>
+    </section>
+  </body>
+</html>
+<!-- AnnaSpirit -->

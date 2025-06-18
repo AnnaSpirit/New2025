@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+}
+
+form,
+#deleteAllBtn {
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 300px;
+    margin: 10px;
+    display: block;
+}
+
+button {
+    margin: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
