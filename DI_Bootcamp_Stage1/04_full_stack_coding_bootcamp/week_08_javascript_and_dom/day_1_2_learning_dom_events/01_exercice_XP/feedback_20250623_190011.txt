@@ -1,0 +1,40 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/01_exercice_XP/01_change_the_article.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/01_exercice_XP/01_change_the_article.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/01_exercice_XP/02_work_with_forms.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/01_exercice_XP/02_work_with_forms.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/01_exercice_XP/03_transform_the_sentence.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/01_exercice_XP/03_transform_the_sentence.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/01_exercice_XP/04_volume_of_a_sphere.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_08_javascript_and_dom/day_1_2_learning_dom_events/01_exercice_XP/04_volume_of_a_sphere.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
