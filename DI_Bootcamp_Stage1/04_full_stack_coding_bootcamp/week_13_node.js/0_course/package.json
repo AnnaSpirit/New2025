@@ -1,0 +1,11 @@
+{
+  "name": "first_json",
+  "version": "1.0.0",
+  "description": "test from gitbash",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aspirit",
+  "license": "ISC"
+}

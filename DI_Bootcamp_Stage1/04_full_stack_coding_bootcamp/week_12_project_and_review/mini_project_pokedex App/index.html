@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icon.jpg" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg"
+     alt="Pokémon Logo"
+     class="pokemon-logo" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Poke-app</title>
+  </head>
+  <body>
+    <header class="header">
+      <form class="header__seeker">
+        <input
+          class="seeker__input-item"
+          placeholder="Enter Pokémon name or Pokédex number (1-1017)"
+        />
+        <button class="seeker__serch" type="submit">Search</button>
+      </form>
+      <div class="container__error">
+        <p class="errorMJ"></p>
+        <p class="state"></p>
+      </div>
+    </header>
+
+    <main class="poke-view">
+      <div class="poke-view__img-container detaills-container">
+        <img
+          class="img-container__image"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+          alt="Pokemon image"
+        />
+      </div>
+
+      <div class="poke-view__detaills detaills-container">
+        <div class="detaills__name detaills">
+          <h3 class="name__title title">Name</h3>
+          <p class="name__paragraph paragraph">Bulbasaur (#1)</p>
+        </div>
+
+        <div class="detaills__desc detaills">
+          <h3 class="desc__title title">Description</h3>
+          <p class="desc__paragraph paragraph">
+            A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.
+          </p>
+        </div>
+
+        <div class="detaills__type detaills">
+          <h3 class="type__title title">Type</h3>
+          <div class="type__paragraph">
+            <p class="paragraph">Grass</p>
+          </div>
+        </div>
+
+        <div class="detaills__dimensions detaills">
+          <h3 class="dimensions__title title">Dimensions</h3>
+          <div class="dimensions__paragraph">
+            <p class="paragraph paragraph__weight">Weight: 69 kg</p>
+            <br />
+            <p class="paragraph paragraph__height">Height: 7 cm</p>
+          </div>
+        </div>
+
+        <div class="detaills__evolute detaills">
+          <h3 class="evolute__title title">Evolution Chain</h3>
+          <figure class="detaills__figure"></figure>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+</html>

@@ -1,0 +1,239 @@
+:root {
+    --main-bg: #747474;
+    --accent: #7AC74C;
+    --text-color: #333;
+    --card-bg: #fff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #1B5E20;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+/* === HEADER STYLES :Start=== */
+.header {
+    padding: 1rem;
+    width: 100%;
+    background-color: #78C850;
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: background-color 0.5s ease;
+}
+
+.header__seeker {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.seeker__input-item {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.seeker__input-item:focus {
+    box-shadow: 0 0 5px var(--accent);
+    outline: none;
+}
+
+.seeker__serch {
+    background-color: #1a1f1a;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seeker__serch:hover {
+    color: #1a1f1a;
+    background-color: #ffffff;
+}
+
+.container__error {
+    display: none;
+    font-family: 'Roboto Mono', monospace;
+    margin: auto;
+    width: 20%;
+    background-color: #fff1f0;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.errorMJ {
+
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ff4d4f;
+}
+
+
+.state {
+    font-style: italic;
+    color: #ffa940;
+}
+
+/* === HEADER STYLES :END=== */
+
+
+/* === POKE-VIEW STYLES :START=== */
+.poke-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.poke-view__img-container {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px var(--shadow);
+    animation: float 3s ease-in-out infinite;
+}
+
+.img-container__image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.poke-view__detaills {
+    flex: 2 1 400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+@media (max-width: 700px) {
+    .poke-view__detaills {
+        grid-template-columns: 1fr;
+        /* Una sola columna */
+        gap: .5rem;
+    }
+}
+
+.detaills {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px var(--shadow);
+    /* animation: fadeInUp 0.6s ease forwards; */
+    transition: transform 0.3s ease;
+}
+
+.detaills:hover {
+    transform: scale(1.02);
+}
+
+.title {
+    background-color: #f1efef;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.paragraph {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.detaills__evolute {
+    grid-column: span 2;
+}
+
+.detaills__figure {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pokemon-evolution {
+    width: 50px;
+    height: 70px;
+}
+
+/* === POKE-VIEW STYLES :END=== */
+
+
+/* === ANIMATIONS :START=== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* === ANIMATIONS :END=== */
+.pokemon-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    opacity: 0.9;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.pokemon-logo:hover {
+    transform: scale(1.1) rotate(5deg);
+    cursor: pointer;
+}

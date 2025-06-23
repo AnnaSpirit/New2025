@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'StarJedi';
+    src: url('fonts/Stjldbl1.ttf') format('truetype');
+}
+
+body {
+    background: url("https://e1.pxfuel.com/desktop-wallpaper/709/425/desktop-wallpaper-star-wars-space-backgrounds-starwars-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.logo {
+    font-family: 'StarJedi', sans-serif;
+    font-size: 70px;
+    color: #a7a74e;
+    text-shadow: 2px 2px white;
+}
+
+.card {
+    border: 2px solid yellow;
+    border-radius: 10px;
+    margin: 30px auto;
+    padding: 20px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 150px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: black;
+    color: yellow;
+    border: 2px solid yellow;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.loading i {
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
