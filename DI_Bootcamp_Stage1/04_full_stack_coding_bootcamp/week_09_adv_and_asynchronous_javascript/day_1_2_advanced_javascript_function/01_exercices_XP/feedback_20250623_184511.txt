@@ -1,0 +1,62 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/01_scope.js
+suggestions for improvement:
+- Add comments explaining the purpose of each function and the expected output for better understanding.
+- Use more descriptive variable names instead of using 'a' repeatedly.  This improves readability significantly.
+- For exercises 2-8, consider separating the Javascript code from the HTML manipulation (for exercises 6 and 7) into different files for better organization and maintainability.  Consider using a dedicated HTML file and a separate JavaScript file for cleaner code structure.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/03_Is_it_a_string.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/04_Sum.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/05_Kg_and_grams.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/06_fortune_teller.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/07_welcome.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/07_welcome.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar_2.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/08_juice_bar_2.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_09_adv_and_asynchronous_javascript/day_1_2_advanced_javascript_function/01_exercices_XP/exercices_XP.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
