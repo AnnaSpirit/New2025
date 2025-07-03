@@ -1,0 +1,15 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_12_project_and_review/mini_project_day_star_wars_web/index.html
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_12_project_and_review/mini_project_day_star_wars_web/script.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_12_project_and_review/mini_project_day_star_wars_web/style.css
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
