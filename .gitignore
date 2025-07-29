@@ -1,7 +1,6 @@
 # ——— Dossiers à ignorer individuellement ———
 
 # Éditeur / config locale
-.git/
 .vscode/
 
 # Ignorer certains sous-dossiers de travail dans /Bases
@@ -9,9 +8,41 @@
 /Bases/Memo/
 /Bases/non ok/
 
-#Ignorer le fichier de mot de passe:
+# Ignorer tous les dossiers screenshot_course, peu importe où ils sont
+**/screenshot_course/
 
-/OK/Info Passwords Tools.txt
+# Fichier sensible
+/Bases/OK/Info Passwords Tools.txt
 
-**/node_modules
+# Ignorer node_modules et package-lock
+**/node_modules/
 **/package-lock.json
+
+# ——— Python 🐍 ———
+
+# Environnements virtuels
+venv/
+env/
+.venv/
+.env/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Fichiers d'environnement (API keys etc)
+.env
+.env.*
+
+# Logs et bases locales
+*.log
+*.sqlite3
+
+# Fichiers de packaging/build
+*.spec
+dist/
+build/
+*.egg-info/
+
+# AnnaSpirit Approved™ 🔥🐍🚀
