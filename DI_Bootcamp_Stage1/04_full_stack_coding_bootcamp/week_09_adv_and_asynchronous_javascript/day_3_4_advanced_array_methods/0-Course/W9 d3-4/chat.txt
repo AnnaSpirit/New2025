@@ -1,8 +1,0 @@
-let users = [
-  { id: 1, name: "John", email: "John@gmail.com" },
-  { id: 2, name: "Marry", email: "Marry@gmail.com" },
-  { id: 3, name: "Anne", email: "Anne@gmail.com" },
-  { id: 4, name: "Or", email: "Or@gmail.com" },
-];
-
-
