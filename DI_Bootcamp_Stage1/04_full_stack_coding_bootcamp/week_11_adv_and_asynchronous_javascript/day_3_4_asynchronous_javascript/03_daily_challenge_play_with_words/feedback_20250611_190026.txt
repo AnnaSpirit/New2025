@@ -1,0 +1,18 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_3_4_asynchronous_javascript/03_daily_challenge_play_with_words/index.html
+suggestions for improvement:
+- In `makeAllCaps`, add more descriptive error messages when rejecting the promise.  For example, instead of a generic error, specify 'Not all items in the array are strings'.
+- In `sortWords`, similarly improve the rejection reason.  Instead of a generic message, say something like 'Array length must be greater than 4 for sorting'.
+- The `toMorse` function relies on a prompt. For better user experience and testability, consider accepting user input via a different method (e.g., an input field).
+- Add input validation to `toMorse` to handle cases where the user enters only whitespace or an empty string.
+- In `joinWords`, handle the case where `morseTranslation` might be null or undefined to prevent errors.
+Correctness: 85%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_3_4_asynchronous_javascript/03_daily_challenge_play_with_words/script.js
+suggestions for improvement:
+- In `makeAllCaps`, consider using `Array.isArray()` for a more robust type check instead of `every` and `typeof`.
+- The comments in `makeAllCaps` and `sortWords` can be improved for clarity.  Instead of 'astuce', use descriptive phrases like 'Check if all elements are strings' and 'Check array length before sorting'.
+- In `toMorse`,  using `prompt` is not ideal for production. A more user-friendly input method (like an input field) should be considered.
+- Add more comprehensive error handling in `toJs` to handle potential issues beyond empty objects or invalid JSON.  Consider logging the error for debugging purposes.
+- The code lacks error handling within the `runChallenge1` function; it should ideally handle potential errors during the promise chain execution more robustly.
+Correctness: 95%
+-----

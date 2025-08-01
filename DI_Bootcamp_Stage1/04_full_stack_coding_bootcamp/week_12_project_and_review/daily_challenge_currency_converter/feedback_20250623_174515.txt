@@ -1,0 +1,27 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_12_project_and_review/daily_challenge_currency_converter/index.html
+suggestions for improvement:
+- Implement fetching of supported currencies from the ExchangeRate API's Supported Codes endpoint and populating the select elements.
+- Implement the currency conversion logic using the ExchangeRate API's Pair Conversion endpoint.
+- Handle potential errors during API calls (e.g., network errors, invalid API keys).
+- Add input validation to ensure the amount entered is a valid number.
+- Improve the user interface by providing feedback during loading and displaying errors clearly.
+- Add better styling using CSS to enhance visual appeal.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_12_project_and_review/daily_challenge_currency_converter/script.js
+suggestions for improvement:
+- Improve error handling: Provide more specific error messages to the user.  For example, instead of 'Network error', specify the type of network error if possible (e.g., 'Network timeout', 'Connection refused'). Similarly, for API errors, display the error message received from the API rather than just 'Conversion failed'.
+- Enhance User Experience (UX): Add visual feedback while the API calls are in progress (e.g., a loading indicator). This improves the user experience by letting them know the application is working.
+- Input Validation: Add more robust input validation for the amount field.  Check for negative numbers, extremely large numbers, or non-numeric characters beyond just 'isNaN'.
+- Currency Display: Instead of displaying 'EUR - Euro' in the select options, just display 'EUR' and 'USD' etc.  The user likely already knows the currency symbols/names.
+Correctness: 95%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_12_project_and_review/daily_challenge_currency_converter/style.css
+suggestions for improvement:
+- The provided code only includes CSS styling.  It lacks the JavaScript functionality required to fetch data from the ExchangeRate API, perform currency conversions, and update the UI as described in the chapter content.  The core functionality of the currency converter is missing.
+- Add JavaScript code to fetch supported currencies using the 'Supported Codes Endpoint' and populate the select elements.
+- Implement the conversion logic using the 'Pair conversion requests' endpoint to get exchange rates and calculate the converted amount.
+- Update the UI to display the converted amount and add the 'switch' button functionality as a bonus task.
+- Handle potential errors during API calls (e.g., network errors, API rate limits) gracefully.
+Correctness: 0%
+-----

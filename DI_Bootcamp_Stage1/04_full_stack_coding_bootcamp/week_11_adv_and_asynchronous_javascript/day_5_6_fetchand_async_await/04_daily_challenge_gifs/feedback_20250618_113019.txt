@@ -1,0 +1,25 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/04_daily_challenge_gifs/index.html
+suggestions for improvement:
+- Add error handling for the case where the Giphy API returns an error (e.g., network issue or invalid category).
+- Improve the user interface by styling the elements more attractively.
+- Consider adding loading indicators to provide feedback to the user while the API request is being processed.
+- The script.js file is missing, thus preventing a full correctness assessment.  The provided HTML structure is correct as per the instructions.
+Correctness: 85%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/04_daily_challenge_gifs/script.js
+suggestions for improvement:
+- The API key should not be hardcoded in the client-side JavaScript.  It's a security risk.  Consider using a server-side proxy to make the API calls.
+- Add error handling for the case where the `data.data` or `data.data.images` properties are missing.  Currently, it only checks `data.data.images?.original?.url` which could cause unexpected errors.
+- Improve the visual presentation of the GIFs and buttons.  Consider adding CSS styling to make the layout cleaner and more user-friendly.
+- The code uses alert boxes for user feedback which is not ideal for a complex application.  Consider using more sophisticated feedback mechanisms like a dedicated status message area on the page.
+Correctness: 95%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_5_6_fetchand_async_await/04_daily_challenge_gifs/style.css
+suggestions for improvement:
+- The provided code is only CSS.  It doesn't contain any JavaScript code to fetch data from the Giphy API, handle user input, display GIFs, or implement delete functionality as specified in the chapter content. The chapter explicitly requires the use of Fetch API, Async/Await, and Try/Catch, none of which are present.
+- Add JavaScript code to fetch GIFs based on user input using the Giphy API and display them on the page.
+- Implement functionality to delete individual GIFs and all GIFs using buttons.
+- Use async/await and try/catch for robust error handling during API calls.
+- Improve the CSS for better responsiveness and styling.
+Correctness: 0%
+-----

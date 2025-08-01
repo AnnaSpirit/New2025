@@ -1,0 +1,25 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_12_project_and_review/mini_project_day_star_wars_web/index.html
+suggestions for improvement:
+- Add error handling for the homeworld API call.  The current code doesn't handle the case where the homeworld API request fails.
+- Implement async/await for cleaner asynchronous code. The current code likely uses promises, but async/await would be a more modern and readable approach aligned with the chapter's content.
+- Improve the loading animation's visual appeal. Consider adding styling to make the loading message more engaging.
+- Add better separation of concerns between HTML, CSS and JavaScript.  The current approach is reasonable but could be better structured using a more modular approach.
+Correctness: 90%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_12_project_and_review/mini_project_day_star_wars_web/script.js
+suggestions for improvement:
+- Add error handling for the `homeworldData` fetch, similar to the initial fetch.  If the homeworld fetch fails, display an appropriate message indicating that the homeworld information is unavailable.
+- Improve the loading animation. The instructions suggest using an animated icon from Font Awesome.  Currently, there's only a placeholder for loading.
+- Consider adding more informative error messages to the user.  Instead of a generic error message, display a more specific error message (e.g., 'Could not retrieve character information', 'Could not retrieve homeworld').
+- The code assumes the API will always return data in a specific format. Add checks to ensure that the necessary properties exist before accessing them to prevent errors if the API response structure changes unexpectedly.
+- Enhance styling using CSS to match the design in the provided images.
+Correctness: 95%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_12_project_and_review/mini_project_day_star_wars_web/style.css
+suggestions for improvement:
+- The provided code is only CSS and HTML.  It lacks the JavaScript functionality required to fetch data from the Star Wars API using the Fetch API or async/await, which are explicitly mentioned as learning objectives.  No AJAX functionality is implemented.
+- Add JavaScript code to fetch data from `https://www.swapi.tech/api/people/`, handle the response (including error handling), and update the DOM to display character information. 
+- Implement a loading indicator (as specified) using the provided FontAwesome link and animation classes. 
+- Include a button to trigger the data fetching and update.
+Correctness: 0%
+-----

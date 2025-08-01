@@ -1,0 +1,21 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_1_2_HTTP_and_form_method_GET_and_POST/01_exercice_XP/01_exercice_XP_01.html
+suggestions for improvement:
+- Exercise 1 and 2 should be separate HTML files to better demonstrate the difference between GET and POST methods.  The instructions mention using the 'same HTML file for the action URL', but having separate files would be clearer and align better with best practices.  The current setup makes it harder to observe the difference in where the data appears (URL vs. Network tab).
+- Add basic input validation (e.g., to prevent users from submitting empty fields) to enhance the user experience and improve security.
+- For Exercise 3, the code is missing. The instructions request converting a JavaScript object to JSON, but no code implementing this is provided.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_1_2_HTTP_and_form_method_GET_and_POST/01_exercice_XP/01_exercice_XP_02.html
+suggestions for improvement:
+- The code for Exercise 1 (GET method) is missing.  The provided code only addresses Exercise 2 (POST method).
+- The action attribute of the form is set to "", meaning it submits to the same page. While this fulfills the instructions, explicitly stating the URL (e.g.,  `action="/"` or `action="samepage.html"`) would improve clarity and maintainability.
+- Add input validation to prevent script injection vulnerabilities.  Sanitize user inputs before processing them on the server-side.
+- For Exercise 3, the code is missing.  The JSON conversion and pretty printing should be shown.  Include the code that demonstrates adding a breakpoint in the web inspector to check JSON object values.
+- The solution lacks error handling.  What happens if the submission fails?  A user-friendly message would improve the user experience.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_11_adv_and_asynchronous_javascript/day_1_2_HTTP_and_form_method_GET_and_POST/01_exercice_XP/01_exercice_XP_03.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
