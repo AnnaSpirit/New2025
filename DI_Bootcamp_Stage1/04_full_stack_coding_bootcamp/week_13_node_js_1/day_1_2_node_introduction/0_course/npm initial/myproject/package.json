@@ -1,0 +1,13 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "first npm project",
+  "license": "ISC",
+  "author": "AnnaSpirit",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

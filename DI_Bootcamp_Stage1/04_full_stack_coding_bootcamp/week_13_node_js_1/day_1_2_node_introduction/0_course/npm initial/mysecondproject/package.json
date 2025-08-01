@@ -1,0 +1,15 @@
+{
+  "name": "mysecondproject",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "AnnaSpirit",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}

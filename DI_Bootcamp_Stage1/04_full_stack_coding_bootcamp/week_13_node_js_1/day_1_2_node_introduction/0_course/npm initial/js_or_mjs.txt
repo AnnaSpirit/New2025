@@ -1,0 +1,113 @@
+RAPPEL COMMENTAIRE JS:
+
+//comment 1 ligne
+
+/* commenter
+plusieurs
+lignes */
+
+
+Dans le dossier du projet, fichier app.mjs
+Et fichier math.mjs
+
+Pourquoi ? Parce qu’en Node.js, pour utiliser la syntaxe ES6 des modules, tu dois :
+soit utiliser l’extension .mjs
+soit ajouter "type": "module" dans le package.json
+
+
+
+
+
+CommonJS = require() / module.exports
+ES6 = import / export
+.mjs recommandé si tu n’as pas de package.json avec "type": "module"
+
+
+Package.json actuel:   "type": "commonjs",
+
+
+NPM (Node Package Manager):
+
+🎯 NPM - Node Package Manager (Résumé utile)
+
+📦 Qu’est-ce que NPM ?
+- Outil pour installer, gérer et utiliser des bibliothèques Node.js créées par d’autres développeurs.
+- Il est déjà inclus avec Node.js.
+- Il fonctionne via le terminal.
+- + d’un million de packages disponibles sur https://www.npmjs.com
+
+📁 package.json
+- Fichier généré par la commande : 
+    npm init       → te pose des questions
+    npm init -y    → accepte toutes les valeurs par défaut automatiquement
+- Contient :
+    - Nom du projet
+    - Auteur, version, fichier principal (main)
+    - Scripts personnalisés (ex: démarrage)
+    - Liste des dépendances installées
+
+📦 Installer un package
+- npm install slugify
+- Cela crée un dossier node_modules avec le code du package
+- Le package apparaît dans package.json :
+  "dependencies": {
+      "slugify": "^1.6.0"
+  }
+
+NOTE: VOIR Installations en dev (--save-dev) → devDependencies
+
+🔁 Utiliser le package
+- Avec CommonJS :
+    const slugify = require("slugify");
+- Exemple :
+    console.log(slugify("Hello World")); // Hello-World
+
+🌍 Installer un package globalement (utilisable partout)
+- npm install -g create-react-app
+- Sur Mac/Linux, souvent : sudo npm install -g create-react-app
+
+🔢 Gestion des versions :
+Exemple : "slugify": "^1.4.7"
+
+- 1 = version majeure (breaking changes)
+- 4 = version mineure (nouvelles fonctionnalités)
+- 7 = patch (corrections de bugs)
+
+Préfixes :
+- ^1.4.7 : autorise MAJ mineures
+- ~1.4.7 : autorise MAJ de patch
+- 1.4.7 : version figée (pas recommandé)
+
+🛠 Commandes utiles :
+
+- npm install <nom>         → installe un package localement
+- npm install <nom>@<ver>   → installe une version précise
+- npm uninstall <nom>       → désinstalle un package
+- npm list                  → liste les packages installés
+- npm outdated              → vérifie s’il existe des MAJ
+- npm update <nom>          → met à jour un package
+
+⏩ Alias pratiques :
+
+- npm i <package>           → install
+- npm un <package>          → uninstall
+- npm up                    → update
+- npm t                     → test
+- npm ls                    → list modules
+- npm ll / npm la           → liste détaillée
+
+✨ Bonus :
+- Tu peux modifier le champ "type" dans package.json :
+    "type": "module" → pour utiliser `import` / `export`
+    "type": "commonjs" → pour `require()` / `module.exports`
+
+
+
+
+SCRIPTS PACKAGES UTILES: (dans fichier package.json)
+
+"scripts": {
+  "start": "node app.js",
+  "dev": "nodemon app.js"
+}
+

@@ -1,0 +1,16 @@
+{
+  "name": "ex6_npm_chalk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "AnnaSpirit",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.4.1"
+  }
+}
