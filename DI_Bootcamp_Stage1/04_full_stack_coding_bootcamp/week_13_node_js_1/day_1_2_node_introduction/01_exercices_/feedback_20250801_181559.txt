@@ -1,0 +1,125 @@
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex1_commonjs_products/products.js
+suggestions for improvement:
+- Add comments to explain the purpose of each section of code more clearly.
+- Consider using a more descriptive variable name than `products` if the context allows for a more specific name (e.g., `availableProducts`).
+- While the code works correctly, for larger datasets, consider using a more efficient search method than a linear scan for Exercise 1.  A hash map or similar structure could provide faster lookups.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex1_commonjs_products/shop.js
+suggestions for improvement:
+- The code is missing the `products.js` file, which is crucial for the exercise to work.  The evaluation assumes that `products.js` exists and contains an array of product objects as specified in the instructions.
+- Add error handling for the case where `products.js` does not exist or contains invalid data.  Currently, if `products.js` is missing or malformed, the code will throw an error.
+- Consider adding more robust input validation to `findProductByName` (e.g., handling null or undefined inputs).
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex2_es6_data/app.js
+suggestions for improvement:
+- The code could include error handling for the case where the `people` array is empty.  This would prevent a division by zero error.
+- Adding comments explaining the purpose of `toFixed(2)` would enhance readability. For example: `return average.toFixed(2); // Round to 2 decimal places`
+- Consider using a more descriptive variable name than `personArray` in the `calculateAverageAge` function, such as `persons`.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex2_es6_data/data.js
+suggestions for improvement:
+- The code is already quite readable.  Adding comments explaining the purpose of the `people` array would enhance readability further.  Consider using more descriptive variable names if the context allows it (e.g., instead of `people`, you might use `personData` if appropriate).
+- The performance is excellent for this small dataset. For significantly larger datasets, consider optimizing the average age calculation (though it's already quite efficient).
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex2_es6_data/package.json
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex3_file_manager/app.js
+suggestions for improvement:
+- The code uses synchronous file operations (`fs.appendFileSync`), which can block the event loop.  Asynchronous versions (`fs.appendFile`) should be preferred for better responsiveness, especially in larger applications.
+- Error handling is missing.  The code should include `try...catch` blocks around file operations to handle potential errors (e.g., file not found, permission issues).
+- The `file_manager.js` module is not provided, making it impossible to fully assess its correctness and adherence to the instructions. The provided code partially addresses Exercise 3, but relies on an external module.
+- The use of `moment.js` is not part of the exercise requirements. While it adds a timestamp, it increases dependencies unnecessarily for this specific task.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex3_file_manager/file_manager.js
+suggestions for improvement:
+- Add error handling for `fs.readFileSync` and `fs.writeFileSync` to gracefully handle cases where the file doesn't exist or there are permission issues.  This would improve robustness and user experience.
+- Consider using asynchronous versions of `fs.readFile` and `fs.writeFile` (`fs.readFile` and `fs.writeFile`) for better performance, especially when dealing with larger files.  This avoids blocking the main thread.
+- Add input validation to the `writeFile` function to sanitize user inputs and prevent potential security vulnerabilities like path traversal attacks.  Check for invalid characters or attempts to write outside the intended directory.
+- Add comments explaining the purpose of each function and the parameters it takes.  While the code is relatively clear, detailed comments enhance readability, especially for collaborators or future maintainers.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex3_file_manager/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file specifying a dependency on the `moment` library.  This is completely unrelated to the exercises described in the chapter content, which focus on Node.js modules, the `fs` module, and the use of `lodash` and `chalk`.
+- The exercises require creating and using several JavaScript files (`products.js`, `shop.js`, `data.js`, `app.js`, `fileManager.js`, etc.)  This code provides no such files.
+- To address the exercises, you need to create the files and implement the logic for handling products, people, file I/O, and using the `lodash` and `chalk` packages.  This `package.json` only defines a dependency; it doesn't solve any of the problems posed.
+Correctness: 0%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex4_todo_es6/app.js
+suggestions for improvement:
+- The code correctly implements a `TodoList` class with methods to add, complete, and list tasks, fulfilling the core requirement of Exercise 4.  However, it lacks error handling (e.g., what happens if you try to complete a task that doesn't exist?).
+- Add more comprehensive testing to ensure all functionalities work correctly, including edge cases (e.g., empty list, trying to complete a non-existent task).
+- Consider adding a method to remove tasks from the list.
+- The comments are helpful and in two languages (English and French). The comments should be in a single language for better readability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex4_todo_es6/package.json
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex4_todo_es6/todo.js
+suggestions for improvement:
+- Add input validation to prevent unexpected behavior from invalid inputs (e.g., negative index for `completeTask`).
+- Consider using a more robust data structure for tasks if more advanced features (like searching or sorting) are planned. 
+- Add comments explaining the purpose of each method and its parameters.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex5_math_lodash/app.js
+suggestions for improvement:
+- The code does not address any of the exercises in the chapter content. It focuses on using lodash and a custom math module, which is not part of the exercises.
+- The comments are in both English and French, which could be simplified to one language for better readability.
+- Consider using more descriptive variable names (e.g., instead of `result1`, use `additionResult`).
+Correctness: 0%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex5_math_lodash/math.js
+suggestions for improvement:
+- The code only addresses Exercise 5: Creating and Using a Custom Module.  It doesn't touch any other exercises.
+- Add comments explaining the purpose of each function.  While the comments are in French and English, more context around the use of the module would improve readability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex5_math_lodash/package.json
+suggestions for improvement:
+- The `package.json` file only sets up the project structure and dependencies.  It doesn't reflect the actual code for exercises 5 and doesn't include the custom `math.js` module. The instructions explicitly mention creating `math.js` and `app.js` files and implementing specific functionality within them.  The provided JSON only shows the project setup, not the solution.
+- Add the `math.js` file content to the submission for a complete evaluation.  Include the addition and multiplication functions as specified in the instructions.
+- Add the `app.js` file content to demonstrate the use of both `lodash` and the custom `math` module. Show how the functions are imported and used for calculations.
+- Clearly comment your code to enhance readability and explain the logic behind your implementation.
+Correctness: 80%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex6_npm_chalk/app.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex6_npm_chalk/info_chalk.js
+suggestions for improvement:
+- The code uses the `chalk` library to demonstrate text styling, which is not directly related to any of the exercises described in the chapter content.  The exercises focus on Node.js modules, the `fs` module, CommonJS and ES6 module syntax, and creating and using custom modules. This code is unrelated to those topics.
+- Consider refactoring the code to address one or more of the exercises described in the chapter. For example, you could create a module that uses `chalk` to style the output of a file reading operation (Exercise 3 or 7).
+Correctness: 0%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex6_npm_chalk/package.json
+suggestions for improvement:
+- The `package.json` file is well-structured and clearly indicates the project's dependencies and type.  No improvements needed for this specific file.
+Correctness: 100%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex7_file_explorer/copy_file.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/AnnaSpirit/New2025/blob/master/DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_1_2_node_introduction/01_exercices_/ex7_file_explorer/read_directory.js
+suggestions for improvement:
+- The code only addresses a small part of Exercise 7. It successfully lists files in the current directory (part of 'read-directory.js'), but it omits the 'copy-file.js' functionality (copying the content of one file to another).
+- The code lacks error handling.  It could crash if the directory doesn't exist or if there are permission issues.
+- Add comments explaining the purpose of each code section more clearly, particularly clarifying the purpose of `readdirSync` and its usage.
+- Consider using `fs.promises` for asynchronous file operations, enhancing responsiveness, especially for larger directories.  The synchronous approach (`readdirSync`) will block the main thread.
+Correctness: 20%
+-----
