@@ -1,0 +1,3 @@
+This is a small test file ✍️
+It was created for the Node.js daily challenge.
+Reading is fun 📖
