@@ -45,4 +45,9 @@ dist/
 build/
 *.egg-info/
 
+# Ne PAS ignorer Thunder Client (=Postman)
+!.vscode/thunder-tests/**
+
+
+
 # AnnaSpirit Approved™ 🔥🐍🚀

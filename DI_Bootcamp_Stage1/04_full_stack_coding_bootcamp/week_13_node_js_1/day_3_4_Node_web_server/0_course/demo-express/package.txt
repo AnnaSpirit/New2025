@@ -1,0 +1,23 @@
+ the nodemon package allows you to reload the server each time our code is modified.
+
+ HTTP requests
+
+The action you want to take on the specified resource. Although nouns are also encountered, these methods are often referred to as HTTP verbs.
+
+
+Here are the most commonly used HTTP verbs / actions
+
+GET: GET requests are only used to retrieve data.
+POST: GET requests are used to send new data.
+PUT: PUT requests are used to modify data.
+PATCH: PATCH requests are used to partially modify data.
+DELETE: DELETE requests deletes the specified data.
+
+
+REST architecture
+
+REST stands for REpresentational State Transfer. REST is web standards based architecture and uses HTTP Protocol.
+
+
+CRUD routes conventions
+CRUD stands for Create, Read, Update, and Delete.
