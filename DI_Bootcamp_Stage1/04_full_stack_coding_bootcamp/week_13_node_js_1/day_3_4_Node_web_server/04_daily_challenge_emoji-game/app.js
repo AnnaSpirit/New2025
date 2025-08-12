@@ -12,8 +12,6 @@ const fs = require('fs');
 const emojis = require('./data/emojis');
 const app = express();
 const PORT = 5000;
-const leaderboardPath = path.join(__dirname, 'leaderboard.json');
-
 
 // 🛠️ Middlewares
 app.use(express.static(path.join(__dirname, 'public')));
@@ -42,19 +40,14 @@ app.get('/', (req, res) => {
 
 // 🎲 ROUTE: GET /api/question
 app.get('/api/question', (req, res) => {
-    const randomIndex = Math.floor(Math.random() * emojis.length);
-    const emojiObj = emojis[randomIndex];
+    const { correct, all } = getRandomOptions();
+    currentEmoji = correct;
 
-    console.log("🎯 Question envoyée:", emojiObj); // 👈 AJOUTE CETTE LIGNE
-
-    const options = generateOptions(emojiObj.name);
     res.json({
-        emoji: emojiObj.emoji,
-        answer: emojiObj.name,
-        options
+        emoji: correct.emoji,
+        options: all
     });
 });
-
 
 // 📥 ROUTE: POST /api/guess
 app.post('/api/guess', (req, res) => {
@@ -72,7 +65,6 @@ app.post('/api/guess', (req, res) => {
         const data = fs.readFileSync(leaderboardPath, 'utf8') || '{}';
         leaderboard = JSON.parse(data);
     }
-    console.log(req.body)
 
     if (!leaderboard[playerName]) leaderboard[playerName] = 0;
     if (isCorrect) leaderboard[playerName]++;

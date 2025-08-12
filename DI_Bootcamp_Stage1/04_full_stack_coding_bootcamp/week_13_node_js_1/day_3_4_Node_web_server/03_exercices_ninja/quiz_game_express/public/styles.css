@@ -1,0 +1,191 @@
+/* EN: Basic, clean styling with a playful vibe.
+   FR: Style basique et propre avec une touche ludique. */
+
+:root {
+    --bg: #0f1220;
+    --card: #171a2b;
+    --text: #f6f7fb;
+    --muted: #aeb3c2;
+    --primary: #7c5cff;
+    --accent: #00d4ff;
+    --danger: #ff4d6d;
+    --success: #2fd27f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    color: var(--text);
+    background: radial-gradient(60rem 60rem at 10% 10%, #151836 0%, var(--bg) 60%);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+}
+
+.container {
+    max-width: 880px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+header,
+footer {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    margin: 0.2rem 0 0.4rem;
+    font-size: 2rem;
+}
+
+.tagline {
+    color: var(--muted);
+    margin: 0.2rem 0 1rem;
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    margin-bottom: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.8rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.progress {
+    height: 10px;
+    background: #2a2e47;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: var(--w, 0%);
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transition: width 0.3s ease;
+}
+
+.timer {
+    padding: 0.3rem 0.6rem;
+    border: 1px dashed var(--muted);
+    border-radius: 8px;
+    color: var(--accent);
+    min-width: 3.2rem;
+    text-align: center;
+}
+
+#questionArea h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1.3rem;
+}
+
+.meta {
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+}
+
+.options {
+    display: grid;
+    gap: 0.6rem;
+    margin: 0.8rem 0;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    background: #13162a;
+    cursor: pointer;
+}
+
+.option:hover {
+    border-color: var(--accent);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #0f1220;
+    color: var(--text);
+}
+
+#feedback {
+    min-height: 2rem;
+    margin: 0.2rem 0 0.6rem;
+    font-weight: 600;
+}
+
+.correct {
+    color: var(--success);
+}
+
+.incorrect {
+    color: var(--danger);
+}
+
+.controls {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    padding: 0.6rem 0.9rem;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #303555;
+    color: var(--text);
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.btn.primary {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.btn.danger {
+    background: var(--danger);
+    color: white;
+}
+
+.save-form {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+#leaderboardList {
+    padding-left: 1.2rem;
+    margin: 0.6rem 0 0;
+}
+
+/* AnnaSpirit */

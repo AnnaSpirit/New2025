@@ -1,0 +1,140 @@
+# Mémo rapide — Login • Token • Authorization • Profile
+
+## 0) Démarrer
+
+* Lance ton serveur : `node app.js` → écoute sur **[http://localhost:5000](http://localhost:5000)**
+* Middleware JSON : `app.use(express.json())` (déjà en place)
+
+---
+
+## 1) Endpoints utiles
+
+### ➜ Register (créer l’utilisateur une fois)
+
+**POST** `/api/register`
+Body (JSON) :
+
+```json
+{
+    "username": "anna",
+    "password": "P@ssw0rd!",
+    "role": "admin"
+}
+```
+
+Réponse attendue : `201` avec `{ id, username, role }`
+
+### ➜ Login (obtenir le token)
+
+**POST** `/api/login`
+Body (JSON) :
+
+```json
+{
+    "username": "anna",
+    "password": "P@ssw0rd!"
+}
+```
+
+Réponse `200` :
+
+```json
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6...",
+    "expiresIn": "2h"
+}
+```
+
+👉 **Copie le `token`** (c’est ton sésame 🎫).
+
+### ➜ Profile (route protégée)
+
+**GET** `/api/profile`
+Header :
+
+```
+Authorization: Bearer <TON_TOKEN>
+```
+
+Réponse `200` :
+
+```json
+{ "id": 1, "username": "anna", "role": "admin" }
+```
+
+---
+
+## 2) Authorization (comment le serveur vérifie ton token)
+
+Middleware côté serveur (rappel) :
+
+```js
+// EN: Auth middleware verifies Bearer token and attaches req.user
+// FR: Le middleware vérifie le token Bearer et attache req.user
+function auth(req, res, next) {
+    const header = req.headers.authorization || '';
+    const token = header.startsWith('Bearer ') ? header.slice(7) : null;
+
+    if (!token) return res.status(401).json({ message: 'Missing token' });
+
+    try {
+        req.user = jwt.verify(token, JWT_SECRET); // EN: validates + decodes | FR: valide + décode
+        return next();
+    } catch {
+        return res.status(401).json({ message: 'Invalid or expired token' });
+    }
+}
+```
+
+* Si le token est bon → `next()` et tu accèdes à la route.
+* Sinon → `401 Unauthorized` (token manquant, invalide, ou expiré).
+
+---
+
+## 3) Récupérer et réutiliser le token (Postman & cURL)
+
+### Postman — à la main (simple)
+
+1. Fais **/api/login**, copie `token`.
+2. Dans **/api/profile** → onglet **Authorization** → **Bearer Token** → colle ton token.
+3. **Send** → enjoy ✨
+
+### Postman — auto (pro tips)
+
+Dans **/api/login** → onglet **Tests** :
+
+```js
+// EN: Save JWT to environment for reuse
+// FR: Sauvegarder le JWT dans l'environnement
+const data = pm.response.json();
+pm.environment.set("token", data.token);
+```
+
+Puis, dans tes requêtes protégées :
+
+* Headers → `Authorization: Bearer {{token}}`
+  (ou Authorization tab → Bearer Token → `{{token}}`)
+
+### cURL
+
+```bash
+# Login
+curl -X POST http://localhost:5000/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"anna","password":"P@ssw0rd!"}'
+
+# Profile (remplace <TOKEN>)
+curl http://localhost:5000/api/profile \
+  -H "Authorization: Bearer <TOKEN>"
+```
+
+---
+
+## 4) Mini check-list anti-bugs (30 secondes)
+
+* Body **JSON** propre (pas de `//`, pas de virgule finale, guillemets **doubles**).
+* `Content-Type: application/json`.
+* Token envoyé en header : `Authorization: Bearer <token>` (sans quotes).
+* **401 Invalid credentials** → refais **/api/register** ou vérifie le mot de passe.
+* **401 Invalid or expired token** → refais **/api/login** (le token dure **2h**).
+

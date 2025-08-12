@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Express Quiz Game</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <!-- EN: App Container -->
+        <!-- FR: Conteneur de l'application -->
+        <div class="container">
+            <header>
+                <h1>Express Quiz Game ✨</h1>
+                <p class="tagline">Answer fast, learn faster! ⏱️🧠</p>
+            </header>
+
+            <main id="game" class="card">
+                <div id="statusBar" class="status">
+                    <div id="progress" class="progress"></div>
+                    <div id="timer" class="timer" aria-live="polite">00</div>
+                </div>
+
+                <div id="questionArea">
+                    <!-- Filled by app.js -->
+                </div>
+
+                <div id="feedback" aria-live="polite"></div>
+
+                <div class="controls">
+                    <button id="submitBtn" class="btn primary">Submit ✅</button>
+                    <button id="nextBtn" class="btn">Next ➡️</button>
+                    <button id="restartBtn" class="btn danger">Restart ♻️</button>
+                </div>
+            </main>
+
+            <section id="final" class="card hidden">
+                <h2>Your Final Score 🏁</h2>
+                <p id="finalText"></p>
+                <form id="saveScoreForm" class="save-form">
+                    <label for="playerName">Your name:</label>
+                    <input id="playerName" name="playerName" maxlength="20" placeholder="e.g., Anna" />
+                    <button class="btn primary" type="submit">Save score 💾</button>
+                </form>
+            </section>
+
+            <section id="board" class="card">
+                <h2>Leaderboard 🏆</h2>
+                <ol id="leaderboardList"></ol>
+            </section>
+
+            <footer>
+                <small>Built with Express & Vanilla JS. Keep calm and quiz on. 🤓</small>
+            </footer>
+        </div>
+
+        <script src="./app.js" defer></script>
+    </body>
+</html>
+<!-- AnnaSpirit -->
