@@ -42,33 +42,29 @@ app.get('/', (req, res) => {
 
 // 🎲 ROUTE: GET /api/question
 app.get('/api/question', (req, res) => {
-    const { correct, all } = getRandomOptions();
+    const randomIndex = Math.floor(Math.random() * emojis.length);
+    const emojiObj = emojis[randomIndex];
 
-    console.log("🎯 Question envoyée:", correct); // 👈 Debug log
+    console.log("🎯 Question envoyée:", emojiObj); // 👈 AJOUTE CETTE LIGNE
 
+    const options = generateOptions(emojiObj.name);
     res.json({
-        emoji: correct.emoji,
-        answer: correct.name,
-        options: all
+        emoji: emojiObj.emoji,
+        answer: emojiObj.name,
+        options
     });
 });
 
 
 // 📥 ROUTE: POST /api/guess
 app.post('/api/guess', (req, res) => {
-    const { guessedName, correctName, playerName, difficulty } = req.body;
+    const { guessedName, correctName, playerName } = req.body;
 
-    if (!playerName || !guessedName || !correctName || !difficulty) {
+    if (!playerName || !guessedName || !correctName) {
         return res.status(400).json({ message: 'Missing required fields' });
     }
 
     const isCorrect = guessedName === correctName;
-
-    // Calculer les points selon la difficulté
-    let pointsToAdd = 0;
-    if (isCorrect) {
-        pointsToAdd = difficulty === 'hard' ? 3 : 1;
-    }
 
     // Charger ou initialiser le leaderboard
     let leaderboard = {};
@@ -79,17 +75,14 @@ app.post('/api/guess', (req, res) => {
     console.log(req.body)
 
     if (!leaderboard[playerName]) leaderboard[playerName] = 0;
-    leaderboard[playerName] += pointsToAdd;
+    if (isCorrect) leaderboard[playerName]++;
 
     fs.writeFileSync(leaderboardPath, JSON.stringify(leaderboard, null, 2));
 
     res.json({
         correct: isCorrect,
         score: leaderboard[playerName],
-        pointsEarned: pointsToAdd,
-        message: isCorrect
-            ? `🎉 Correct! +${pointsToAdd} point${pointsToAdd > 1 ? 's' : ''}!`
-            : '❌ Wrong guess!'
+        message: isCorrect ? '🎉 Correct guess!' : '❌ Wrong guess!'
     });
 });
 
@@ -107,7 +100,7 @@ app.get('/api/leaderboard', (req, res) => {
     res.json(leaderboard);
 });
 
-//  Démarrer le serveur
+// 📢 Démarrer le serveur
 app.listen(PORT, () => {
     console.log(`🚀 Server is running at http://localhost:${PORT}`);
 });

@@ -12,94 +12,39 @@
       <div id="options"></div>
       <p id="feedback"></p>
       <p>🧮 Score: <span id="score">0</span></p>
+
+      <!-- 🎚️ Difficulty Section -->
+      <div class="control-section">
+        <label for="difficulty">🎯 Select difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy (1 point per correct answer)</option>
+          <option value="hard">Hard (3 points per correct answer)</option>
+        </select>
+      </div>
+
+      <!-- 🧑 Player Name Section -->
+      <div class="control-section">
+        <label for="playerName">� Your name:</label>
+        <input type="text" id="playerName" placeholder="Enter your name" />
+      </div>
+
+      <!-- 🎮 Game Controls Section -->
+      <div class="control-section">
+        <button id="restartBtn" class="game-btn restart-btn">
+          � Restart Game
+        </button>
+      </div>
+
+      <div class="control-section">
+        <button id="stopBtn" class="game-btn stop-btn">
+          🛑 Stop Game & Export
+        </button>
+      </div>
+
       <!-- 🏆 Leaderboard Section -->
       <h2>🏆 Leaderboard</h2>
       <ul id="leaderboard"></ul>
     </div>
-
-    <script>
-      // 🔐 Variables globales
-      let currentAnswer = "";
-      let score = 0;
-
-      // 📦 Références DOM
-      const emojiContainer = document.getElementById("emoji");
-      const optionsContainer = document.getElementById("options");
-      const feedback = document.getElementById("feedback");
-      const scoreDisplay = document.getElementById("score");
-
-      // 🔁 Charger une question depuis le backend
-      async function loadQuestion() {
-        const res = await fetch("/api/question");
-        const data = await res.json();
-
-        currentAnswer = data.answer; // stockée localement
-        emojiContainer.textContent = data.emoji;
-        renderOptions(data.options);
-      }
-
-      // 🧩 Afficher les boutons de réponse
-      function renderOptions(options) {
-        optionsContainer.innerHTML = "";
-        feedback.textContent = "";
-
-        options.forEach((option) => {
-          const btn = document.createElement("button");
-          btn.textContent = option;
-          btn.classList.add("option-button");
-          btn.addEventListener("click", () => handleGuess(option));
-          await loadLeaderboard();
-
-          optionsContainer.appendChild(btn);
-        });
-      }
-
-      // 📬 Envoyer la réponse via POST
-      async function handleGuess(guess) {
-        const res = await fetch("/api/guess", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ guess }),
-        });
-
-        const data = await res.json();
-
-        // 🧠 Afficher feedback et nouveau contenu
-        feedback.textContent = data.isCorrect
-          ? "✅ Correct!"
-          : `❌ Wrong! The correct answer was "${currentAnswer}"`;
-
-        score = data.score;
-        scoreDisplay.textContent = score;
-
-        // Mise à jour avec nouveau round
-        emojiContainer.textContent = data.emoji;
-        currentAnswer = data.emoji; // mise à jour
-        renderOptions(data.options);
-      }
-
-      // 🚀 Démarrage initial
-      loadQuestion();
-      loadLeaderboard();
-      // 🏆 Charger le leaderboard depuis l'API
-      async function loadLeaderboard() {
-        const res = await fetch("/api/leaderboard");
-        const data = await res.json();
-
-        const leaderboardEl = document.getElementById("leaderboard");
-        leaderboardEl.innerHTML = "";
-
-        // 🔢 Trier par score décroissant
-        const sorted = Object.entries(data).sort((a, b) => b[1] - a[1]);
-
-        sorted.forEach(([name, score]) => {
-          const li = document.createElement("li");
-          li.textContent = `${name} : ${score} points`;
-          leaderboardEl.appendChild(li);
-        });
-      }
-    </script>
+    <script src="/script.js"></script>
   </body>
 </html>
