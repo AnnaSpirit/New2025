@@ -13,13 +13,17 @@
 
 
 
-# Ignore Word ou Excel documents 
+# Ignore Word ou Excel documents + présentation vidéo
+
 *.docx
 *.xlsx
+*.mp4
 
-# Ignore fichier HD
+# Ignore fichier system
+
 *.ini 
-
+.DS_Store
+Thumbs.db
 
 
 # Ignorer tous les dossiers screenshot_course, peu importe où ils sont
