@@ -9,12 +9,18 @@
 /Bases/non ok/
 
 # Ignorer certains sous-dossiers de travail 
-DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_3_4_Node_web_server/04_daily_challenge_emoji-game.zip
-DI_Bootcamp_Stage1/04_full_stack_coding_bootcamp/week_13_node_js_1/day_3_4_Node_web_server/04_daily_challenge_emoji-game/emoji_game_corrected.zip
+
+
+
 
 # Ignore Word ou Excel documents 
 *.docx
 *.xlsx
+
+# Ignore fichier HD
+*.ini 
+
+
 
 # Ignorer tous les dossiers screenshot_course, peu importe où ils sont
 **/screenshot_course/
