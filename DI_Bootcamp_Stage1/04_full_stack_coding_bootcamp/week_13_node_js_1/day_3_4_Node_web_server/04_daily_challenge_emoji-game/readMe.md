@@ -484,6 +484,6 @@ emoji-game/
 **AnnaSpirit**
 
 
-CV__LINKEDIN___
+Post for__LINKEDIN___
 
 Built a dynamic Emoji Guessing Game with Node.js, Express.js, HTML5, CSS3, and Vanilla JavaScript, featuring real-time scoring, difficulty modes, and a persistent leaderboard. Designed a sleek, responsive UI with animations, custom backgrounds, and multi-format exports (JSON, PNG, PDF-style) via Canvas API & Blob API — blending clean code with playful interactivity.
