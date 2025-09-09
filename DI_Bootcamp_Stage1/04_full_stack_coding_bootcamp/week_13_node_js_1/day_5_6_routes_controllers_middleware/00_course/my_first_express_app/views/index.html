@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <script src="/public/js/main.js" defer></script>
+
+    <title>Hello Express</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <h1>Hello, the world! 👋</h1>
+        <p>
+          No Bootstrap. Just clean CSS you control.
+          <!-- Pas de Bootstrap. Juste du CSS propre que tu contrôles. -->
+        </p>
+        <a
+          class="btn mt-4"
+          href="#"
+          onclick="alert('Hi there! 😄'); return false;"
+        >
+          Say hi
+        </a>
+      </section>
+
+      <section class="mt-6">
+        <p>
+          Add your content here…
+          <!-- Ajoute ton contenu ici… -->
+
+          CDN veut dire Content Delivery Network (réseau de diffusion de
+          contenu).<br />
+          L’idée en 15 secondes (TL;DR)<br />
+          Un CDN, c’est un réseau de serveurs répartis dans le monde qui copient
+          (mettent en cache) tes fichiers statiques (CSS, JS, images…). Quand
+          un·e utilisateur·ice visite ton site, le fichier est servi depuis le
+          serveur le plus proche au lieu de remonter jusqu’à ton serveur
+          d’origine. Résultat : plus rapide, plus stable, moins de charge sur
+          ton serveur.<br />
+          À quoi ça sert concrètement ?<br />
+          Vitesse ⚡: moins de latence, meilleurs temps de chargement.<br />
+          Disponibilité 🧯: si ton serveur tombe, le CDN peut encore servir ce
+          qui est en cache.<br />
+          Scalabilité 📈: encaisse mieux les pics de trafic.<br />
+          Sécurité 🛡️: DDoS mitigation, TLS géré, headers de sécurité.<br />
+          Cache 🧊: versionnage (ex. style.v1.css) et purge rapide.<br />
+          Comment ça marche (simplifié) ?<br />
+          Tu publies ton fichier (ex. /public/style.css).<br />
+          Le CDN le récupère une première fois (depuis ton “origin”), puis le
+          garde en cache dans plusieurs “PoPs” (points de présence).<br />
+          À chaque visite, le CDN sert la copie la plus proche
+          géographiquement.<br />
+          Deux usages classiques<br />
+          CDN “librairies publiques” (Bootstrap, jQuery, etc.) Tu mets une URL
+          comme https://cdn.jsdelivr.net/npm/... et basta.<br />
+          Ton propre CDN (Cloudflare, Akamai, CloudFront…) Tu fais passer TES
+          assets à travers le CDN pour booster ton site.<br />
+          Tu n’aimes pas Bootstrap ? Aucun souci. Le concept “CDN” est
+          indépendant : tu peux l’utiliser pour tes images/CSS/JS, ou ne pas
+          l’utiliser du tout et rester 100% local.<br />
+          Avantages vs. Inconvénients<br />
+          + Très rapide, très disponible, peu de charge sur ton serveur. –
+          Dépendance réseau tierce (offline compliqué), implications
+          RGPD/privacité, config cache à bien maîtriser.<br />
+          Bonnes pratiques si tu utilises un CDN<br />
+          Pinner la version (évite les latest) pour ne pas casser ton site.<br />
+          SRI (Subresource Integrity) pour vérifier l’intégrité du fichier.
+          <br />
+          Fallback local si le CDN est inaccessible.<br />
+          Headers cache clairs (et versionnement de fichier pour invalider le
+          cache).
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!-- AnnaSpirit -->
