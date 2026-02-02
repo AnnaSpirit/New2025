@@ -1,0 +1,108 @@
+--SELECT language_id, name
+--FROM public.language
+--ORDER BY language_id;
+--
+--
+--UPDATE public.film
+--SET language_id = 5
+--WHERE film_id IN (1, 2, 3);
+--
+--SELECT film_id, title, language_id
+--FROM public.film
+--WHERE film_id IN (1, 2, 3);
+--
+--SELECT
+--    tc.constraint_name,
+--    kcu.column_name,
+--    ccu.table_name AS referenced_table,
+--    ccu.column_name AS referenced_column
+--FROM information_schema.table_constraints AS tc
+--JOIN information_schema.key_column_usage AS kcu
+--    ON tc.constraint_name = kcu.constraint_name
+--    AND tc.table_schema = kcu.table_schema
+--JOIN information_schema.constraint_column_usage AS ccu
+--    ON ccu.constraint_name = tc.constraint_name
+--    AND ccu.table_schema = tc.table_schema
+--WHERE tc.table_schema = 'public'
+--  AND tc.table_name = 'customer'
+--  AND tc.constraint_type = 'FOREIGN KEY'
+--ORDER BY kcu.column_name;
+--
+--DROP TABLE public.customer_review;
+--
+--SELECT COUNT(*) AS outstanding_rentals
+--FROM public.rental
+--WHERE return_date IS NULL;
+--
+--SELECT DISTINCT
+--    f.film_id,
+--    f.title,
+--    f.replacement_cost
+--FROM public.rental AS r
+--JOIN public.inventory AS i
+--    ON r.inventory_id = i.inventory_id
+--JOIN public.film AS f
+--    ON i.film_id = f.film_id
+--WHERE r.return_date IS NULL
+--ORDER BY f.replacement_cost DESC, f.title
+--LIMIT 30;
+--
+--SELECT DISTINCT f.film_id, f.title
+--FROM public.film AS f
+--JOIN public.film_actor AS fa
+--    ON f.film_id = fa.film_id
+--JOIN public.actor AS a
+--    ON fa.actor_id = a.actor_id
+--WHERE f.description ILIKE '%sumo%'
+--  AND a.first_name = 'PENELOPE'
+--  AND a.last_name = 'MONROE';
+--
+--
+--SELECT f.film_id, f.title, f.length, f.rating
+--FROM public.film AS f
+--JOIN public.film_category AS fc
+--    ON f.film_id = fc.film_id
+--JOIN public.category AS c
+--    ON fc.category_id = c.category_id
+--WHERE c.name = 'Documentary'
+--  AND f.length < 60
+--  AND f.rating = 'R';
+--
+--SELECT DISTINCT f.film_id, f.title, p.amount, r.return_date
+--FROM public.customer AS cu
+--JOIN public.rental AS r
+--    ON cu.customer_id = r.customer_id
+--JOIN public.payment AS p
+--    ON r.rental_id = p.rental_id
+--JOIN public.inventory AS i
+--    ON r.inventory_id = i.inventory_id
+--JOIN public.film AS f
+--    ON i.film_id = f.film_id
+--WHERE cu.first_name = 'MATTHEW'
+--  AND cu.last_name = 'MAHAN'
+--  AND p.amount > 4.00
+--  AND r.return_date >= '2005-07-28'
+--  AND r.return_date <  '2005-08-02'
+--ORDER BY r.return_date, p.amount DESC;
+--
+--SELECT DISTINCT f.film_id, f.title, f.replacement_cost
+--FROM public.customer AS cu
+--JOIN public.rental AS r
+--    ON cu.customer_id = r.customer_id
+--JOIN public.inventory AS i
+--    ON r.inventory_id = i.inventory_id
+--JOIN public.film AS f
+--    ON i.film_id = f.film_id
+--WHERE cu.first_name = 'MATTHEW'
+--  AND cu.last_name = 'MAHAN'
+--  AND (f.title ILIKE '%boat%' OR f.description ILIKE '%boat%')
+--ORDER BY f.replacement_cost DESC, f.title
+--LIMIT 20;
+--
+
+--DROP TABLE public.customer_review;
+--
+--ANSWER: Dropping the customer_review table is generally easy,but the database system warns about possible data loss.Extra checking is needed to ensure that no other objects
+--(such as foreign keys or views) depend on this table before dropping it.
+
+
