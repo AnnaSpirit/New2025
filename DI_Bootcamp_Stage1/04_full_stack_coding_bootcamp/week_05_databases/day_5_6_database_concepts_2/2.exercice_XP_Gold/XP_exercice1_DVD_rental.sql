@@ -1,0 +1,76 @@
+--
+--SELECT
+--    r.rental_id,
+--    r.rental_date,
+--    f.title,
+--    i.store_id,
+--    r.customer_id
+--FROM rental r
+--JOIN inventory i ON r.inventory_id = i.inventory_id
+--JOIN film f ON i.film_id = f.film_id
+--WHERE r.return_date IS NULL
+--ORDER BY r.rental_date;
+
+--SELECT
+--    c.customer_id,
+--    c.first_name,
+--    c.last_name,
+--    COUNT(*) AS open_rentals
+--FROM rental r
+--JOIN customer c ON r.customer_id = c.customer_id
+--WHERE r.return_date IS NULL
+--GROUP BY c.customer_id, c.first_name, c.last_name
+--ORDER BY open_rentals DESC, c.last_name;
+
+--iste des titres non rendus par client
+
+--SELECT
+--    c.customer_id,
+--    c.first_name,
+--    c.last_name,
+--    COUNT(*) AS open_rentals,
+--    STRING_AGG(f.title, ', ' ORDER BY f.title) AS titles
+--FROM rental r
+--JOIN customer c ON r.customer_id = c.customer_id
+--JOIN inventory i ON r.inventory_id = i.inventory_id
+--JOIN film f ON i.film_id = f.film_id
+--WHERE r.return_date IS NULL
+--GROUP BY c.customer_id, c.first_name, c.last_name
+--ORDER BY open_rentals DESC;
+
+--SELECT
+--    c.customer_id,
+--    c.first_name,
+--    c.last_name,
+--    COUNT(*) AS open_rentals,
+--    STRING_AGG(f.title, ', ' ORDER BY f.title) AS titles
+--FROM rental r
+--JOIN customer c ON r.customer_id = c.customer_id
+--JOIN inventory i ON r.inventory_id = i.inventory_id
+--JOIN film f ON i.film_id = f.film_id
+--WHERE r.return_date IS NULL
+--GROUP BY c.customer_id, c.first_name, c.last_name
+--ORDER BY open_rentals DESC;
+
+--Action films avec Joe Swank
+--
+--CREATE VIEW film_actor_category AS
+--SELECT
+--    f.film_id,
+--    f.title,
+--    cat.name AS category,
+--    a.first_name,
+--    a.last_name
+--FROM film f
+--JOIN film_category fc ON f.film_id = fc.film_id
+--JOIN category cat ON fc.category_id = cat.category_id
+--JOIN film_actor fa ON f.film_id = fa.film_id
+--JOIN actor a ON fa.actor_id = a.actor_id;
+
+--SELECT DISTINCT
+--    title
+--FROM film_actor_category
+--WHERE category = 'Action'
+--  AND first_name = 'Joe'
+--  AND last_name = 'Swank'
+--ORDER BY title;
