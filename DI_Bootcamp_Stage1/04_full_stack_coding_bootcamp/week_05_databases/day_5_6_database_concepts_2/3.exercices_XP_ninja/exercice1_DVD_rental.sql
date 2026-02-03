@@ -1,0 +1,68 @@
+--1. Retrieve all films with a rating of G or PG, which are are not currently rented (they have been returned/have never been borrowed).
+--
+--SELECT DISTINCT
+--    f.film_id,
+--    f.title,
+--    f.rating
+--FROM film f
+--JOIN inventory i ON f.film_id = i.film_id
+--WHERE f.rating IN ('G', 'PG')
+--  AND NOT EXISTS (
+--      SELECT 1
+--      FROM rental r
+--      WHERE r.inventory_id = i.inventory_id
+--        AND r.return_date IS NULL
+--  )
+--ORDER BY f.title;
+--
+--2. Create a new table which will represent a waiting list for children’s movies. This will allow a child to add their name to the list until the DVD is available (has been returned). Once the child takes the DVD, their name should be removed from the waiting list (ideally using triggers, but we have not learned about them yet. Let’s assume that our Python program will manage this). Which table references should be included?
+--
+--CREATE TABLE children_waiting_list (
+--    waiting_id SERIAL PRIMARY KEY,
+--    film_id INTEGER NOT NULL,
+--    store_id INTEGER NOT NULL,
+--    child_name VARCHAR(100) NOT NULL,
+--    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+--
+--    CONSTRAINT fk_waiting_film
+--        FOREIGN KEY (film_id) REFERENCES film(film_id),
+--
+--    CONSTRAINT fk_waiting_store
+--        FOREIGN KEY (store_id) REFERENCES store(store_id)
+--);
+--3. Retrieve the number of people waiting for each children’s DVD. Test this by adding rows to the table that you created in question 2 above.
+
+--INSERT INTO children_waiting_list (film_id, store_id, child_name)
+--VALUES
+--    (1, 1, 'Anna Junior'),
+--    (1, 1, 'Little Skywalker'),
+--    (2, 1, 'Tiny Ninja'),
+--    (1, 2, 'Mini Dragon');
+
+--SELECT
+--    cwl.store_id,
+--    cwl.film_id,
+--    f.title,
+--    COUNT(*) AS people_waiting
+--FROM children_waiting_list cwl
+--JOIN film f ON cwl.film_id = f.film_id
+--GROUP BY cwl.store_id, cwl.film_id, f.title
+--ORDER BY people_waiting DESC, f.title;
+
+
+--SELECT
+--    cwl.store_id,
+--    cwl.film_id,
+--    f.title,
+--    cwl.child_name,
+--    cwl.created_at
+--FROM children_waiting_list cwl
+--JOIN film f ON cwl.film_id = f.film_id
+--ORDER BY cwl.store_id, cwl.film_id, cwl.created_at;
+
+--test--
+--SELECT waiting_id, child_name
+--FROM children_waiting_list
+--WHERE film_id = 1 AND store_id = 1
+--ORDER BY created_at
+--LIMIT 1;

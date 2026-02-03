@@ -1,0 +1,281 @@
+--PART 1
+--
+--
+--1. Create 2 tables : Customer and Customer profile. They have a One to One relationship.     A customer can have only one profile, and a profile belongs to only one customer
+--    The Customer table should have the columns : id, first_name, last_name NOT NULL
+--    The Customer profile table should have the columns : id, isLoggedIn DEFAULT false (a Boolean), customer_id (a reference to the Customer table)
+--
+--DROP TABLE IF EXISTS customer_profile;
+--DROP TABLE IF EXISTS customer2;
+--
+--CREATE TABLE customer2 (
+--    id SERIAL PRIMARY KEY,
+--    first_name VARCHAR(50) NOT NULL,
+--    last_name VARCHAR(50) NOT NULL
+--);
+--
+--VERIFICATION
+--
+--SELECT table_name
+--FROM information_schema.tables
+--WHERE table_name IN ('customer2', 'customer2_profile');
+--
+--
+--2. Insert those customers: John, Doe + Jerome, Lalu + Lea, Rive
+--
+--INSERT INTO customer2 (first_name, last_name)
+--VALUES
+--    ('John', 'Doe'),
+--    ('Jerome', 'Lalu'),
+--    ('Lea', 'Rive');
+--
+--
+--3. Insert those customer profiles, use subqueries : John is loggedIn + Jerome is not logged in
+--
+--INSERT INTO customer2_profile (isloggedin, customer_id)
+--VALUES
+--    (
+--        TRUE,
+--        (SELECT id FROM customer2 WHERE first_name = 'John' AND last_name = 'Doe')
+--    ),
+--    (
+--        FALSE,
+--        (SELECT id FROM customer2 WHERE first_name = 'Jerome' AND last_name = 'Lalu')
+--    );
+--
+--4. Use the relevant types of Joins to display:
+--   4.1: The first_name of the LoggedIn customers  INNERJOIN
+--
+--SELECT c.first_name
+--FROM customer2 c
+--JOIN customer2_profile cp ON cp.customer_id = c.id
+--WHERE cp.isloggedin = TRUE;
+--
+--
+--   4.2: All the customers first_name and isLoggedIn columns - even the customers those who don’t have a profile. LEFTJOIN
+--
+--SELECT
+--    c.first_name,
+--    cp.isloggedin
+--FROM customer2 c
+--LEFT JOIN customer2_profile cp ON cp.customer_id = c.id
+--ORDER BY c.first_name;
+--
+--
+--   4.3:  The number of customers that are not LoggedIn  --inclut FALSE et NULL
+--
+--SELECT COUNT(*) AS not_loggedin_count
+--FROM customer2 c
+--LEFT JOIN customer2_profile cp ON cp.customer_id = c.id
+--WHERE cp.isloggedin IS DISTINCT FROM TRUE;
+--
+--+++
+--
+--SELECT *
+--FROM customer2 c
+--LEFT JOIN customer2_profile cp ON cp.customer_id = c.id;
+--
+--
+--PART 2
+--1. Create a table named Book, with the columns : book_id SERIAL PRIMARY KEY, title NOT NULL, author NOT NULL
+--
+--- STEP 1: drop everything
+--DROP TABLE IF EXISTS library2;
+--DROP TABLE IF EXISTS student2;
+--DROP TABLE IF EXISTS book2;
+--
+-- STEP 2: create book2
+--CREATE TABLE book2 (
+--    book_id SERIAL PRIMARY KEY,
+--    title VARCHAR(200) NOT NULL,
+--    author VARCHAR(200) NOT NULL
+--);
+--
+-- STEP 3: create student2
+--CREATE TABLE student2 (
+--    student_id SERIAL PRIMARY KEY,
+--    name VARCHAR(100) NOT NULL UNIQUE,
+--    age INTEGER NOT NULL,
+--    CONSTRAINT chk_student2_age CHECK (age <= 15)
+--);
+--
+-- STEP 4: create library2 (LAST)
+--CREATE TABLE library2 (
+--    book_fk_id INTEGER NOT NULL,
+--    student_fk_id INTEGER NOT NULL,
+--    borrowed_date DATE NOT NULL,
+--    PRIMARY KEY (book_fk_id, student_fk_id),
+--    FOREIGN KEY (book_fk_id)
+--        REFERENCES book2(book_id)
+--        ON DELETE CASCADE
+--        ON UPDATE CASCADE,
+--    FOREIGN KEY (student_fk_id)
+--        REFERENCES student2(student_id)
+--        ON DELETE CASCADE
+--        ON UPDATE CASCADE
+--);
+--
+--
+--VERIFICATION
+--
+--SELECT 'book2' AS table, COUNT(*) FROM book2
+--UNION ALL
+--SELECT 'student2', COUNT(*) FROM student2
+--UNION ALL
+--SELECT 'library2', COUNT(*) FROM library2;
+--
+--
+--INSERT INTO book2 (title, author)
+--VALUES
+--    ('Alice In Wonderland', 'Lewis Carroll'),
+--    ('Harry Potter', 'J.K Rowling'),
+--    ('To kill a mockingbird', 'Harper Lee');
+--
+--
+--3. Create a table named Student, with the columns : student_id SERIAL PRIMARY KEY, name NOT NULL UNIQUE, age. Make sure that the age is never bigger than 15 (Find an SQL method);
+--
+--CREATE TABLE Student (
+--    student_id SERIAL PRIMARY KEY,
+--    name VARCHAR(100) NOT NULL UNIQUE,
+--    age INTEGER,
+--    CONSTRAINT chk_student_age CHECK (age <= 15)
+--);
+--
+--
+--4. Insert those students: John, 12 + Lera, 11 + Patrick, 10 +  Bob, 14
+--
+--INSERT INTO Student (name, age)
+--VALUES
+--    ('John', 12),
+--    ('Lera', 11),
+--    ('Patrick', 10),
+--    ('Bob', 14);
+--
+--
+--
+--5. Create a table named Library, with the columns :
+--
+--    book_fk_id ON DELETE CASCADE ON UPDATE CASCADE
+--    student_id ON DELETE CASCADE ON UPDATE CASCADE
+--    borrowed_date
+--    This table, is a junction table for a Many to Many relationship with the Book and Student tables : A student can borrow many books, and a book can be borrowed by many children
+--    book_fk_id is a Foreign Key representing the column book_id from the Book table
+--    student_fk_id is a Foreign Key representing the column student_id from the Student table
+--    The pair of Foreign Keys is the Primary Key of the Junction Table
+--
+--
+--CREATE TABLE library2 (
+--    book_fk_id INTEGER NOT NULL,
+--    student_fk_id INTEGER NOT NULL,
+--    borrowed_date DATE NOT NULL,
+--
+--    PRIMARY KEY (book_fk_id, student_fk_id),
+--
+--    FOREIGN KEY (book_fk_id)
+--        REFERENCES book2(book_id)
+--        ON DELETE CASCADE
+--        ON UPDATE CASCADE,
+--
+--    FOREIGN KEY (student_fk_id)
+--        REFERENCES student2(student_id)
+--        ON DELETE CASCADE
+--        ON UPDATE CASCADE
+--);
+--
+--
+--SELECT table_schema, table_name
+--FROM information_schema.tables
+--WHERE table_name IN ('student2', 'book2', 'library2');
+
+--VERIFICATION
+
+--SELECT
+--    s.name        AS student_name,
+--    b.title       AS book_title,
+--    l.borrowed_date
+--FROM library2 l
+--JOIN student2 s ON l.student_fk_id = s.student_id
+--JOIN book2 b ON l.book_fk_id = b.book_id
+--ORDER BY l.borrowed_date;
+--
+
+--6. Add 4 records in the junction table, use subqueries. the student named John, borrowed the book Alice In Wonderland on the 15/02/2022 + the student named Bob, borrowed the book To kill a mockingbird on the 03/03/2021 + the student named Lera, borrowed the book Alice In Wonderland on the 23/05/2021 + the student named Bob, borrowed the book Harry Potter the on 12/08/2021
+
+--INSERT INTO library2 (book_fk_id, student_fk_id, borrowed_date)
+--VALUES
+--    (
+--        (SELECT book_id FROM book2 WHERE title = 'Alice In Wonderland'),
+--        (SELECT student_id FROM student2 WHERE name = 'John'),
+--        '2022-02-15'
+--    ),
+--    (
+--        (SELECT book_id FROM book2 WHERE title = 'To kill a mockingbird'),
+--        (SELECT student_id FROM student2 WHERE name = 'Bob'),
+--        '2021-03-03'
+--    ),
+--    (
+--        (SELECT book_id FROM book2 WHERE title = 'Alice In Wonderland'),
+--        (SELECT student_id FROM student2 WHERE name = 'Lera'),
+--        '2021-05-23'
+--    ),
+--    (
+--        (SELECT book_id FROM book2 WHERE title = 'Harry Potter'),
+--        (SELECT student_id FROM student2 WHERE name = 'Bob'),
+--        '2021-08-12'
+--    );
+
+--SELECT title, COUNT(*) AS how_many
+--FROM book2
+--GROUP BY title
+--HAVING COUNT(*) > 1;
+
+--TRUNCATE TABLE library2;
+--TRUNCATE TABLE book2 RESTART IDENTITY;
+
+--
+--INSERT INTO book2 (title, author)
+--VALUES
+--    ('Alice In Wonderland', 'Lewis Carroll'),
+--    ('Harry Potter', 'J.K Rowling'),
+--    ('To kill a mockingbird', 'Harper Lee');
+
+
+--7.     Display the data
+--        7.1 Select all the columns from the junction table
+
+--SELECT *
+--FROM library2
+--ORDER BY borrowed_date;
+
+
+--        7.2 Select the name of the student and the title of the borrowed books
+
+--SELECT
+--    s.name AS student_name,
+--    b.title AS book_title,
+--    l.borrowed_date
+--FROM library2 l
+--JOIN student2 s ON l.student_fk_id = s.student_id
+--JOIN book2 b ON l.book_fk_id = b.book_id
+--ORDER BY l.borrowed_date, s.name;
+
+
+--        7.3 Select the average age of the children, that borrowed the book Alice in Wonderland
+
+SELECT
+--    AVG(s.age) AS average_age
+--FROM library2 l
+--JOIN student2 s ON l.student_fk_id = s.student_id
+--JOIN book2 b ON l.book_fk_id = b.book_id
+--WHERE b.title = 'Alice In Wonderland';
+
+
+--        7.4 Delete a student from the Student table, what happened in the junction table ?
+
+--DELETE FROM student2
+--WHERE name = 'Bob';
+
+--SELECT *
+--FROM library2
+--ORDER BY borrowed_date;
+
