@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual env (si tu en as un)
+venv/
+.env/
+
+# Tests / debug files
+test_*.py
+fix_*.py
+
+# Config sensible
+db_config.py
+
+# OS files
+.DS_Store
+Thumbs.db
