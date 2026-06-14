@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="coloring_game_style.css">
+    <!-- Link to external JavaScript file + DEFER with game logic -->
+    <script src="coloring_game_script.js" defer></script>
+
+    <!-- Page title that appears in the browser tab -->
+    <title>Coloring Squares Game</title>
+</head>
+
+<body>
+    <!-- Main container with two-column layout -->
+    <div class="container">
+        <!-- Left side: Title and color palette -->
+        <div class="left-section">
+            <h1>Coloring Squares</h1>
+
+            <!-- Color palette selection area -->
+            <div class="palette-section">
+                <h2>Select a Color:</h2>
+                <!-- Grid container for color palette -->
+                <div class="color-palette" id="colorPalette"></div>
+
+                <!-- Display selected color -->
+                <div class="selected-color-display">
+                    <p>Selected: <span id="selectedColorName">None</span></p>
+                    <div class="color-preview" id="colorPreview"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side: Drawing grid -->
+        <div class="right-section">
+            <h2>Draw Here:</h2>
+            <!-- Grid container for drawing squares -->
+            <div class="drawing-grid" id="drawingGrid"></div>
+
+            <!-- Clear button -->
+            <button class="clear-button" id="clearButton">Clear All</button>
+        </div>
+    </div>
+
+</html>
+
+
+<!-- Add model background to copy image (children game, like diamond painting),
+Add button to have more or less case in drawing-grid :10*10, 30*30 or 60*60.
+add color pick-up as user want (user choose new color)
+Button full page? 
+Add save drawing
+🔥 mode gomme (eraser toggle)
+🔥 pinceau taille (1 / 3 / 5)
+🔥 bucket fill (remplissage intelligent)
+🔥 sauvegarde localStorage
+🔥 export PNG (download ton dessin)-->
