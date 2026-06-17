@@ -1,0 +1,17 @@
+{
+  "name": "04_daily_challenge_trivia_quiz_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "quiz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
+  }
+}
